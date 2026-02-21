@@ -39,7 +39,21 @@ def main():
                     cursor: cs.getPropertyValue('cursor'),
                 };
             }"""
-        )  # locator.evaluate pattern for computed style [web:22]
+        ) 
+
+        result = {
+            "url": url,
+            "selector": selector,
+            "text": text,
+            "styles": styles,
+        }
+
+        # save to json file
+        with open("button_style_dump.json", "w", encoding="utf-8") as f:
+            import json
+            json.dump(result, f, ensure_ascii=False, indent=2)
+
+        print("Button style dumped to button_style_dump.json")
 
         print("=== Button ===")
         print(f"URL: {url}")
