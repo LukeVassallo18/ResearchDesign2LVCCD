@@ -1,0 +1,417 @@
+{
+  "url": "https://www.booking.com/",
+  "total_elements_scanned": 387,
+  "total_unique_style_groups": 27,
+  "groups": [
+    {
+      "category": "other",
+      "textColor": "rgb(26, 26, 26)",
+      "backgroundColor": "rgb(255, 255, 255)",
+      "fontSize": "14px",
+      "count": 1,
+      "sampleTexts": [
+        "Skip to main content"
+      ],
+      "sampleTags": [
+        "DIV"
+      ]
+    },
+    {
+      "category": "link",
+      "textColor": "rgb(0, 108, 228)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontSize": "14px",
+      "count": 3,
+      "sampleTexts": [
+        "Skip to main content",
+        "Discover homes",
+        "Register"
+      ],
+      "sampleTags": [
+        "A"
+      ]
+    },
+    {
+      "category": "other",
+      "textColor": "rgb(255, 255, 255)",
+      "backgroundColor": "rgb(0, 59, 149)",
+      "fontSize": "14px",
+      "count": 1,
+      "sampleTexts": [
+        "EUR\nList your property\nRegister\nSign in\nStays\nFlights\nFlight + Hotel\nCar rental\n"
+      ],
+      "sampleTags": [
+        "HEADER"
+      ]
+    },
+    {
+      "category": "navigation",
+      "textColor": "rgb(255, 255, 255)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontSize": "14px",
+      "count": 2,
+      "sampleTexts": [
+        "EUR\nList your property\nRegister\nSign in",
+        "Stays\nFlights\nFlight + Hotel\nCar rental\nAttractions\nAirport taxis"
+      ],
+      "sampleTags": [
+        "NAV"
+      ]
+    },
+    {
+      "category": "button",
+      "textColor": "rgb(255, 255, 255)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontSize": "16px",
+      "count": 1,
+      "sampleTexts": [
+        "EUR"
+      ],
+      "sampleTags": [
+        "BUTTON"
+      ]
+    },
+    {
+      "category": "link",
+      "textColor": "rgb(255, 255, 255)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontSize": "16px",
+      "count": 1,
+      "sampleTexts": [
+        "List your property"
+      ],
+      "sampleTags": [
+        "A"
+      ]
+    },
+    {
+      "category": "link",
+      "textColor": "rgb(0, 108, 228)",
+      "backgroundColor": "rgb(255, 255, 255)",
+      "fontSize": "14px",
+      "count": 2,
+      "sampleTexts": [
+        "Register",
+        "Sign in"
+      ],
+      "sampleTags": [
+        "A"
+      ]
+    },
+    {
+      "category": "other",
+      "textColor": "rgb(255, 255, 255)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontSize": "14px",
+      "count": 7,
+      "sampleTexts": [
+        "Stays\nFlights\nFlight + Hotel\nCar rental\nAttractions\nAirport taxis",
+        "Stays",
+        "Flights",
+        "Flight + Hotel",
+        "Car rental"
+      ],
+      "sampleTags": [
+        "UL",
+        "LI"
+      ]
+    },
+    {
+      "category": "link",
+      "textColor": "rgb(255, 255, 255)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontSize": "14px",
+      "count": 8,
+      "sampleTexts": [
+        "Stays",
+        "Flights",
+        "Flight + Hotel",
+        "Car rental",
+        "Attractions"
+      ],
+      "sampleTags": [
+        "A"
+      ]
+    },
+    {
+      "category": "other",
+      "textColor": "rgb(26, 26, 26)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontSize": "14px",
+      "count": 96,
+      "sampleTexts": [
+        "Find your next stay",
+        "Check-in date\n\u2014\nCheck-out date\n2 adults \u00b7 0 children \u00b7 1 room\nSearch\nAdd flights",
+        "2 adults \u00b7 0 children \u00b7 1 room",
+        "Add flights to my search",
+        "Rome\nLondon"
+      ],
+      "sampleTags": [
+        "HEADER",
+        "FORM",
+        "DIV",
+        "LABEL",
+        "SECTION",
+        "UL",
+        "LI"
+      ]
+    },
+    {
+      "category": "heading",
+      "textColor": "rgb(26, 26, 26)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontSize": "24px",
+      "count": 11,
+      "sampleTexts": [
+        "Find your next stay",
+        "Offers",
+        "Trending destinations",
+        "Browse by property type",
+        "Explore Malta"
+      ],
+      "sampleTags": [
+        "H1",
+        "H2"
+      ]
+    },
+    {
+      "category": "paragraph",
+      "textColor": "rgb(255, 255, 255)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontSize": "24px",
+      "count": 1,
+      "sampleTexts": [
+        "Search low prices on hotels, homes and much more..."
+      ],
+      "sampleTags": [
+        "P"
+      ]
+    },
+    {
+      "category": "button",
+      "textColor": "rgb(26, 26, 26)",
+      "backgroundColor": "rgb(255, 255, 255)",
+      "fontSize": "14px",
+      "count": 2,
+      "sampleTexts": [
+        "Check-in date\n\u2014\nCheck-out date",
+        "2 adults \u00b7 0 children \u00b7 1 room"
+      ],
+      "sampleTags": [
+        "BUTTON"
+      ]
+    },
+    {
+      "category": "button",
+      "textColor": "rgb(255, 255, 255)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontSize": "20px",
+      "count": 1,
+      "sampleTexts": [
+        "Search"
+      ],
+      "sampleTags": [
+        "BUTTON"
+      ]
+    },
+    {
+      "category": "heading",
+      "textColor": "rgb(26, 26, 26)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontSize": "16px",
+      "count": 86,
+      "sampleTexts": [
+        "Book now, pay at the property",
+        "300M+ reviews from fellow travellers",
+        "2+ million properties worldwide",
+        "Trusted customer service you can rely on, 24/7",
+        "Hotels"
+      ],
+      "sampleTags": [
+        "H3"
+      ]
+    },
+    {
+      "category": "paragraph",
+      "textColor": "rgb(26, 26, 26)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontSize": "14px",
+      "count": 4,
+      "sampleTexts": [
+        "FREE cancellation on most rooms",
+        "Get trusted information from guests like you",
+        "Hotels, guest houses, apartments, and more\u2026",
+        "We're always here to help"
+      ],
+      "sampleTags": [
+        "P"
+      ]
+    },
+    {
+      "category": "heading",
+      "textColor": "rgb(26, 26, 26)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontSize": "20px",
+      "count": 1,
+      "sampleTexts": [
+        "At least 15% off"
+      ],
+      "sampleTags": [
+        "H3"
+      ]
+    },
+    {
+      "category": "link",
+      "textColor": "rgb(0, 0, 238)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontSize": "14px",
+      "count": 42,
+      "sampleTexts": [
+        "Rome",
+        "London",
+        "St Julian's",
+        "St Paul's Bay",
+        "Milan"
+      ],
+      "sampleTags": [
+        "A"
+      ]
+    },
+    {
+      "category": "link",
+      "textColor": "rgb(89, 89, 89)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontSize": "14px",
+      "count": 44,
+      "sampleTexts": [
+        "Hotels",
+        "Apartments",
+        "Resorts",
+        "Villas",
+        "Cabins"
+      ],
+      "sampleTags": [
+        "A"
+      ]
+    },
+    {
+      "category": "navigation",
+      "textColor": "rgb(26, 26, 26)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontSize": "14px",
+      "count": 3,
+      "sampleTexts": [
+        "Festivals & Events\nArts & Literature\nHistorical Discoveries\nHistorical Expeditio",
+        "International cities\nCountries\nAthens hotels\nGreece",
+        "Countries\nRegions\nCities\nDistricts\nAirports\nHotels\nPlaces of interest\nHoliday Ho"
+      ],
+      "sampleTags": [
+        "NAV"
+      ]
+    },
+    {
+      "category": "button",
+      "textColor": "rgb(0, 108, 228)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontSize": "14px",
+      "count": 2,
+      "sampleTexts": [
+        "Festivals & Events",
+        "International cities"
+      ],
+      "sampleTags": [
+        "BUTTON"
+      ]
+    },
+    {
+      "category": "button",
+      "textColor": "rgb(26, 26, 26)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontSize": "14px",
+      "count": 5,
+      "sampleTexts": [
+        "Arts & Literature",
+        "Historical Discoveries",
+        "Historical Expeditions",
+        "Food & Cooking",
+        "Countries"
+      ],
+      "sampleTags": [
+        "BUTTON"
+      ]
+    },
+    {
+      "category": "other",
+      "textColor": "rgb(0, 108, 228)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontSize": "14px",
+      "count": 1,
+      "sampleTexts": [
+        "International cities"
+      ],
+      "sampleTags": [
+        "LI"
+      ]
+    },
+    {
+      "category": "link",
+      "textColor": "rgb(26, 26, 26)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontSize": "14px",
+      "count": 55,
+      "sampleTexts": [
+        "Athens hotels",
+        "Countries",
+        "Regions",
+        "Cities",
+        "Districts"
+      ],
+      "sampleTags": [
+        "A"
+      ]
+    },
+    {
+      "category": "other",
+      "textColor": "rgb(26, 26, 26)",
+      "backgroundColor": "rgb(245, 245, 245)",
+      "fontSize": "14px",
+      "count": 1,
+      "sampleTexts": [
+        "Countries\nRegions\nCities\nDistricts\nAirports\nHotels\nPlaces of interest\nHoliday Ho"
+      ],
+      "sampleTags": [
+        "FOOTER"
+      ]
+    },
+    {
+      "category": "heading",
+      "textColor": "rgb(26, 26, 26)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontSize": "14px",
+      "count": 5,
+      "sampleTexts": [
+        "Support",
+        "Discover",
+        "Terms and settings",
+        "Partners",
+        "About"
+      ],
+      "sampleTags": [
+        "H3"
+      ]
+    },
+    {
+      "category": "button",
+      "textColor": "rgb(26, 26, 26)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontSize": "16px",
+      "count": 1,
+      "sampleTexts": [
+        "EUR"
+      ],
+      "sampleTags": [
+        "BUTTON"
+      ]
+    }
+  ]
+}
