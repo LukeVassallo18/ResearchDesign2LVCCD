@@ -4,1021 +4,1821 @@
   "websites": {
     "booking.com": {
       "url": "https://www.booking.com/",
-      "total_elements_scanned": 409,
-      "total_unique_style_groups": 35,
-      "groups": [
-        {
-          "category": "other",
-          "textColor": "rgb(26, 26, 26)",
-          "backgroundColor": "rgb(255, 255, 255)",
-          "fontSize": "14px",
-          "count": 1,
-          "sampleTexts": [
-            "Skip to main content"
-          ],
-          "sampleTags": [
-            "DIV"
+      "matched_total": 400,
+      "elements_kept_total": 378,
+      "unique_style_groups_total": 42,
+      "layers": {
+        "interactive": {
+          "matched": 224,
+          "elements_kept": 210,
+          "raw_bg_transparent_kept": 161,
+          "category_counts": {
+            "other": 5,
+            "link": 142,
+            "button": 61,
+            "input": 2
+          },
+          "groups": [
+            {
+              "layer": "interactive",
+              "category": "other",
+              "textColor": "rgb(26, 26, 26)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "fontSize": "14px",
+              "fontWeight": "400",
+              "textDecoration": "none",
+              "count": 3,
+              "sampleLabels": [
+                "Skip to main content",
+                "2 adults · 0 children · 1 room",
+                "Athens hotels\nGreece"
+              ],
+              "sampleTags": [
+                "DIV"
+              ],
+              "sampleRoles": [
+                "tabpanel"
+              ],
+              "rawBgTransparentExamples": 2
+            },
+            {
+              "layer": "interactive",
+              "category": "link",
+              "textColor": "rgb(0, 108, 228)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "fontSize": "14px",
+              "fontWeight": "400",
+              "textDecoration": "none",
+              "count": 1,
+              "sampleLabels": [
+                "Skip to main content"
+              ],
+              "sampleTags": [
+                "A"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 1
+            },
+            {
+              "layer": "interactive",
+              "category": "link",
+              "textColor": "rgb(0, 0, 238)",
+              "backgroundColor": "rgb(0, 59, 149)",
+              "fontSize": "14px",
+              "fontWeight": "500",
+              "textDecoration": "none",
+              "count": 1,
+              "sampleLabels": [
+                "Booking.com"
+              ],
+              "sampleTags": [
+                "A"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 1
+            },
+            {
+              "layer": "interactive",
+              "category": "button",
+              "textColor": "rgb(255, 255, 255)",
+              "backgroundColor": "rgb(0, 59, 149)",
+              "fontSize": "16px",
+              "fontWeight": "500",
+              "textDecoration": "none",
+              "count": 2,
+              "sampleLabels": [
+                "EUR",
+                "Language: English (UK)"
+              ],
+              "sampleTags": [
+                "BUTTON"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 2
+            },
+            {
+              "layer": "interactive",
+              "category": "link",
+              "textColor": "rgb(255, 255, 255)",
+              "backgroundColor": "rgb(0, 59, 149)",
+              "fontSize": "16px",
+              "fontWeight": "500",
+              "textDecoration": "none",
+              "count": 2,
+              "sampleLabels": [
+                "Customer support",
+                "List your property"
+              ],
+              "sampleTags": [
+                "A"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 2
+            },
+            {
+              "layer": "interactive",
+              "category": "link",
+              "textColor": "rgb(0, 108, 228)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "fontSize": "14px",
+              "fontWeight": "500",
+              "textDecoration": "none",
+              "count": 4,
+              "sampleLabels": [
+                "Register",
+                "Sign in",
+                "Discover homes"
+              ],
+              "sampleTags": [
+                "A"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 2
+            },
+            {
+              "layer": "interactive",
+              "category": "link",
+              "textColor": "rgb(255, 255, 255)",
+              "backgroundColor": "rgb(0, 59, 149)",
+              "fontSize": "14px",
+              "fontWeight": "500",
+              "textDecoration": "none",
+              "count": 6,
+              "sampleLabels": [
+                "Stays",
+                "Flights",
+                "Flight + Hotel",
+                "Car rental",
+                "Attractions"
+              ],
+              "sampleTags": [
+                "A"
+              ],
+              "sampleRoles": [
+                "menuitem"
+              ],
+              "rawBgTransparentExamples": 6
+            },
+            {
+              "layer": "interactive",
+              "category": "link",
+              "textColor": "rgb(255, 255, 255)",
+              "backgroundColor": "rgb(0, 59, 149)",
+              "fontSize": "16px",
+              "fontWeight": "600",
+              "textDecoration": "none",
+              "count": 1,
+              "sampleLabels": [
+                "Sign in or register"
+              ],
+              "sampleTags": [
+                "A"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 1
+            },
+            {
+              "layer": "interactive",
+              "category": "input",
+              "textColor": "rgb(26, 26, 26)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "fontSize": "14px",
+              "fontWeight": "500",
+              "textDecoration": "none",
+              "count": 1,
+              "sampleLabels": [
+                "Where are you going?"
+              ],
+              "sampleTags": [
+                "INPUT"
+              ],
+              "sampleRoles": [
+                "combobox"
+              ],
+              "rawBgTransparentExamples": 1
+            },
+            {
+              "layer": "interactive",
+              "category": "button",
+              "textColor": "rgb(26, 26, 26)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "fontSize": "14px",
+              "fontWeight": "500",
+              "textDecoration": "none",
+              "count": 51,
+              "sampleLabels": [
+                "Check-in date\n—\nCheck-out date",
+                "2 adults · 0 children · 1 room",
+                "Next",
+                "Explore Malta",
+                "Festivals & Events"
+              ],
+              "sampleTags": [
+                "BUTTON"
+              ],
+              "sampleRoles": [
+                "tab"
+              ],
+              "rawBgTransparentExamples": 8
+            },
+            {
+              "layer": "interactive",
+              "category": "button",
+              "textColor": "rgb(255, 255, 255)",
+              "backgroundColor": "rgb(255, 183, 0)",
+              "fontSize": "20px",
+              "fontWeight": "500",
+              "textDecoration": "none",
+              "count": 1,
+              "sampleLabels": [
+                "Search"
+              ],
+              "sampleTags": [
+                "BUTTON"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 1
+            },
+            {
+              "layer": "interactive",
+              "category": "input",
+              "textColor": "rgb(26, 26, 26)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "fontSize": "14px",
+              "fontWeight": "400",
+              "textDecoration": "none",
+              "count": 1,
+              "sampleLabels": [
+                "flight"
+              ],
+              "sampleTags": [
+                "INPUT"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 1
+            },
+            {
+              "layer": "interactive",
+              "category": "link",
+              "textColor": "rgb(255, 255, 255)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "fontSize": "14px",
+              "fontWeight": "500",
+              "textDecoration": "none",
+              "count": 2,
+              "sampleLabels": [
+                "Explore deals",
+                "Sign in"
+              ],
+              "sampleTags": [
+                "A"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 2
+            },
+            {
+              "layer": "interactive",
+              "category": "link",
+              "textColor": "rgb(89, 89, 89)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "fontSize": "14px",
+              "fontWeight": "500",
+              "textDecoration": "none",
+              "count": 24,
+              "sampleLabels": [
+                "Hotels",
+                "Apartments",
+                "Resorts",
+                "Villas",
+                "Cabins"
+              ],
+              "sampleTags": [
+                "A"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 24
+            },
+            {
+              "layer": "interactive",
+              "category": "button",
+              "textColor": "rgb(0, 108, 228)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "fontSize": "14px",
+              "fontWeight": "500",
+              "textDecoration": "none",
+              "count": 2,
+              "sampleLabels": [
+                "Popular",
+                "International cities"
+              ],
+              "sampleTags": [
+                "BUTTON"
+              ],
+              "sampleRoles": [
+                "tab"
+              ],
+              "rawBgTransparentExamples": 2
+            },
+            {
+              "layer": "interactive",
+              "category": "link",
+              "textColor": "rgb(0, 0, 238)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "fontSize": "14px",
+              "fontWeight": "400",
+              "textDecoration": "none",
+              "count": 44,
+              "sampleLabels": [
+                "Rome",
+                "London",
+                "St Julian's",
+                "St Paul's Bay",
+                "Milan"
+              ],
+              "sampleTags": [
+                "A"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 44
+            },
+            {
+              "layer": "interactive",
+              "category": "link",
+              "textColor": "rgb(26, 26, 26)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "fontSize": "14px",
+              "fontWeight": "400",
+              "textDecoration": "none",
+              "count": 23,
+              "sampleLabels": [
+                "Athens hotels",
+                "Countries",
+                "Regions",
+                "Cities",
+                "Districts"
+              ],
+              "sampleTags": [
+                "A"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 23
+            },
+            {
+              "layer": "interactive",
+              "category": "link",
+              "textColor": "rgb(26, 26, 26)",
+              "backgroundColor": "rgb(245, 245, 245)",
+              "fontSize": "14px",
+              "fontWeight": "400",
+              "textDecoration": "none",
+              "count": 32,
+              "sampleLabels": [
+                "Manage your trips",
+                "Contact Customer Service",
+                "Safety resource centre",
+                "Genius loyalty programme",
+                "Seasonal and holiday deals"
+              ],
+              "sampleTags": [
+                "A"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 32
+            },
+            {
+              "layer": "interactive",
+              "category": "button",
+              "textColor": "rgb(26, 26, 26)",
+              "backgroundColor": "rgb(245, 245, 245)",
+              "fontSize": "16px",
+              "fontWeight": "500",
+              "textDecoration": "none",
+              "count": 2,
+              "sampleLabels": [
+                "Language: English (UK)",
+                "EUR"
+              ],
+              "sampleTags": [
+                "BUTTON"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 2
+            },
+            {
+              "layer": "interactive",
+              "category": "link",
+              "textColor": "rgb(255, 255, 255)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "fontSize": "16px",
+              "fontWeight": "500",
+              "textDecoration": "none",
+              "count": 1,
+              "sampleLabels": [
+                "Sign in or register"
+              ],
+              "sampleTags": [
+                "A"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 1
+            },
+            {
+              "layer": "interactive",
+              "category": "other",
+              "textColor": "rgb(26, 26, 26)",
+              "backgroundColor": "rgb(247, 247, 247)",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "textDecoration": "none",
+              "count": 1,
+              "sampleLabels": [
+                "Manage cookie settings\n\nWhen you use Booking.com, we (Booking.com and our partne"
+              ],
+              "sampleTags": [
+                "DIV"
+              ],
+              "sampleRoles": [
+                "region"
+              ],
+              "rawBgTransparentExamples": 0
+            },
+            {
+              "layer": "interactive",
+              "category": "other",
+              "textColor": "rgb(56, 56, 56)",
+              "backgroundColor": "rgb(247, 247, 247)",
+              "fontSize": "14px",
+              "fontWeight": "400",
+              "textDecoration": "none",
+              "count": 1,
+              "sampleLabels": [
+                "When you use Booking.com, we (Booking.com and our partners) use the following ca"
+              ],
+              "sampleTags": [
+                "DIV"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 1
+            },
+            {
+              "layer": "interactive",
+              "category": "link",
+              "textColor": "rgb(10, 117, 194)",
+              "backgroundColor": "rgb(247, 247, 247)",
+              "fontSize": "14px",
+              "fontWeight": "400",
+              "textDecoration": "underline",
+              "count": 1,
+              "sampleLabels": [
+                "Privacy Notice"
+              ],
+              "sampleTags": [
+                "A"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 1
+            },
+            {
+              "layer": "interactive",
+              "category": "button",
+              "textColor": "rgb(0, 108, 228)",
+              "backgroundColor": "rgb(247, 247, 247)",
+              "fontSize": "13.008px",
+              "fontWeight": "600",
+              "textDecoration": "underline",
+              "count": 1,
+              "sampleLabels": [
+                "Manage settings"
+              ],
+              "sampleTags": [
+                "BUTTON"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 1
+            },
+            {
+              "layer": "interactive",
+              "category": "button",
+              "textColor": "rgb(255, 255, 255)",
+              "backgroundColor": "rgb(0, 108, 228)",
+              "fontSize": "13.008px",
+              "fontWeight": "600",
+              "textDecoration": "none",
+              "count": 2,
+              "sampleLabels": [
+                "Decline",
+                "Accept"
+              ],
+              "sampleTags": [
+                "BUTTON"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 0
+            }
           ]
         },
-        {
-          "category": "link",
-          "textColor": "rgb(0, 108, 228)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "14px",
-          "count": 3,
-          "sampleTexts": [
-            "Skip to main content",
-            "Discover homes",
-            "Register"
-          ],
-          "sampleTags": [
-            "A"
-          ]
-        },
-        {
-          "category": "other",
-          "textColor": "rgb(255, 255, 255)",
-          "backgroundColor": "rgb(0, 59, 149)",
-          "fontSize": "14px",
-          "count": 1,
-          "sampleTexts": [
-            "EUR\nList your property\nRegister\nSign in\nStays\nFlights\nFlight + Hotel\nCar rental\n"
-          ],
-          "sampleTags": [
-            "HEADER"
-          ]
-        },
-        {
-          "category": "navigation",
-          "textColor": "rgb(255, 255, 255)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "14px",
-          "count": 2,
-          "sampleTexts": [
-            "EUR\nList your property\nRegister\nSign in",
-            "Stays\nFlights\nFlight + Hotel\nCar rental\nAttractions\nAirport taxis"
-          ],
-          "sampleTags": [
-            "NAV"
-          ]
-        },
-        {
-          "category": "button",
-          "textColor": "rgb(255, 255, 255)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "16px",
-          "count": 1,
-          "sampleTexts": [
-            "EUR"
-          ],
-          "sampleTags": [
-            "BUTTON"
-          ]
-        },
-        {
-          "category": "link",
-          "textColor": "rgb(255, 255, 255)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "16px",
-          "count": 3,
-          "sampleTexts": [
-            "List your property",
-            "Sign in or register",
-            "Sign in or register"
-          ],
-          "sampleTags": [
-            "A"
-          ]
-        },
-        {
-          "category": "link",
-          "textColor": "rgb(0, 108, 228)",
-          "backgroundColor": "rgb(255, 255, 255)",
-          "fontSize": "14px",
-          "count": 2,
-          "sampleTexts": [
-            "Register",
-            "Sign in"
-          ],
-          "sampleTags": [
-            "A"
-          ]
-        },
-        {
-          "category": "other",
-          "textColor": "rgb(255, 255, 255)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "14px",
-          "count": 7,
-          "sampleTexts": [
-            "Stays\nFlights\nFlight + Hotel\nCar rental\nAttractions\nAirport taxis",
-            "Stays",
-            "Flights",
-            "Flight + Hotel",
-            "Car rental"
-          ],
-          "sampleTags": [
-            "UL",
-            "LI"
-          ]
-        },
-        {
-          "category": "link",
-          "textColor": "rgb(255, 255, 255)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "14px",
-          "count": 8,
-          "sampleTexts": [
-            "Stays",
-            "Flights",
-            "Flight + Hotel",
-            "Car rental",
-            "Attractions"
-          ],
-          "sampleTags": [
-            "A"
-          ]
-        },
-        {
-          "category": "other",
-          "textColor": "rgb(26, 26, 26)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "14px",
-          "count": 97,
-          "sampleTexts": [
-            "Unlock Flights savings with member-only deals",
-            "Check-in date\n\u2014\nCheck-out date\n2 adults \u00b7 0 children \u00b7 1 room\nSearch\nAdd flights",
-            "2 adults \u00b7 0 children \u00b7 1 room",
-            "Add flights",
-            "St. Julian's Bay Hotel\nSt Julian's, Malta\n7.3\n7.3\nGood\nGood\n4,045 reviews\nEarly "
-          ],
-          "sampleTags": [
-            "HEADER",
-            "FORM",
-            "DIV",
-            "LABEL",
-            "SECTION",
-            "UL",
-            "LI"
-          ]
-        },
-        {
-          "category": "heading",
-          "textColor": "rgb(26, 26, 26)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "24px",
-          "count": 11,
-          "sampleTexts": [
-            "Unlock Flights savings with member-only deals",
-            "Offers",
-            "Deals for the weekend",
-            "Browse by property type",
-            "Stay at our top unique properties"
-          ],
-          "sampleTags": [
-            "H1",
-            "H2"
-          ]
-        },
-        {
-          "category": "paragraph",
-          "textColor": "rgb(255, 255, 255)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "24px",
-          "count": 1,
-          "sampleTexts": [
-            "Save more on Flights marked with the Genius label."
-          ],
-          "sampleTags": [
-            "P"
-          ]
-        },
-        {
-          "category": "button",
-          "textColor": "rgb(26, 26, 26)",
-          "backgroundColor": "rgb(255, 255, 255)",
-          "fontSize": "14px",
-          "count": 2,
-          "sampleTexts": [
-            "Check-in date\n\u2014\nCheck-out date",
-            "2 adults \u00b7 0 children \u00b7 1 room"
-          ],
-          "sampleTags": [
-            "BUTTON"
-          ]
-        },
-        {
-          "category": "button",
-          "textColor": "rgb(255, 255, 255)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "20px",
-          "count": 1,
-          "sampleTexts": [
-            "Search"
-          ],
-          "sampleTags": [
-            "BUTTON"
-          ]
-        },
-        {
-          "category": "heading",
-          "textColor": "rgb(26, 26, 26)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "16px",
-          "count": 86,
-          "sampleTexts": [
-            "Book now, pay at the property",
-            "300M+ reviews from fellow travellers",
-            "2+ million properties worldwide",
-            "Trusted customer service you can rely on, 24/7",
-            "St. Julian's Bay Hotel"
-          ],
-          "sampleTags": [
-            "H3"
-          ]
-        },
-        {
-          "category": "paragraph",
-          "textColor": "rgb(26, 26, 26)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "14px",
-          "count": 10,
-          "sampleTexts": [
-            "FREE cancellation on most rooms",
-            "Get trusted information from guests like you",
-            "Hotels, guest houses, apartments, and more\u2026",
-            "We're always here to help",
-            "When you use Booking.com, we (Booking.com and our partners) use the following ca"
-          ],
-          "sampleTags": [
-            "P"
-          ]
-        },
-        {
-          "category": "heading",
-          "textColor": "rgb(26, 26, 26)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "20px",
-          "count": 2,
-          "sampleTexts": [
-            "At least 15% off",
-            "Sign in, save money"
-          ],
-          "sampleTags": [
-            "H3",
-            "H2"
-          ]
-        },
-        {
-          "category": "link",
-          "textColor": "rgb(0, 0, 238)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "14px",
-          "count": 42,
-          "sampleTexts": [
-            "St. Julian's Bay Hotel\nSt Julian's, Malta\n7.3\n7.3\nGood\nGood\n4,045 reviews\nEarly ",
-            "ME Malta by Meli\u00e1\nSt Julian's, Malta\n9.4\n9.4\nSuperb\nSuperb\n677 reviews\nEarly 202",
-            "The George, Urban Boutique Hotel\nSt Julian's, Malta\n7.9\n7.9\nGood\nGood\n950 review",
-            "HOLM Boutique & SPA - IK Collection\nSt Julian's, Malta\n8.9\n8.9\nFabulous\nFabulous",
-            "Spinola Hotel\nSt Julian's, Malta\n8.5\n8.5\nVery good\nVery good\n1,029 reviews\nEarly"
-          ],
-          "sampleTags": [
-            "A"
-          ]
-        },
-        {
-          "category": "link",
-          "textColor": "rgb(89, 89, 89)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "14px",
-          "count": 44,
-          "sampleTexts": [
-            "Hotels",
-            "Apartments",
-            "Resorts",
-            "Villas",
-            "Cabins"
-          ],
-          "sampleTags": [
-            "A"
-          ]
-        },
-        {
-          "category": "navigation",
-          "textColor": "rgb(26, 26, 26)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "14px",
-          "count": 3,
-          "sampleTexts": [
-            "Festivals\nArt & Literature\nHistorical Discoveries\nCultural Exploration\nGastronom",
-            "International cities\nCountries\nAthens hotels\nGreece",
-            "Countries\nRegions\nCities\nDistricts\nAirports\nHotels\nPlaces of interest\nHoliday Ho"
-          ],
-          "sampleTags": [
-            "NAV"
-          ]
-        },
-        {
-          "category": "button",
-          "textColor": "rgb(0, 108, 228)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "14px",
-          "count": 2,
-          "sampleTexts": [
-            "Festivals",
-            "International cities"
-          ],
-          "sampleTags": [
-            "BUTTON"
-          ]
-        },
-        {
-          "category": "button",
-          "textColor": "rgb(26, 26, 26)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "14px",
-          "count": 6,
-          "sampleTexts": [
-            "Art & Literature",
-            "Historical Discoveries",
-            "Cultural Exploration",
-            "Gastronomy",
-            "Romantic Getaways"
-          ],
-          "sampleTags": [
-            "BUTTON"
-          ]
-        },
-        {
-          "category": "other",
-          "textColor": "rgb(0, 108, 228)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "14px",
-          "count": 1,
-          "sampleTexts": [
-            "International cities"
-          ],
-          "sampleTags": [
-            "LI"
-          ]
-        },
-        {
-          "category": "link",
-          "textColor": "rgb(26, 26, 26)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "14px",
-          "count": 55,
-          "sampleTexts": [
-            "Athens hotels",
-            "Countries",
-            "Regions",
-            "Cities",
-            "Districts"
-          ],
-          "sampleTags": [
-            "A"
-          ]
-        },
-        {
-          "category": "other",
-          "textColor": "rgb(26, 26, 26)",
-          "backgroundColor": "rgb(245, 245, 245)",
-          "fontSize": "14px",
-          "count": 1,
-          "sampleTexts": [
-            "Countries\nRegions\nCities\nDistricts\nAirports\nHotels\nPlaces of interest\nHoliday Ho"
-          ],
-          "sampleTags": [
-            "FOOTER"
-          ]
-        },
-        {
-          "category": "heading",
-          "textColor": "rgb(26, 26, 26)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "14px",
-          "count": 7,
-          "sampleTexts": [
-            "Support",
-            "Discover",
-            "Terms and settings",
-            "Partners",
-            "About"
-          ],
-          "sampleTags": [
-            "H3"
-          ]
-        },
-        {
-          "category": "button",
-          "textColor": "rgb(26, 26, 26)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "16px",
-          "count": 1,
-          "sampleTexts": [
-            "EUR"
-          ],
-          "sampleTags": [
-            "BUTTON"
-          ]
-        },
-        {
-          "category": "paragraph",
-          "textColor": "rgb(26, 26, 26)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "16px",
-          "count": 1,
-          "sampleTexts": [
-            "Sign in to save 10% or more with a free Booking.com membership"
-          ],
-          "sampleTags": [
-            "P"
-          ]
-        },
-        {
-          "category": "other",
-          "textColor": "rgb(26, 26, 26)",
-          "backgroundColor": "rgb(247, 247, 247)",
-          "fontSize": "16px",
-          "count": 1,
-          "sampleTexts": [
-            "Manage cookie settings\n\nWhen you use Booking.com, we (Booking.com and our partne"
-          ],
-          "sampleTags": [
-            "DIV"
-          ]
-        },
-        {
-          "category": "other",
-          "textColor": "rgb(26, 26, 26)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "16px",
-          "count": 1,
-          "sampleTexts": [
-            "Manage cookie settings\n\nWhen you use Booking.com, we (Booking.com and our partne"
-          ],
-          "sampleTags": [
-            "DIV"
-          ]
-        },
-        {
-          "category": "heading",
-          "textColor": "rgb(56, 56, 56)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "16px",
-          "count": 1,
-          "sampleTexts": [
-            "Manage cookie settings"
-          ],
-          "sampleTags": [
-            "H2"
-          ]
-        },
-        {
-          "category": "other",
-          "textColor": "rgb(56, 56, 56)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "14px",
-          "count": 1,
-          "sampleTexts": [
-            "When you use Booking.com, we (Booking.com and our partners) use the following ca"
-          ],
-          "sampleTags": [
-            "DIV"
-          ]
-        },
-        {
-          "category": "link",
-          "textColor": "rgb(10, 117, 194)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "14px",
-          "count": 1,
-          "sampleTexts": [
-            "Privacy Notice"
-          ],
-          "sampleTags": [
-            "A"
-          ]
-        },
-        {
-          "category": "button",
-          "textColor": "rgb(0, 108, 228)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "13.008px",
-          "count": 1,
-          "sampleTexts": [
-            "Manage settings"
-          ],
-          "sampleTags": [
-            "BUTTON"
-          ]
-        },
-        {
-          "category": "button",
-          "textColor": "rgb(255, 255, 255)",
-          "backgroundColor": "rgb(0, 108, 228)",
-          "fontSize": "13.008px",
-          "count": 2,
-          "sampleTexts": [
-            "Decline",
-            "Accept"
-          ],
-          "sampleTags": [
-            "BUTTON"
+        "content": {
+          "matched": 176,
+          "elements_kept": 168,
+          "raw_bg_transparent_kept": 168,
+          "category_counts": {
+            "listitem": 70,
+            "heading": 85,
+            "paragraph": 12,
+            "label": 1
+          },
+          "groups": [
+            {
+              "layer": "content",
+              "category": "listitem",
+              "textColor": "rgb(255, 255, 255)",
+              "backgroundColor": "rgb(0, 59, 149)",
+              "fontSize": "14px",
+              "fontWeight": "400",
+              "textDecoration": "none",
+              "count": 6,
+              "sampleLabels": [
+                "Stays",
+                "Flights",
+                "Flight + Hotel",
+                "Car rental",
+                "Attractions"
+              ],
+              "sampleTags": [
+                "LI"
+              ],
+              "sampleRoles": [
+                "none"
+              ],
+              "rawBgTransparentExamples": 6
+            },
+            {
+              "layer": "content",
+              "category": "heading",
+              "textColor": "rgb(26, 26, 26)",
+              "backgroundColor": "rgb(0, 59, 149)",
+              "fontSize": "24px",
+              "fontWeight": "700",
+              "textDecoration": "none",
+              "count": 1,
+              "sampleLabels": [
+                "Unlock Flights savings with member-only deals"
+              ],
+              "sampleTags": [
+                "H1"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 1
+            },
+            {
+              "layer": "content",
+              "category": "paragraph",
+              "textColor": "rgb(255, 255, 255)",
+              "backgroundColor": "rgb(0, 59, 149)",
+              "fontSize": "24px",
+              "fontWeight": "400",
+              "textDecoration": "none",
+              "count": 1,
+              "sampleLabels": [
+                "Save more on Flights marked with the Genius label."
+              ],
+              "sampleTags": [
+                "P"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 1
+            },
+            {
+              "layer": "content",
+              "category": "label",
+              "textColor": "rgb(26, 26, 26)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "fontSize": "14px",
+              "fontWeight": "400",
+              "textDecoration": "none",
+              "count": 1,
+              "sampleLabels": [
+                "Add flights to my search"
+              ],
+              "sampleTags": [
+                "LABEL"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 1
+            },
+            {
+              "layer": "content",
+              "category": "heading",
+              "textColor": "rgb(26, 26, 26)",
+              "backgroundColor": "rgb(245, 245, 245)",
+              "fontSize": "16px",
+              "fontWeight": "700",
+              "textDecoration": "none",
+              "count": 4,
+              "sampleLabels": [
+                "Book now, pay at the property",
+                "300M+ reviews from fellow travellers",
+                "2+ million properties worldwide",
+                "Trusted customer service you can rely on, 24/7"
+              ],
+              "sampleTags": [
+                "H3"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 4
+            },
+            {
+              "layer": "content",
+              "category": "paragraph",
+              "textColor": "rgb(26, 26, 26)",
+              "backgroundColor": "rgb(245, 245, 245)",
+              "fontSize": "14px",
+              "fontWeight": "400",
+              "textDecoration": "none",
+              "count": 4,
+              "sampleLabels": [
+                "FREE cancellation on most rooms",
+                "Get trusted information from guests like you",
+                "Hotels, guest houses, apartments, and more…",
+                "We're always here to help"
+              ],
+              "sampleTags": [
+                "P"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 4
+            },
+            {
+              "layer": "content",
+              "category": "heading",
+              "textColor": "rgb(26, 26, 26)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "fontSize": "24px",
+              "fontWeight": "700",
+              "textDecoration": "none",
+              "count": 8,
+              "sampleLabels": [
+                "Offers",
+                "Browse by property type",
+                "Trending destinations",
+                "Deals for the weekend",
+                "Stay at our top unique properties"
+              ],
+              "sampleTags": [
+                "H2"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 8
+            },
+            {
+              "layer": "content",
+              "category": "heading",
+              "textColor": "rgb(26, 26, 26)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "fontSize": "20px",
+              "fontWeight": "700",
+              "textDecoration": "none",
+              "count": 2,
+              "sampleLabels": [
+                "At least 15% off",
+                "Sign in, save money"
+              ],
+              "sampleTags": [
+                "H3",
+                "H2"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 2
+            },
+            {
+              "layer": "content",
+              "category": "heading",
+              "textColor": "rgb(26, 26, 26)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "fontSize": "16px",
+              "fontWeight": "700",
+              "textDecoration": "none",
+              "count": 62,
+              "sampleLabels": [
+                "Hotels",
+                "Apartments",
+                "Resorts",
+                "Villas",
+                "Cabins"
+              ],
+              "sampleTags": [
+                "H3"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 62
+            },
+            {
+              "layer": "content",
+              "category": "listitem",
+              "textColor": "rgb(0, 108, 228)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "fontSize": "14px",
+              "fontWeight": "400",
+              "textDecoration": "none",
+              "count": 2,
+              "sampleLabels": [
+                "Popular",
+                "International cities"
+              ],
+              "sampleTags": [
+                "LI"
+              ],
+              "sampleRoles": [
+                "none"
+              ],
+              "rawBgTransparentExamples": 2
+            },
+            {
+              "layer": "content",
+              "category": "listitem",
+              "textColor": "rgb(26, 26, 26)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "fontSize": "14px",
+              "fontWeight": "400",
+              "textDecoration": "none",
+              "count": 30,
+              "sampleLabels": [
+                "Explore Malta",
+                "Festivals & Events",
+                "Arts & Literature",
+                "Historical Discoveries",
+                "Historical Expeditions"
+              ],
+              "sampleTags": [
+                "LI"
+              ],
+              "sampleRoles": [
+                "presentation",
+                "none"
+              ],
+              "rawBgTransparentExamples": 30
+            },
+            {
+              "layer": "content",
+              "category": "heading",
+              "textColor": "rgb(26, 26, 26)",
+              "backgroundColor": "rgb(245, 245, 245)",
+              "fontSize": "14px",
+              "fontWeight": "700",
+              "textDecoration": "none",
+              "count": 5,
+              "sampleLabels": [
+                "Support",
+                "Discover",
+                "Terms and settings",
+                "Partners",
+                "About"
+              ],
+              "sampleTags": [
+                "H3"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 5
+            },
+            {
+              "layer": "content",
+              "category": "listitem",
+              "textColor": "rgb(26, 26, 26)",
+              "backgroundColor": "rgb(245, 245, 245)",
+              "fontSize": "14px",
+              "fontWeight": "400",
+              "textDecoration": "none",
+              "count": 32,
+              "sampleLabels": [
+                "Manage your trips",
+                "Contact Customer Service",
+                "Safety resource centre",
+                "Genius loyalty programme",
+                "Seasonal and holiday deals"
+              ],
+              "sampleTags": [
+                "LI"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 32
+            },
+            {
+              "layer": "content",
+              "category": "paragraph",
+              "textColor": "rgb(26, 26, 26)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "textDecoration": "none",
+              "count": 1,
+              "sampleLabels": [
+                "Sign in to save 10% or more with a free Booking.com membership"
+              ],
+              "sampleTags": [
+                "P"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 1
+            },
+            {
+              "layer": "content",
+              "category": "heading",
+              "textColor": "rgb(56, 56, 56)",
+              "backgroundColor": "rgb(247, 247, 247)",
+              "fontSize": "16px",
+              "fontWeight": "700",
+              "textDecoration": "none",
+              "count": 1,
+              "sampleLabels": [
+                "Manage cookie settings"
+              ],
+              "sampleTags": [
+                "H2"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 1
+            },
+            {
+              "layer": "content",
+              "category": "paragraph",
+              "textColor": "rgb(26, 26, 26)",
+              "backgroundColor": "rgb(247, 247, 247)",
+              "fontSize": "14px",
+              "fontWeight": "400",
+              "textDecoration": "none",
+              "count": 6,
+              "sampleLabels": [
+                "When you use Booking.com, we (Booking.com and our partners) use the following ca",
+                "We and our partners use analytical cookies to gain information on how you use ou",
+                "We and our partners use marketing cookies, including social media cookies, to co",
+                "By selecting 'Accept', you consent to the use of analytical and marketing cookie",
+                "By selecting 'Decline', you will be provided with a less personalised experience"
+              ],
+              "sampleTags": [
+                "P"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 6
+            },
+            {
+              "layer": "content",
+              "category": "heading",
+              "textColor": "rgb(26, 26, 26)",
+              "backgroundColor": "rgb(247, 247, 247)",
+              "fontSize": "14px",
+              "fontWeight": "600",
+              "textDecoration": "none",
+              "count": 2,
+              "sampleLabels": [
+                "Analytical cookies",
+                "Marketing cookies"
+              ],
+              "sampleTags": [
+                "H3"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 2
+            }
           ]
         }
-      ]
+      },
+      "category_counts_total": {
+        "other": 5,
+        "link": 142,
+        "button": 61,
+        "input": 2,
+        "listitem": 70,
+        "heading": 85,
+        "paragraph": 12,
+        "label": 1
+      }
     },
     "airbnb.com": {
       "url": "https://www.airbnb.com/",
-      "total_elements_scanned": 119,
-      "total_unique_style_groups": 14,
-      "groups": [
-        {
-          "category": "link",
-          "textColor": "rgb(34, 34, 34)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "14px",
-          "count": 14,
-          "sampleTexts": [
-            "Skip to content",
-            "Homes\nHomes",
-            "NEW\nNEW\nExperiences\nExperiences, new",
-            "NEW\nNEW\nServices\nServices, new",
-            "Popular homes in Rome"
-          ],
-          "sampleTags": [
-            "A"
+      "matched_total": 277,
+      "elements_kept_total": 137,
+      "unique_style_groups_total": 17,
+      "layers": {
+        "interactive": {
+          "matched": 118,
+          "elements_kept": 78,
+          "raw_bg_transparent_kept": 61,
+          "category_counts": {
+            "link": 15,
+            "input": 1,
+            "button": 62
+          },
+          "groups": [
+            {
+              "layer": "interactive",
+              "category": "link",
+              "textColor": "rgb(34, 34, 34)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "fontSize": "14px",
+              "fontWeight": "400",
+              "textDecoration": "none",
+              "count": 14,
+              "sampleLabels": [
+                "Skip to content",
+                "Homes\nHomes",
+                "NEW\nNEW\nExperiences\nExperiences, new",
+                "NEW\nNEW\nServices\nServices, new",
+                "Popular homes in Rome"
+              ],
+              "sampleTags": [
+                "A"
+              ],
+              "sampleRoles": [
+                "tab"
+              ],
+              "rawBgTransparentExamples": 9
+            },
+            {
+              "layer": "interactive",
+              "category": "link",
+              "textColor": "rgb(255, 56, 92)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "fontSize": "14px",
+              "fontWeight": "400",
+              "textDecoration": "none",
+              "count": 1,
+              "sampleLabels": [
+                "Airbnb homepage"
+              ],
+              "sampleTags": [
+                "A"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 1
+            },
+            {
+              "layer": "interactive",
+              "category": "input",
+              "textColor": "rgb(34, 34, 34)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "fontSize": "14px",
+              "fontWeight": "500",
+              "textDecoration": "none",
+              "count": 1,
+              "sampleLabels": [
+                "Where"
+              ],
+              "sampleTags": [
+                "INPUT"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 1
+            },
+            {
+              "layer": "interactive",
+              "category": "button",
+              "textColor": "rgb(34, 34, 34)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "fontSize": "14px",
+              "fontWeight": "400",
+              "textDecoration": "none",
+              "count": 3,
+              "sampleLabels": [
+                "When\nAdd dates",
+                "Who\nAdd guests",
+                "Search"
+              ],
+              "sampleTags": [
+                "DIV",
+                "BUTTON"
+              ],
+              "sampleRoles": [
+                "button"
+              ],
+              "rawBgTransparentExamples": 3
+            },
+            {
+              "layer": "interactive",
+              "category": "button",
+              "textColor": "rgb(34, 34, 34)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "fontSize": "14px",
+              "fontWeight": "500",
+              "textDecoration": "none",
+              "count": 1,
+              "sampleLabels": [
+                "Become a host"
+              ],
+              "sampleTags": [
+                "BUTTON"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 1
+            },
+            {
+              "layer": "interactive",
+              "category": "button",
+              "textColor": "rgb(34, 34, 34)",
+              "backgroundColor": "rgb(242, 242, 242)",
+              "fontSize": "14px",
+              "fontWeight": "400",
+              "textDecoration": "none",
+              "count": 7,
+              "sampleLabels": [
+                "Choose a language and currency",
+                "Main navigation menu",
+                "_"
+              ],
+              "sampleTags": [
+                "BUTTON"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 0
+            },
+            {
+              "layer": "interactive",
+              "category": "button",
+              "textColor": "rgb(193, 193, 193)",
+              "backgroundColor": "rgb(242, 242, 242)",
+              "fontSize": "14px",
+              "fontWeight": "400",
+              "textDecoration": "none",
+              "count": 5,
+              "sampleLabels": [
+                "_"
+              ],
+              "sampleTags": [
+                "BUTTON"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 0
+            },
+            {
+              "layer": "interactive",
+              "category": "button",
+              "textColor": "rgb(34, 34, 34)",
+              "backgroundColor": "rgb(221, 221, 221)",
+              "fontSize": "16px",
+              "fontWeight": "500",
+              "textDecoration": "none",
+              "count": 40,
+              "sampleLabels": [
+                "Add to wishlist: Apartment in Esquilino",
+                "Add to wishlist: Room in Tiburtino",
+                "Add to wishlist: Guesthouse in Testaccio",
+                "Add to wishlist: Room in Pietralata",
+                "Add to wishlist: Room in EUR"
+              ],
+              "sampleTags": [
+                "BUTTON"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 40
+            },
+            {
+              "layer": "interactive",
+              "category": "button",
+              "textColor": "rgb(34, 34, 34)",
+              "backgroundColor": "rgb(247, 247, 247)",
+              "fontSize": "14px",
+              "fontWeight": "500",
+              "textDecoration": "none",
+              "count": 1,
+              "sampleLabels": [
+                "Popular"
+              ],
+              "sampleTags": [
+                "BUTTON"
+              ],
+              "sampleRoles": [
+                "tab"
+              ],
+              "rawBgTransparentExamples": 1
+            },
+            {
+              "layer": "interactive",
+              "category": "button",
+              "textColor": "rgb(106, 106, 106)",
+              "backgroundColor": "rgb(247, 247, 247)",
+              "fontSize": "14px",
+              "fontWeight": "500",
+              "textDecoration": "none",
+              "count": 5,
+              "sampleLabels": [
+                "Arts & culture",
+                "Beach",
+                "Mountains",
+                "Outdoors",
+                "Things to do"
+              ],
+              "sampleTags": [
+                "BUTTON"
+              ],
+              "sampleRoles": [
+                "tab"
+              ],
+              "rawBgTransparentExamples": 5
+            }
           ]
         },
-        {
-          "category": "heading",
-          "textColor": "rgb(34, 34, 34)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "28px",
-          "count": 1,
-          "sampleTexts": [
-            "Airbnb homepage"
-          ],
-          "sampleTags": [
-            "H1"
-          ]
-        },
-        {
-          "category": "other",
-          "textColor": "rgb(34, 34, 34)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "14px",
-          "count": 51,
-          "sampleTexts": [
-            "Homes\nHomes\nNEW\nNEW\nExperiences\nExperiences, new\nNEW\nNEW\nServices\nServices, new\n",
-            "Homes\nHomes\nNEW\nNEW\nExperiences\nExperiences, new\nNEW\nNEW\nServices\nServices, new\n",
-            "Homes\nHomes\nNEW\nNEW\nExperiences\nExperiences, new\nNEW\nNEW\nServices\nServices, new",
-            "Popular homes in Rome\n6 of 9 items showing\n_\n_\nGuest favorite\nGuest favorite\nApa",
-            "Guest favorite\nGuest favorite\nApartment in Esquilino\nJul 24\u2009\u2013\u200926\n,\n\u00a0\u00b7\u00a0Individual"
-          ],
-          "sampleTags": [
-            "HEADER",
-            "FORM",
-            "DIV",
-            "SECTION"
-          ]
-        },
-        {
-          "category": "button",
-          "textColor": "rgb(34, 34, 34)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "14px",
-          "count": 5,
-          "sampleTexts": [
-            "When\nAdd dates",
-            "Who\nAdd guests",
-            "Become a host",
-            "Popular",
-            "Show more"
-          ],
-          "sampleTags": [
-            "DIV",
-            "BUTTON"
-          ]
-        },
-        {
-          "category": "navigation",
-          "textColor": "rgb(34, 34, 34)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "14px",
-          "count": 1,
-          "sampleTexts": [
-            "Become a host"
-          ],
-          "sampleTags": [
-            "NAV"
-          ]
-        },
-        {
-          "category": "heading",
-          "textColor": "rgb(34, 34, 34)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "14px",
-          "count": 6,
-          "sampleTexts": [
-            "Popular homes in Rome",
-            "Featured hotels in Paris",
-            "Available next month in Madrid",
-            "Stay in Barcelona",
-            "Available next month in Milan"
-          ],
-          "sampleTags": [
-            "H2",
-            "H3"
-          ]
-        },
-        {
-          "category": "button",
-          "textColor": "rgb(193, 193, 193)",
-          "backgroundColor": "rgb(242, 242, 242)",
-          "fontSize": "14px",
-          "count": 5,
-          "sampleTexts": [
-            "_",
-            "_",
-            "_",
-            "_",
-            "_"
-          ],
-          "sampleTags": [
-            "BUTTON"
-          ]
-        },
-        {
-          "category": "button",
-          "textColor": "rgb(34, 34, 34)",
-          "backgroundColor": "rgb(242, 242, 242)",
-          "fontSize": "14px",
-          "count": 5,
-          "sampleTexts": [
-            "_",
-            "_",
-            "_",
-            "_",
-            "_"
-          ],
-          "sampleTags": [
-            "BUTTON"
-          ]
-        },
-        {
-          "category": "link",
-          "textColor": "rgb(34, 34, 34)",
-          "backgroundColor": "rgb(255, 255, 255)",
-          "fontSize": "14px",
-          "count": 5,
-          "sampleTexts": [
-            "See all",
-            "See all",
-            "See all",
-            "See all",
-            "See all"
-          ],
-          "sampleTags": [
-            "A"
-          ]
-        },
-        {
-          "category": "heading",
-          "textColor": "rgb(34, 34, 34)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "22px",
-          "count": 1,
-          "sampleTexts": [
-            "Inspiration for future getaways"
-          ],
-          "sampleTags": [
-            "H2"
-          ]
-        },
-        {
-          "category": "button",
-          "textColor": "rgb(106, 106, 106)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "14px",
-          "count": 6,
-          "sampleTexts": [
-            "Arts & culture",
-            "Beach",
-            "Mountains",
-            "Outdoors",
-            "Things to do"
-          ],
-          "sampleTags": [
-            "BUTTON"
-          ]
-        },
-        {
-          "category": "link",
-          "textColor": "rgb(106, 106, 106)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "14px",
-          "count": 17,
-          "sampleTexts": [
-            "West Palm Beach\u00a0\nVacation rentals",
-            "Brooklyn\u00a0\nApartment rentals",
-            "Dallas\u00a0\nApartment rentals",
-            "Santo Domingo\u00a0\nMonthly Rentals",
-            "Milan\u00a0\nMonthly Rentals"
-          ],
-          "sampleTags": [
-            "A"
-          ]
-        },
-        {
-          "category": "other",
-          "textColor": "rgb(34, 34, 34)",
-          "backgroundColor": "rgb(247, 247, 247)",
-          "fontSize": "14px",
-          "count": 1,
-          "sampleTexts": [
-            "Site Footer\nSupport\nHelp Center\nGet help with a safety issue\nAirCover\nAnti-discr"
-          ],
-          "sampleTags": [
-            "FOOTER"
-          ]
-        },
-        {
-          "category": "heading",
-          "textColor": "rgb(34, 34, 34)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "21px",
-          "count": 1,
-          "sampleTexts": [
-            "Site Footer"
-          ],
-          "sampleTags": [
-            "H2"
+        "content": {
+          "matched": 159,
+          "elements_kept": 59,
+          "raw_bg_transparent_kept": 59,
+          "category_counts": {
+            "heading": 12,
+            "listitem": 46,
+            "paragraph": 1
+          },
+          "groups": [
+            {
+              "layer": "content",
+              "category": "heading",
+              "textColor": "rgb(34, 34, 34)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "fontSize": "28px",
+              "fontWeight": "700",
+              "textDecoration": "none",
+              "count": 1,
+              "sampleLabels": [
+                "Airbnb homepage"
+              ],
+              "sampleTags": [
+                "H1"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 1
+            },
+            {
+              "layer": "content",
+              "category": "heading",
+              "textColor": "rgb(34, 34, 34)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "fontSize": "14px",
+              "fontWeight": "400",
+              "textDecoration": "none",
+              "count": 6,
+              "sampleLabels": [
+                "Popular homes in Rome",
+                "Featured hotels in Paris",
+                "Available next month in Madrid",
+                "Stay in Barcelona",
+                "Available next month in Milan"
+              ],
+              "sampleTags": [
+                "H2",
+                "H1"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 6
+            },
+            {
+              "layer": "content",
+              "category": "heading",
+              "textColor": "rgb(34, 34, 34)",
+              "backgroundColor": "rgb(247, 247, 247)",
+              "fontSize": "22px",
+              "fontWeight": "500",
+              "textDecoration": "none",
+              "count": 1,
+              "sampleLabels": [
+                "Inspiration for future getaways"
+              ],
+              "sampleTags": [
+                "H2"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 1
+            },
+            {
+              "layer": "content",
+              "category": "listitem",
+              "textColor": "rgb(34, 34, 34)",
+              "backgroundColor": "rgb(247, 247, 247)",
+              "fontSize": "14px",
+              "fontWeight": "400",
+              "textDecoration": "none",
+              "count": 46,
+              "sampleLabels": [
+                "West Palm Beach \nVacation rentals",
+                "Brooklyn \nApartment rentals",
+                "Dallas \nApartment rentals",
+                "Santo Domingo \nMonthly Rentals",
+                "Milan \nMonthly Rentals"
+              ],
+              "sampleTags": [
+                "LI"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 46
+            },
+            {
+              "layer": "content",
+              "category": "heading",
+              "textColor": "rgb(34, 34, 34)",
+              "backgroundColor": "rgb(247, 247, 247)",
+              "fontSize": "21px",
+              "fontWeight": "700",
+              "textDecoration": "none",
+              "count": 1,
+              "sampleLabels": [
+                "Site Footer"
+              ],
+              "sampleTags": [
+                "H2"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 1
+            },
+            {
+              "layer": "content",
+              "category": "heading",
+              "textColor": "rgb(34, 34, 34)",
+              "backgroundColor": "rgb(247, 247, 247)",
+              "fontSize": "14px",
+              "fontWeight": "500",
+              "textDecoration": "none",
+              "count": 3,
+              "sampleLabels": [
+                "Support",
+                "Hosting",
+                "Airbnb"
+              ],
+              "sampleTags": [
+                "H3"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 3
+            },
+            {
+              "layer": "content",
+              "category": "paragraph",
+              "textColor": "rgb(34, 34, 34)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "fontSize": "14px",
+              "fontWeight": "400",
+              "textDecoration": "none",
+              "count": 1,
+              "sampleLabels": [
+                "We use cookies and other technologies to personalize content, measure ads, and p"
+              ],
+              "sampleTags": [
+                "P"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 1
+            }
           ]
         }
-      ]
+      },
+      "category_counts_total": {
+        "link": 15,
+        "input": 1,
+        "button": 62,
+        "heading": 12,
+        "listitem": 46,
+        "paragraph": 1
+      }
     },
     "react.dev": {
       "url": "https://react.dev/",
-      "total_elements_scanned": 80,
-      "total_unique_style_groups": 17,
-      "groups": [
-        {
-          "category": "navigation",
-          "textColor": "rgb(64, 71, 86)",
-          "backgroundColor": "rgba(255, 255, 255, 0.9)",
-          "fontSize": "17px",
-          "count": 1,
-          "sampleTexts": [
-            "React\nv19.2\nSearch\n\u2318\nK\nLearn\nReference\nCommunity\nBlog"
-          ],
-          "sampleTags": [
-            "NAV"
+      "matched_total": 244,
+      "elements_kept_total": 118,
+      "unique_style_groups_total": 26,
+      "layers": {
+        "interactive": {
+          "matched": 143,
+          "elements_kept": 81,
+          "raw_bg_transparent_kept": 75,
+          "category_counts": {
+            "link": 47,
+            "button": 31,
+            "input": 3
+          },
+          "groups": [
+            {
+              "layer": "interactive",
+              "category": "link",
+              "textColor": "rgb(35, 39, 47)",
+              "backgroundColor": "rgba(255, 255, 255, 0.9)",
+              "fontSize": "17px",
+              "fontWeight": "400",
+              "textDecoration": "none",
+              "count": 1,
+              "sampleLabels": [
+                "React"
+              ],
+              "sampleTags": [
+                "A"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 1
+            },
+            {
+              "layer": "interactive",
+              "category": "link",
+              "textColor": "rgb(94, 104, 126)",
+              "backgroundColor": "rgba(255, 255, 255, 0.9)",
+              "fontSize": "13px",
+              "fontWeight": "500",
+              "textDecoration": "none",
+              "count": 1,
+              "sampleLabels": [
+                "v19.2"
+              ],
+              "sampleTags": [
+                "A"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 1
+            },
+            {
+              "layer": "interactive",
+              "category": "button",
+              "textColor": "rgb(153, 161, 179)",
+              "backgroundColor": "rgba(153, 161, 179, 0.2)",
+              "fontSize": "15px",
+              "fontWeight": "500",
+              "textDecoration": "none",
+              "count": 1,
+              "sampleLabels": [
+                "Search\n⌘\nK"
+              ],
+              "sampleTags": [
+                "BUTTON"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 0
+            },
+            {
+              "layer": "interactive",
+              "category": "link",
+              "textColor": "rgb(64, 71, 86)",
+              "backgroundColor": "rgba(255, 255, 255, 0.9)",
+              "fontSize": "15px",
+              "fontWeight": "500",
+              "textDecoration": "none",
+              "count": 6,
+              "sampleLabels": [
+                "Learn",
+                "Reference",
+                "Community",
+                "Blog",
+                "Translations"
+              ],
+              "sampleTags": [
+                "A"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 6
+            },
+            {
+              "layer": "interactive",
+              "category": "button",
+              "textColor": "rgb(64, 71, 86)",
+              "backgroundColor": "rgba(255, 255, 255, 0.9)",
+              "fontSize": "15px",
+              "fontWeight": "500",
+              "textDecoration": "none",
+              "count": 1,
+              "sampleLabels": [
+                "Use Dark Mode"
+              ],
+              "sampleTags": [
+                "BUTTON"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 1
+            },
+            {
+              "layer": "interactive",
+              "category": "link",
+              "textColor": "rgb(255, 255, 255)",
+              "backgroundColor": "rgb(8, 126, 164)",
+              "fontSize": "17px",
+              "fontWeight": "700",
+              "textDecoration": "none",
+              "count": 2,
+              "sampleLabels": [
+                "Learn React",
+                "Get Started"
+              ],
+              "sampleTags": [
+                "A"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 0
+            },
+            {
+              "layer": "interactive",
+              "category": "link",
+              "textColor": "rgb(35, 39, 47)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "fontSize": "17px",
+              "fontWeight": "700",
+              "textDecoration": "none",
+              "count": 5,
+              "sampleLabels": [
+                "API Reference",
+                "Add React to your page",
+                "Get started with a framework",
+                "Build for native platforms",
+                "Read more React news"
+              ],
+              "sampleTags": [
+                "A"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 5
+            },
+            {
+              "layer": "interactive",
+              "category": "button",
+              "textColor": "rgb(94, 104, 126)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "fontSize": "17px",
+              "fontWeight": "400",
+              "textDecoration": "none",
+              "count": 28,
+              "sampleLabels": [
+                "Save"
+              ],
+              "sampleTags": [
+                "BUTTON"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 28
+            },
+            {
+              "layer": "interactive",
+              "category": "input",
+              "textColor": "rgb(35, 39, 47)",
+              "backgroundColor": "rgb(235, 236, 240)",
+              "fontSize": "15px",
+              "fontWeight": "400",
+              "textDecoration": "none",
+              "count": 2,
+              "sampleLabels": [
+                "Search"
+              ],
+              "sampleTags": [
+                "INPUT"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 0
+            },
+            {
+              "layer": "interactive",
+              "category": "link",
+              "textColor": "rgb(8, 126, 164)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "fontSize": "20px",
+              "fontWeight": "400",
+              "textDecoration": "none",
+              "count": 2,
+              "sampleLabels": [
+                "Next.js",
+                "React Router"
+              ],
+              "sampleTags": [
+                "A"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 2
+            },
+            {
+              "layer": "interactive",
+              "category": "button",
+              "textColor": "rgb(94, 104, 126)",
+              "backgroundColor": "rgb(235, 236, 239)",
+              "fontSize": "13px",
+              "fontWeight": "400",
+              "textDecoration": "none",
+              "count": 1,
+              "sampleLabels": [
+                "Reload"
+              ],
+              "sampleTags": [
+                "BUTTON"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 0
+            },
+            {
+              "layer": "interactive",
+              "category": "input",
+              "textColor": "rgb(246, 247, 249)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "fontSize": "24px",
+              "fontWeight": "700",
+              "textDecoration": "none",
+              "count": 1,
+              "sampleLabels": [
+                "Event"
+              ],
+              "sampleTags": [
+                "SELECT"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 1
+            },
+            {
+              "layer": "interactive",
+              "category": "link",
+              "textColor": "rgb(8, 126, 164)",
+              "backgroundColor": "rgb(22, 24, 29)",
+              "fontSize": "20px",
+              "fontWeight": "400",
+              "textDecoration": "none",
+              "count": 2,
+              "sampleLabels": [
+                "React Native",
+                "Expo"
+              ],
+              "sampleTags": [
+                "A"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 2
+            },
+            {
+              "layer": "interactive",
+              "category": "link",
+              "textColor": "rgb(35, 39, 47)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "fontSize": "17px",
+              "fontWeight": "400",
+              "textDecoration": "none",
+              "count": 4,
+              "sampleLabels": [
+                "Additional Vulnerabilities in RSC\nDecember 11, 2025",
+                "Vulnerability in React Server Components\nDecember 3, 2025",
+                "React Conf 2025 Recap\nOctober 16, 2025",
+                "React Compiler v1.0\nOctober 7, 2025"
+              ],
+              "sampleTags": [
+                "A"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 4
+            },
+            {
+              "layer": "interactive",
+              "category": "link",
+              "textColor": "rgb(64, 71, 86)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "fontSize": "17px",
+              "fontWeight": "500",
+              "textDecoration": "none",
+              "count": 5,
+              "sampleLabels": [
+                "Meta Open Source",
+                "React on Facebook",
+                "React on Twitter",
+                "React on Bluesky",
+                "React on Github"
+              ],
+              "sampleTags": [
+                "A"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 5
+            },
+            {
+              "layer": "interactive",
+              "category": "link",
+              "textColor": "rgb(64, 71, 86)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "fontSize": "17px",
+              "fontWeight": "700",
+              "textDecoration": "none",
+              "count": 3,
+              "sampleLabels": [
+                "Learn React",
+                "API Reference",
+                "Community"
+              ],
+              "sampleTags": [
+                "A"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 3
+            },
+            {
+              "layer": "interactive",
+              "category": "link",
+              "textColor": "rgb(35, 39, 47)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "fontSize": "13px",
+              "fontWeight": "500",
+              "textDecoration": "none",
+              "count": 16,
+              "sampleLabels": [
+                "Quick Start",
+                "Installation",
+                "Describing the UI",
+                "Adding Interactivity",
+                "Managing State"
+              ],
+              "sampleTags": [
+                "A"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 16
+            }
           ]
         },
-        {
-          "category": "link",
-          "textColor": "rgb(35, 39, 47)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "17px",
-          "count": 10,
-          "sampleTexts": [
-            "React",
-            "API Reference",
-            "Add React to your page",
-            "Get started with a framework",
-            "Build for native platforms"
-          ],
-          "sampleTags": [
-            "A"
-          ]
-        },
-        {
-          "category": "link",
-          "textColor": "rgb(94, 104, 126)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "13px",
-          "count": 1,
-          "sampleTexts": [
-            "v19.2"
-          ],
-          "sampleTags": [
-            "A"
-          ]
-        },
-        {
-          "category": "button",
-          "textColor": "rgb(153, 161, 179)",
-          "backgroundColor": "rgba(153, 161, 179, 0.2)",
-          "fontSize": "15px",
-          "count": 1,
-          "sampleTexts": [
-            "Search\n\u2318\nK"
-          ],
-          "sampleTags": [
-            "BUTTON"
-          ]
-        },
-        {
-          "category": "link",
-          "textColor": "rgb(64, 71, 86)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "15px",
-          "count": 4,
-          "sampleTexts": [
-            "Learn",
-            "Reference",
-            "Community",
-            "Blog"
-          ],
-          "sampleTags": [
-            "A"
-          ]
-        },
-        {
-          "category": "heading",
-          "textColor": "rgb(35, 39, 47)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "52px",
-          "count": 9,
-          "sampleTexts": [
-            "React",
-            "Create user interfaces from components",
-            "Write components with code and markup",
-            "Add interactivity wherever you need it",
-            "Go full-stack\nwith a framework"
-          ],
-          "sampleTags": [
-            "H1",
-            "H2"
-          ]
-        },
-        {
-          "category": "paragraph",
-          "textColor": "rgb(64, 71, 86)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "32px",
-          "count": 1,
-          "sampleTexts": [
-            "The library for web and native user interfaces"
-          ],
-          "sampleTags": [
-            "P"
-          ]
-        },
-        {
-          "category": "link",
-          "textColor": "rgb(255, 255, 255)",
-          "backgroundColor": "rgb(8, 126, 164)",
-          "fontSize": "17px",
-          "count": 2,
-          "sampleTexts": [
-            "Learn React",
-            "Get Started"
-          ],
-          "sampleTags": [
-            "A"
-          ]
-        },
-        {
-          "category": "paragraph",
-          "textColor": "rgb(64, 71, 86)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "20px",
-          "count": 16,
-          "sampleTexts": [
-            "React lets you build user interfaces out of individual pieces called components.",
-            "Whether you work on your own or with thousands of other developers, using React ",
-            "React components are JavaScript functions. Want to show some content conditional",
-            "This markup syntax is called JSX. It is a JavaScript syntax extension popularize",
-            "React components receive data and return what should appear on the screen. You c"
-          ],
-          "sampleTags": [
-            "P"
-          ]
-        },
-        {
-          "category": "heading",
-          "textColor": "rgb(94, 104, 126)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "13px",
-          "count": 4,
-          "sampleTexts": [
-            "Video.js",
-            "VideoList.js",
-            "SearchableVideoList.js",
-            "confs/[slug].js"
-          ],
-          "sampleTags": [
-            "H3"
-          ]
-        },
-        {
-          "category": "link",
-          "textColor": "rgb(8, 126, 164)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "20px",
-          "count": 4,
-          "sampleTexts": [
-            "Next.js",
-            "React Router",
-            "React Native",
-            "Expo"
-          ],
-          "sampleTags": [
-            "A"
-          ]
-        },
-        {
-          "category": "heading",
-          "textColor": "rgb(35, 39, 47)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "32px",
-          "count": 2,
-          "sampleTexts": [
-            "Stay true to the web",
-            "Go truly native"
-          ],
-          "sampleTags": [
-            "H4"
-          ]
-        },
-        {
-          "category": "paragraph",
-          "textColor": "rgb(94, 104, 126)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "13px",
-          "count": 1,
-          "sampleTexts": [
-            "LATEST REACT NEWS"
-          ],
-          "sampleTags": [
-            "P"
-          ]
-        },
-        {
-          "category": "heading",
-          "textColor": "rgb(35, 39, 47)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "28px",
-          "count": 4,
-          "sampleTexts": [
-            "Additional Vulnerabilities in RSC",
-            "Vulnerability in React Server Components",
-            "React Conf 2025 Recap",
-            "React Compiler v1.0"
-          ],
-          "sampleTags": [
-            "H2"
-          ]
-        },
-        {
-          "category": "other",
-          "textColor": "rgb(64, 71, 86)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "17px",
-          "count": 1,
-          "sampleTexts": [
-            "Copyright \u00a9 Meta Platforms, Inc\nuwu?\nLearn React\nQuick Start\nInstallation\nDescri"
-          ],
-          "sampleTags": [
-            "FOOTER"
-          ]
-        },
-        {
-          "category": "link",
-          "textColor": "rgb(64, 71, 86)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "17px",
-          "count": 3,
-          "sampleTexts": [
-            "Learn React",
-            "API Reference",
-            "Community"
-          ],
-          "sampleTags": [
-            "A"
-          ]
-        },
-        {
-          "category": "link",
-          "textColor": "rgb(35, 39, 47)",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "fontSize": "13px",
-          "count": 16,
-          "sampleTexts": [
-            "Quick Start",
-            "Installation",
-            "Describing the UI",
-            "Adding Interactivity",
-            "Managing State"
-          ],
-          "sampleTags": [
-            "A"
+        "content": {
+          "matched": 101,
+          "elements_kept": 37,
+          "raw_bg_transparent_kept": 37,
+          "category_counts": {
+            "heading": 19,
+            "paragraph": 18
+          },
+          "groups": [
+            {
+              "layer": "content",
+              "category": "heading",
+              "textColor": "rgb(35, 39, 47)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "fontSize": "52px",
+              "fontWeight": "600",
+              "textDecoration": "none",
+              "count": 9,
+              "sampleLabels": [
+                "React",
+                "Create user interfaces from components",
+                "Write components with code and markup",
+                "Add interactivity wherever you need it",
+                "Go full-stack\nwith a framework"
+              ],
+              "sampleTags": [
+                "H1",
+                "H2"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 9
+            },
+            {
+              "layer": "content",
+              "category": "paragraph",
+              "textColor": "rgb(64, 71, 86)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "fontSize": "32px",
+              "fontWeight": "400",
+              "textDecoration": "none",
+              "count": 1,
+              "sampleLabels": [
+                "The library for web and native user interfaces"
+              ],
+              "sampleTags": [
+                "P"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 1
+            },
+            {
+              "layer": "content",
+              "category": "paragraph",
+              "textColor": "rgb(64, 71, 86)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "fontSize": "20px",
+              "fontWeight": "400",
+              "textDecoration": "none",
+              "count": 15,
+              "sampleLabels": [
+                "React lets you build user interfaces out of individual pieces called components.",
+                "Whether you work on your own or with thousands of other developers, using React ",
+                "React components are JavaScript functions. Want to show some content conditional",
+                "This markup syntax is called JSX. It is a JavaScript syntax extension popularize",
+                "React components receive data and return what should appear on the screen. You c"
+              ],
+              "sampleTags": [
+                "P"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 15
+            },
+            {
+              "layer": "content",
+              "category": "heading",
+              "textColor": "rgb(94, 104, 126)",
+              "backgroundColor": "rgb(246, 247, 249)",
+              "fontSize": "13px",
+              "fontWeight": "400",
+              "textDecoration": "none",
+              "count": 4,
+              "sampleLabels": [
+                "Video.js",
+                "VideoList.js",
+                "SearchableVideoList.js",
+                "confs/[slug].js"
+              ],
+              "sampleTags": [
+                "H3"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 4
+            },
+            {
+              "layer": "content",
+              "category": "heading",
+              "textColor": "rgb(35, 39, 47)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "fontSize": "32px",
+              "fontWeight": "600",
+              "textDecoration": "none",
+              "count": 1,
+              "sampleLabels": [
+                "Stay true to the web"
+              ],
+              "sampleTags": [
+                "H4"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 1
+            },
+            {
+              "layer": "content",
+              "category": "heading",
+              "textColor": "rgb(35, 39, 47)",
+              "backgroundColor": "rgb(22, 24, 29)",
+              "fontSize": "32px",
+              "fontWeight": "600",
+              "textDecoration": "none",
+              "count": 1,
+              "sampleLabels": [
+                "Go truly native"
+              ],
+              "sampleTags": [
+                "H4"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 1
+            },
+            {
+              "layer": "content",
+              "category": "paragraph",
+              "textColor": "rgb(64, 71, 86)",
+              "backgroundColor": "rgb(22, 24, 29)",
+              "fontSize": "20px",
+              "fontWeight": "400",
+              "textDecoration": "none",
+              "count": 1,
+              "sampleLabels": [
+                "People expect native apps to look and feel like their platform. React Native and"
+              ],
+              "sampleTags": [
+                "P"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 1
+            },
+            {
+              "layer": "content",
+              "category": "paragraph",
+              "textColor": "rgb(94, 104, 126)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "fontSize": "13px",
+              "fontWeight": "700",
+              "textDecoration": "none",
+              "count": 1,
+              "sampleLabels": [
+                "LATEST REACT NEWS"
+              ],
+              "sampleTags": [
+                "P"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 1
+            },
+            {
+              "layer": "content",
+              "category": "heading",
+              "textColor": "rgb(35, 39, 47)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "fontSize": "28px",
+              "fontWeight": "600",
+              "textDecoration": "none",
+              "count": 4,
+              "sampleLabels": [
+                "Additional Vulnerabilities in RSC",
+                "Vulnerability in React Server Components",
+                "React Conf 2025 Recap",
+                "React Compiler v1.0"
+              ],
+              "sampleTags": [
+                "H2"
+              ],
+              "sampleRoles": [],
+              "rawBgTransparentExamples": 4
+            }
           ]
         }
-      ]
+      },
+      "category_counts_total": {
+        "link": 47,
+        "button": 31,
+        "input": 3,
+        "heading": 19,
+        "paragraph": 18
+      }
     }
   }
 }
