@@ -1,417 +1,1024 @@
 {
-  "url": "https://www.booking.com/",
-  "total_elements_scanned": 387,
-  "total_unique_style_groups": 27,
-  "groups": [
-    {
-      "category": "other",
-      "textColor": "rgb(26, 26, 26)",
-      "backgroundColor": "rgb(255, 255, 255)",
-      "fontSize": "14px",
-      "count": 1,
-      "sampleTexts": [
-        "Skip to main content"
-      ],
-      "sampleTags": [
-        "DIV"
+  "scan_date": "2026-02-23",
+  "total_websites": 3,
+  "websites": {
+    "booking.com": {
+      "url": "https://www.booking.com/",
+      "total_elements_scanned": 409,
+      "total_unique_style_groups": 35,
+      "groups": [
+        {
+          "category": "other",
+          "textColor": "rgb(26, 26, 26)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "count": 1,
+          "sampleTexts": [
+            "Skip to main content"
+          ],
+          "sampleTags": [
+            "DIV"
+          ]
+        },
+        {
+          "category": "link",
+          "textColor": "rgb(0, 108, 228)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "14px",
+          "count": 3,
+          "sampleTexts": [
+            "Skip to main content",
+            "Discover homes",
+            "Register"
+          ],
+          "sampleTags": [
+            "A"
+          ]
+        },
+        {
+          "category": "other",
+          "textColor": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(0, 59, 149)",
+          "fontSize": "14px",
+          "count": 1,
+          "sampleTexts": [
+            "EUR\nList your property\nRegister\nSign in\nStays\nFlights\nFlight + Hotel\nCar rental\n"
+          ],
+          "sampleTags": [
+            "HEADER"
+          ]
+        },
+        {
+          "category": "navigation",
+          "textColor": "rgb(255, 255, 255)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "14px",
+          "count": 2,
+          "sampleTexts": [
+            "EUR\nList your property\nRegister\nSign in",
+            "Stays\nFlights\nFlight + Hotel\nCar rental\nAttractions\nAirport taxis"
+          ],
+          "sampleTags": [
+            "NAV"
+          ]
+        },
+        {
+          "category": "button",
+          "textColor": "rgb(255, 255, 255)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "16px",
+          "count": 1,
+          "sampleTexts": [
+            "EUR"
+          ],
+          "sampleTags": [
+            "BUTTON"
+          ]
+        },
+        {
+          "category": "link",
+          "textColor": "rgb(255, 255, 255)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "16px",
+          "count": 3,
+          "sampleTexts": [
+            "List your property",
+            "Sign in or register",
+            "Sign in or register"
+          ],
+          "sampleTags": [
+            "A"
+          ]
+        },
+        {
+          "category": "link",
+          "textColor": "rgb(0, 108, 228)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "count": 2,
+          "sampleTexts": [
+            "Register",
+            "Sign in"
+          ],
+          "sampleTags": [
+            "A"
+          ]
+        },
+        {
+          "category": "other",
+          "textColor": "rgb(255, 255, 255)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "14px",
+          "count": 7,
+          "sampleTexts": [
+            "Stays\nFlights\nFlight + Hotel\nCar rental\nAttractions\nAirport taxis",
+            "Stays",
+            "Flights",
+            "Flight + Hotel",
+            "Car rental"
+          ],
+          "sampleTags": [
+            "UL",
+            "LI"
+          ]
+        },
+        {
+          "category": "link",
+          "textColor": "rgb(255, 255, 255)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "14px",
+          "count": 8,
+          "sampleTexts": [
+            "Stays",
+            "Flights",
+            "Flight + Hotel",
+            "Car rental",
+            "Attractions"
+          ],
+          "sampleTags": [
+            "A"
+          ]
+        },
+        {
+          "category": "other",
+          "textColor": "rgb(26, 26, 26)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "14px",
+          "count": 97,
+          "sampleTexts": [
+            "Unlock Flights savings with member-only deals",
+            "Check-in date\n\u2014\nCheck-out date\n2 adults \u00b7 0 children \u00b7 1 room\nSearch\nAdd flights",
+            "2 adults \u00b7 0 children \u00b7 1 room",
+            "Add flights",
+            "St. Julian's Bay Hotel\nSt Julian's, Malta\n7.3\n7.3\nGood\nGood\n4,045 reviews\nEarly "
+          ],
+          "sampleTags": [
+            "HEADER",
+            "FORM",
+            "DIV",
+            "LABEL",
+            "SECTION",
+            "UL",
+            "LI"
+          ]
+        },
+        {
+          "category": "heading",
+          "textColor": "rgb(26, 26, 26)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "24px",
+          "count": 11,
+          "sampleTexts": [
+            "Unlock Flights savings with member-only deals",
+            "Offers",
+            "Deals for the weekend",
+            "Browse by property type",
+            "Stay at our top unique properties"
+          ],
+          "sampleTags": [
+            "H1",
+            "H2"
+          ]
+        },
+        {
+          "category": "paragraph",
+          "textColor": "rgb(255, 255, 255)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "24px",
+          "count": 1,
+          "sampleTexts": [
+            "Save more on Flights marked with the Genius label."
+          ],
+          "sampleTags": [
+            "P"
+          ]
+        },
+        {
+          "category": "button",
+          "textColor": "rgb(26, 26, 26)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "count": 2,
+          "sampleTexts": [
+            "Check-in date\n\u2014\nCheck-out date",
+            "2 adults \u00b7 0 children \u00b7 1 room"
+          ],
+          "sampleTags": [
+            "BUTTON"
+          ]
+        },
+        {
+          "category": "button",
+          "textColor": "rgb(255, 255, 255)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "20px",
+          "count": 1,
+          "sampleTexts": [
+            "Search"
+          ],
+          "sampleTags": [
+            "BUTTON"
+          ]
+        },
+        {
+          "category": "heading",
+          "textColor": "rgb(26, 26, 26)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "16px",
+          "count": 86,
+          "sampleTexts": [
+            "Book now, pay at the property",
+            "300M+ reviews from fellow travellers",
+            "2+ million properties worldwide",
+            "Trusted customer service you can rely on, 24/7",
+            "St. Julian's Bay Hotel"
+          ],
+          "sampleTags": [
+            "H3"
+          ]
+        },
+        {
+          "category": "paragraph",
+          "textColor": "rgb(26, 26, 26)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "14px",
+          "count": 10,
+          "sampleTexts": [
+            "FREE cancellation on most rooms",
+            "Get trusted information from guests like you",
+            "Hotels, guest houses, apartments, and more\u2026",
+            "We're always here to help",
+            "When you use Booking.com, we (Booking.com and our partners) use the following ca"
+          ],
+          "sampleTags": [
+            "P"
+          ]
+        },
+        {
+          "category": "heading",
+          "textColor": "rgb(26, 26, 26)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "20px",
+          "count": 2,
+          "sampleTexts": [
+            "At least 15% off",
+            "Sign in, save money"
+          ],
+          "sampleTags": [
+            "H3",
+            "H2"
+          ]
+        },
+        {
+          "category": "link",
+          "textColor": "rgb(0, 0, 238)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "14px",
+          "count": 42,
+          "sampleTexts": [
+            "St. Julian's Bay Hotel\nSt Julian's, Malta\n7.3\n7.3\nGood\nGood\n4,045 reviews\nEarly ",
+            "ME Malta by Meli\u00e1\nSt Julian's, Malta\n9.4\n9.4\nSuperb\nSuperb\n677 reviews\nEarly 202",
+            "The George, Urban Boutique Hotel\nSt Julian's, Malta\n7.9\n7.9\nGood\nGood\n950 review",
+            "HOLM Boutique & SPA - IK Collection\nSt Julian's, Malta\n8.9\n8.9\nFabulous\nFabulous",
+            "Spinola Hotel\nSt Julian's, Malta\n8.5\n8.5\nVery good\nVery good\n1,029 reviews\nEarly"
+          ],
+          "sampleTags": [
+            "A"
+          ]
+        },
+        {
+          "category": "link",
+          "textColor": "rgb(89, 89, 89)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "14px",
+          "count": 44,
+          "sampleTexts": [
+            "Hotels",
+            "Apartments",
+            "Resorts",
+            "Villas",
+            "Cabins"
+          ],
+          "sampleTags": [
+            "A"
+          ]
+        },
+        {
+          "category": "navigation",
+          "textColor": "rgb(26, 26, 26)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "14px",
+          "count": 3,
+          "sampleTexts": [
+            "Festivals\nArt & Literature\nHistorical Discoveries\nCultural Exploration\nGastronom",
+            "International cities\nCountries\nAthens hotels\nGreece",
+            "Countries\nRegions\nCities\nDistricts\nAirports\nHotels\nPlaces of interest\nHoliday Ho"
+          ],
+          "sampleTags": [
+            "NAV"
+          ]
+        },
+        {
+          "category": "button",
+          "textColor": "rgb(0, 108, 228)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "14px",
+          "count": 2,
+          "sampleTexts": [
+            "Festivals",
+            "International cities"
+          ],
+          "sampleTags": [
+            "BUTTON"
+          ]
+        },
+        {
+          "category": "button",
+          "textColor": "rgb(26, 26, 26)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "14px",
+          "count": 6,
+          "sampleTexts": [
+            "Art & Literature",
+            "Historical Discoveries",
+            "Cultural Exploration",
+            "Gastronomy",
+            "Romantic Getaways"
+          ],
+          "sampleTags": [
+            "BUTTON"
+          ]
+        },
+        {
+          "category": "other",
+          "textColor": "rgb(0, 108, 228)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "14px",
+          "count": 1,
+          "sampleTexts": [
+            "International cities"
+          ],
+          "sampleTags": [
+            "LI"
+          ]
+        },
+        {
+          "category": "link",
+          "textColor": "rgb(26, 26, 26)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "14px",
+          "count": 55,
+          "sampleTexts": [
+            "Athens hotels",
+            "Countries",
+            "Regions",
+            "Cities",
+            "Districts"
+          ],
+          "sampleTags": [
+            "A"
+          ]
+        },
+        {
+          "category": "other",
+          "textColor": "rgb(26, 26, 26)",
+          "backgroundColor": "rgb(245, 245, 245)",
+          "fontSize": "14px",
+          "count": 1,
+          "sampleTexts": [
+            "Countries\nRegions\nCities\nDistricts\nAirports\nHotels\nPlaces of interest\nHoliday Ho"
+          ],
+          "sampleTags": [
+            "FOOTER"
+          ]
+        },
+        {
+          "category": "heading",
+          "textColor": "rgb(26, 26, 26)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "14px",
+          "count": 7,
+          "sampleTexts": [
+            "Support",
+            "Discover",
+            "Terms and settings",
+            "Partners",
+            "About"
+          ],
+          "sampleTags": [
+            "H3"
+          ]
+        },
+        {
+          "category": "button",
+          "textColor": "rgb(26, 26, 26)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "16px",
+          "count": 1,
+          "sampleTexts": [
+            "EUR"
+          ],
+          "sampleTags": [
+            "BUTTON"
+          ]
+        },
+        {
+          "category": "paragraph",
+          "textColor": "rgb(26, 26, 26)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "16px",
+          "count": 1,
+          "sampleTexts": [
+            "Sign in to save 10% or more with a free Booking.com membership"
+          ],
+          "sampleTags": [
+            "P"
+          ]
+        },
+        {
+          "category": "other",
+          "textColor": "rgb(26, 26, 26)",
+          "backgroundColor": "rgb(247, 247, 247)",
+          "fontSize": "16px",
+          "count": 1,
+          "sampleTexts": [
+            "Manage cookie settings\n\nWhen you use Booking.com, we (Booking.com and our partne"
+          ],
+          "sampleTags": [
+            "DIV"
+          ]
+        },
+        {
+          "category": "other",
+          "textColor": "rgb(26, 26, 26)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "16px",
+          "count": 1,
+          "sampleTexts": [
+            "Manage cookie settings\n\nWhen you use Booking.com, we (Booking.com and our partne"
+          ],
+          "sampleTags": [
+            "DIV"
+          ]
+        },
+        {
+          "category": "heading",
+          "textColor": "rgb(56, 56, 56)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "16px",
+          "count": 1,
+          "sampleTexts": [
+            "Manage cookie settings"
+          ],
+          "sampleTags": [
+            "H2"
+          ]
+        },
+        {
+          "category": "other",
+          "textColor": "rgb(56, 56, 56)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "14px",
+          "count": 1,
+          "sampleTexts": [
+            "When you use Booking.com, we (Booking.com and our partners) use the following ca"
+          ],
+          "sampleTags": [
+            "DIV"
+          ]
+        },
+        {
+          "category": "link",
+          "textColor": "rgb(10, 117, 194)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "14px",
+          "count": 1,
+          "sampleTexts": [
+            "Privacy Notice"
+          ],
+          "sampleTags": [
+            "A"
+          ]
+        },
+        {
+          "category": "button",
+          "textColor": "rgb(0, 108, 228)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "13.008px",
+          "count": 1,
+          "sampleTexts": [
+            "Manage settings"
+          ],
+          "sampleTags": [
+            "BUTTON"
+          ]
+        },
+        {
+          "category": "button",
+          "textColor": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(0, 108, 228)",
+          "fontSize": "13.008px",
+          "count": 2,
+          "sampleTexts": [
+            "Decline",
+            "Accept"
+          ],
+          "sampleTags": [
+            "BUTTON"
+          ]
+        }
       ]
     },
-    {
-      "category": "link",
-      "textColor": "rgb(0, 108, 228)",
-      "backgroundColor": "rgba(0, 0, 0, 0)",
-      "fontSize": "14px",
-      "count": 3,
-      "sampleTexts": [
-        "Skip to main content",
-        "Discover homes",
-        "Register"
-      ],
-      "sampleTags": [
-        "A"
+    "airbnb.com": {
+      "url": "https://www.airbnb.com/",
+      "total_elements_scanned": 119,
+      "total_unique_style_groups": 14,
+      "groups": [
+        {
+          "category": "link",
+          "textColor": "rgb(34, 34, 34)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "14px",
+          "count": 14,
+          "sampleTexts": [
+            "Skip to content",
+            "Homes\nHomes",
+            "NEW\nNEW\nExperiences\nExperiences, new",
+            "NEW\nNEW\nServices\nServices, new",
+            "Popular homes in Rome"
+          ],
+          "sampleTags": [
+            "A"
+          ]
+        },
+        {
+          "category": "heading",
+          "textColor": "rgb(34, 34, 34)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "28px",
+          "count": 1,
+          "sampleTexts": [
+            "Airbnb homepage"
+          ],
+          "sampleTags": [
+            "H1"
+          ]
+        },
+        {
+          "category": "other",
+          "textColor": "rgb(34, 34, 34)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "14px",
+          "count": 51,
+          "sampleTexts": [
+            "Homes\nHomes\nNEW\nNEW\nExperiences\nExperiences, new\nNEW\nNEW\nServices\nServices, new\n",
+            "Homes\nHomes\nNEW\nNEW\nExperiences\nExperiences, new\nNEW\nNEW\nServices\nServices, new\n",
+            "Homes\nHomes\nNEW\nNEW\nExperiences\nExperiences, new\nNEW\nNEW\nServices\nServices, new",
+            "Popular homes in Rome\n6 of 9 items showing\n_\n_\nGuest favorite\nGuest favorite\nApa",
+            "Guest favorite\nGuest favorite\nApartment in Esquilino\nJul 24\u2009\u2013\u200926\n,\n\u00a0\u00b7\u00a0Individual"
+          ],
+          "sampleTags": [
+            "HEADER",
+            "FORM",
+            "DIV",
+            "SECTION"
+          ]
+        },
+        {
+          "category": "button",
+          "textColor": "rgb(34, 34, 34)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "14px",
+          "count": 5,
+          "sampleTexts": [
+            "When\nAdd dates",
+            "Who\nAdd guests",
+            "Become a host",
+            "Popular",
+            "Show more"
+          ],
+          "sampleTags": [
+            "DIV",
+            "BUTTON"
+          ]
+        },
+        {
+          "category": "navigation",
+          "textColor": "rgb(34, 34, 34)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "14px",
+          "count": 1,
+          "sampleTexts": [
+            "Become a host"
+          ],
+          "sampleTags": [
+            "NAV"
+          ]
+        },
+        {
+          "category": "heading",
+          "textColor": "rgb(34, 34, 34)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "14px",
+          "count": 6,
+          "sampleTexts": [
+            "Popular homes in Rome",
+            "Featured hotels in Paris",
+            "Available next month in Madrid",
+            "Stay in Barcelona",
+            "Available next month in Milan"
+          ],
+          "sampleTags": [
+            "H2",
+            "H3"
+          ]
+        },
+        {
+          "category": "button",
+          "textColor": "rgb(193, 193, 193)",
+          "backgroundColor": "rgb(242, 242, 242)",
+          "fontSize": "14px",
+          "count": 5,
+          "sampleTexts": [
+            "_",
+            "_",
+            "_",
+            "_",
+            "_"
+          ],
+          "sampleTags": [
+            "BUTTON"
+          ]
+        },
+        {
+          "category": "button",
+          "textColor": "rgb(34, 34, 34)",
+          "backgroundColor": "rgb(242, 242, 242)",
+          "fontSize": "14px",
+          "count": 5,
+          "sampleTexts": [
+            "_",
+            "_",
+            "_",
+            "_",
+            "_"
+          ],
+          "sampleTags": [
+            "BUTTON"
+          ]
+        },
+        {
+          "category": "link",
+          "textColor": "rgb(34, 34, 34)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "count": 5,
+          "sampleTexts": [
+            "See all",
+            "See all",
+            "See all",
+            "See all",
+            "See all"
+          ],
+          "sampleTags": [
+            "A"
+          ]
+        },
+        {
+          "category": "heading",
+          "textColor": "rgb(34, 34, 34)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "22px",
+          "count": 1,
+          "sampleTexts": [
+            "Inspiration for future getaways"
+          ],
+          "sampleTags": [
+            "H2"
+          ]
+        },
+        {
+          "category": "button",
+          "textColor": "rgb(106, 106, 106)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "14px",
+          "count": 6,
+          "sampleTexts": [
+            "Arts & culture",
+            "Beach",
+            "Mountains",
+            "Outdoors",
+            "Things to do"
+          ],
+          "sampleTags": [
+            "BUTTON"
+          ]
+        },
+        {
+          "category": "link",
+          "textColor": "rgb(106, 106, 106)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "14px",
+          "count": 17,
+          "sampleTexts": [
+            "West Palm Beach\u00a0\nVacation rentals",
+            "Brooklyn\u00a0\nApartment rentals",
+            "Dallas\u00a0\nApartment rentals",
+            "Santo Domingo\u00a0\nMonthly Rentals",
+            "Milan\u00a0\nMonthly Rentals"
+          ],
+          "sampleTags": [
+            "A"
+          ]
+        },
+        {
+          "category": "other",
+          "textColor": "rgb(34, 34, 34)",
+          "backgroundColor": "rgb(247, 247, 247)",
+          "fontSize": "14px",
+          "count": 1,
+          "sampleTexts": [
+            "Site Footer\nSupport\nHelp Center\nGet help with a safety issue\nAirCover\nAnti-discr"
+          ],
+          "sampleTags": [
+            "FOOTER"
+          ]
+        },
+        {
+          "category": "heading",
+          "textColor": "rgb(34, 34, 34)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "21px",
+          "count": 1,
+          "sampleTexts": [
+            "Site Footer"
+          ],
+          "sampleTags": [
+            "H2"
+          ]
+        }
       ]
     },
-    {
-      "category": "other",
-      "textColor": "rgb(255, 255, 255)",
-      "backgroundColor": "rgb(0, 59, 149)",
-      "fontSize": "14px",
-      "count": 1,
-      "sampleTexts": [
-        "EUR\nList your property\nRegister\nSign in\nStays\nFlights\nFlight + Hotel\nCar rental\n"
-      ],
-      "sampleTags": [
-        "HEADER"
-      ]
-    },
-    {
-      "category": "navigation",
-      "textColor": "rgb(255, 255, 255)",
-      "backgroundColor": "rgba(0, 0, 0, 0)",
-      "fontSize": "14px",
-      "count": 2,
-      "sampleTexts": [
-        "EUR\nList your property\nRegister\nSign in",
-        "Stays\nFlights\nFlight + Hotel\nCar rental\nAttractions\nAirport taxis"
-      ],
-      "sampleTags": [
-        "NAV"
-      ]
-    },
-    {
-      "category": "button",
-      "textColor": "rgb(255, 255, 255)",
-      "backgroundColor": "rgba(0, 0, 0, 0)",
-      "fontSize": "16px",
-      "count": 1,
-      "sampleTexts": [
-        "EUR"
-      ],
-      "sampleTags": [
-        "BUTTON"
-      ]
-    },
-    {
-      "category": "link",
-      "textColor": "rgb(255, 255, 255)",
-      "backgroundColor": "rgba(0, 0, 0, 0)",
-      "fontSize": "16px",
-      "count": 1,
-      "sampleTexts": [
-        "List your property"
-      ],
-      "sampleTags": [
-        "A"
-      ]
-    },
-    {
-      "category": "link",
-      "textColor": "rgb(0, 108, 228)",
-      "backgroundColor": "rgb(255, 255, 255)",
-      "fontSize": "14px",
-      "count": 2,
-      "sampleTexts": [
-        "Register",
-        "Sign in"
-      ],
-      "sampleTags": [
-        "A"
-      ]
-    },
-    {
-      "category": "other",
-      "textColor": "rgb(255, 255, 255)",
-      "backgroundColor": "rgba(0, 0, 0, 0)",
-      "fontSize": "14px",
-      "count": 7,
-      "sampleTexts": [
-        "Stays\nFlights\nFlight + Hotel\nCar rental\nAttractions\nAirport taxis",
-        "Stays",
-        "Flights",
-        "Flight + Hotel",
-        "Car rental"
-      ],
-      "sampleTags": [
-        "UL",
-        "LI"
-      ]
-    },
-    {
-      "category": "link",
-      "textColor": "rgb(255, 255, 255)",
-      "backgroundColor": "rgba(0, 0, 0, 0)",
-      "fontSize": "14px",
-      "count": 8,
-      "sampleTexts": [
-        "Stays",
-        "Flights",
-        "Flight + Hotel",
-        "Car rental",
-        "Attractions"
-      ],
-      "sampleTags": [
-        "A"
-      ]
-    },
-    {
-      "category": "other",
-      "textColor": "rgb(26, 26, 26)",
-      "backgroundColor": "rgba(0, 0, 0, 0)",
-      "fontSize": "14px",
-      "count": 96,
-      "sampleTexts": [
-        "Find your next stay",
-        "Check-in date\n\u2014\nCheck-out date\n2 adults \u00b7 0 children \u00b7 1 room\nSearch\nAdd flights",
-        "2 adults \u00b7 0 children \u00b7 1 room",
-        "Add flights to my search",
-        "Rome\nLondon"
-      ],
-      "sampleTags": [
-        "HEADER",
-        "FORM",
-        "DIV",
-        "LABEL",
-        "SECTION",
-        "UL",
-        "LI"
-      ]
-    },
-    {
-      "category": "heading",
-      "textColor": "rgb(26, 26, 26)",
-      "backgroundColor": "rgba(0, 0, 0, 0)",
-      "fontSize": "24px",
-      "count": 11,
-      "sampleTexts": [
-        "Find your next stay",
-        "Offers",
-        "Trending destinations",
-        "Browse by property type",
-        "Explore Malta"
-      ],
-      "sampleTags": [
-        "H1",
-        "H2"
-      ]
-    },
-    {
-      "category": "paragraph",
-      "textColor": "rgb(255, 255, 255)",
-      "backgroundColor": "rgba(0, 0, 0, 0)",
-      "fontSize": "24px",
-      "count": 1,
-      "sampleTexts": [
-        "Search low prices on hotels, homes and much more..."
-      ],
-      "sampleTags": [
-        "P"
-      ]
-    },
-    {
-      "category": "button",
-      "textColor": "rgb(26, 26, 26)",
-      "backgroundColor": "rgb(255, 255, 255)",
-      "fontSize": "14px",
-      "count": 2,
-      "sampleTexts": [
-        "Check-in date\n\u2014\nCheck-out date",
-        "2 adults \u00b7 0 children \u00b7 1 room"
-      ],
-      "sampleTags": [
-        "BUTTON"
-      ]
-    },
-    {
-      "category": "button",
-      "textColor": "rgb(255, 255, 255)",
-      "backgroundColor": "rgba(0, 0, 0, 0)",
-      "fontSize": "20px",
-      "count": 1,
-      "sampleTexts": [
-        "Search"
-      ],
-      "sampleTags": [
-        "BUTTON"
-      ]
-    },
-    {
-      "category": "heading",
-      "textColor": "rgb(26, 26, 26)",
-      "backgroundColor": "rgba(0, 0, 0, 0)",
-      "fontSize": "16px",
-      "count": 86,
-      "sampleTexts": [
-        "Book now, pay at the property",
-        "300M+ reviews from fellow travellers",
-        "2+ million properties worldwide",
-        "Trusted customer service you can rely on, 24/7",
-        "Hotels"
-      ],
-      "sampleTags": [
-        "H3"
-      ]
-    },
-    {
-      "category": "paragraph",
-      "textColor": "rgb(26, 26, 26)",
-      "backgroundColor": "rgba(0, 0, 0, 0)",
-      "fontSize": "14px",
-      "count": 4,
-      "sampleTexts": [
-        "FREE cancellation on most rooms",
-        "Get trusted information from guests like you",
-        "Hotels, guest houses, apartments, and more\u2026",
-        "We're always here to help"
-      ],
-      "sampleTags": [
-        "P"
-      ]
-    },
-    {
-      "category": "heading",
-      "textColor": "rgb(26, 26, 26)",
-      "backgroundColor": "rgba(0, 0, 0, 0)",
-      "fontSize": "20px",
-      "count": 1,
-      "sampleTexts": [
-        "At least 15% off"
-      ],
-      "sampleTags": [
-        "H3"
-      ]
-    },
-    {
-      "category": "link",
-      "textColor": "rgb(0, 0, 238)",
-      "backgroundColor": "rgba(0, 0, 0, 0)",
-      "fontSize": "14px",
-      "count": 42,
-      "sampleTexts": [
-        "Rome",
-        "London",
-        "St Julian's",
-        "St Paul's Bay",
-        "Milan"
-      ],
-      "sampleTags": [
-        "A"
-      ]
-    },
-    {
-      "category": "link",
-      "textColor": "rgb(89, 89, 89)",
-      "backgroundColor": "rgba(0, 0, 0, 0)",
-      "fontSize": "14px",
-      "count": 44,
-      "sampleTexts": [
-        "Hotels",
-        "Apartments",
-        "Resorts",
-        "Villas",
-        "Cabins"
-      ],
-      "sampleTags": [
-        "A"
-      ]
-    },
-    {
-      "category": "navigation",
-      "textColor": "rgb(26, 26, 26)",
-      "backgroundColor": "rgba(0, 0, 0, 0)",
-      "fontSize": "14px",
-      "count": 3,
-      "sampleTexts": [
-        "Festivals & Events\nArts & Literature\nHistorical Discoveries\nHistorical Expeditio",
-        "International cities\nCountries\nAthens hotels\nGreece",
-        "Countries\nRegions\nCities\nDistricts\nAirports\nHotels\nPlaces of interest\nHoliday Ho"
-      ],
-      "sampleTags": [
-        "NAV"
-      ]
-    },
-    {
-      "category": "button",
-      "textColor": "rgb(0, 108, 228)",
-      "backgroundColor": "rgba(0, 0, 0, 0)",
-      "fontSize": "14px",
-      "count": 2,
-      "sampleTexts": [
-        "Festivals & Events",
-        "International cities"
-      ],
-      "sampleTags": [
-        "BUTTON"
-      ]
-    },
-    {
-      "category": "button",
-      "textColor": "rgb(26, 26, 26)",
-      "backgroundColor": "rgba(0, 0, 0, 0)",
-      "fontSize": "14px",
-      "count": 5,
-      "sampleTexts": [
-        "Arts & Literature",
-        "Historical Discoveries",
-        "Historical Expeditions",
-        "Food & Cooking",
-        "Countries"
-      ],
-      "sampleTags": [
-        "BUTTON"
-      ]
-    },
-    {
-      "category": "other",
-      "textColor": "rgb(0, 108, 228)",
-      "backgroundColor": "rgba(0, 0, 0, 0)",
-      "fontSize": "14px",
-      "count": 1,
-      "sampleTexts": [
-        "International cities"
-      ],
-      "sampleTags": [
-        "LI"
-      ]
-    },
-    {
-      "category": "link",
-      "textColor": "rgb(26, 26, 26)",
-      "backgroundColor": "rgba(0, 0, 0, 0)",
-      "fontSize": "14px",
-      "count": 55,
-      "sampleTexts": [
-        "Athens hotels",
-        "Countries",
-        "Regions",
-        "Cities",
-        "Districts"
-      ],
-      "sampleTags": [
-        "A"
-      ]
-    },
-    {
-      "category": "other",
-      "textColor": "rgb(26, 26, 26)",
-      "backgroundColor": "rgb(245, 245, 245)",
-      "fontSize": "14px",
-      "count": 1,
-      "sampleTexts": [
-        "Countries\nRegions\nCities\nDistricts\nAirports\nHotels\nPlaces of interest\nHoliday Ho"
-      ],
-      "sampleTags": [
-        "FOOTER"
-      ]
-    },
-    {
-      "category": "heading",
-      "textColor": "rgb(26, 26, 26)",
-      "backgroundColor": "rgba(0, 0, 0, 0)",
-      "fontSize": "14px",
-      "count": 5,
-      "sampleTexts": [
-        "Support",
-        "Discover",
-        "Terms and settings",
-        "Partners",
-        "About"
-      ],
-      "sampleTags": [
-        "H3"
-      ]
-    },
-    {
-      "category": "button",
-      "textColor": "rgb(26, 26, 26)",
-      "backgroundColor": "rgba(0, 0, 0, 0)",
-      "fontSize": "16px",
-      "count": 1,
-      "sampleTexts": [
-        "EUR"
-      ],
-      "sampleTags": [
-        "BUTTON"
+    "react.dev": {
+      "url": "https://react.dev/",
+      "total_elements_scanned": 80,
+      "total_unique_style_groups": 17,
+      "groups": [
+        {
+          "category": "navigation",
+          "textColor": "rgb(64, 71, 86)",
+          "backgroundColor": "rgba(255, 255, 255, 0.9)",
+          "fontSize": "17px",
+          "count": 1,
+          "sampleTexts": [
+            "React\nv19.2\nSearch\n\u2318\nK\nLearn\nReference\nCommunity\nBlog"
+          ],
+          "sampleTags": [
+            "NAV"
+          ]
+        },
+        {
+          "category": "link",
+          "textColor": "rgb(35, 39, 47)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "17px",
+          "count": 10,
+          "sampleTexts": [
+            "React",
+            "API Reference",
+            "Add React to your page",
+            "Get started with a framework",
+            "Build for native platforms"
+          ],
+          "sampleTags": [
+            "A"
+          ]
+        },
+        {
+          "category": "link",
+          "textColor": "rgb(94, 104, 126)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "13px",
+          "count": 1,
+          "sampleTexts": [
+            "v19.2"
+          ],
+          "sampleTags": [
+            "A"
+          ]
+        },
+        {
+          "category": "button",
+          "textColor": "rgb(153, 161, 179)",
+          "backgroundColor": "rgba(153, 161, 179, 0.2)",
+          "fontSize": "15px",
+          "count": 1,
+          "sampleTexts": [
+            "Search\n\u2318\nK"
+          ],
+          "sampleTags": [
+            "BUTTON"
+          ]
+        },
+        {
+          "category": "link",
+          "textColor": "rgb(64, 71, 86)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "15px",
+          "count": 4,
+          "sampleTexts": [
+            "Learn",
+            "Reference",
+            "Community",
+            "Blog"
+          ],
+          "sampleTags": [
+            "A"
+          ]
+        },
+        {
+          "category": "heading",
+          "textColor": "rgb(35, 39, 47)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "52px",
+          "count": 9,
+          "sampleTexts": [
+            "React",
+            "Create user interfaces from components",
+            "Write components with code and markup",
+            "Add interactivity wherever you need it",
+            "Go full-stack\nwith a framework"
+          ],
+          "sampleTags": [
+            "H1",
+            "H2"
+          ]
+        },
+        {
+          "category": "paragraph",
+          "textColor": "rgb(64, 71, 86)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "32px",
+          "count": 1,
+          "sampleTexts": [
+            "The library for web and native user interfaces"
+          ],
+          "sampleTags": [
+            "P"
+          ]
+        },
+        {
+          "category": "link",
+          "textColor": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(8, 126, 164)",
+          "fontSize": "17px",
+          "count": 2,
+          "sampleTexts": [
+            "Learn React",
+            "Get Started"
+          ],
+          "sampleTags": [
+            "A"
+          ]
+        },
+        {
+          "category": "paragraph",
+          "textColor": "rgb(64, 71, 86)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "20px",
+          "count": 16,
+          "sampleTexts": [
+            "React lets you build user interfaces out of individual pieces called components.",
+            "Whether you work on your own or with thousands of other developers, using React ",
+            "React components are JavaScript functions. Want to show some content conditional",
+            "This markup syntax is called JSX. It is a JavaScript syntax extension popularize",
+            "React components receive data and return what should appear on the screen. You c"
+          ],
+          "sampleTags": [
+            "P"
+          ]
+        },
+        {
+          "category": "heading",
+          "textColor": "rgb(94, 104, 126)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "13px",
+          "count": 4,
+          "sampleTexts": [
+            "Video.js",
+            "VideoList.js",
+            "SearchableVideoList.js",
+            "confs/[slug].js"
+          ],
+          "sampleTags": [
+            "H3"
+          ]
+        },
+        {
+          "category": "link",
+          "textColor": "rgb(8, 126, 164)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "20px",
+          "count": 4,
+          "sampleTexts": [
+            "Next.js",
+            "React Router",
+            "React Native",
+            "Expo"
+          ],
+          "sampleTags": [
+            "A"
+          ]
+        },
+        {
+          "category": "heading",
+          "textColor": "rgb(35, 39, 47)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "32px",
+          "count": 2,
+          "sampleTexts": [
+            "Stay true to the web",
+            "Go truly native"
+          ],
+          "sampleTags": [
+            "H4"
+          ]
+        },
+        {
+          "category": "paragraph",
+          "textColor": "rgb(94, 104, 126)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "13px",
+          "count": 1,
+          "sampleTexts": [
+            "LATEST REACT NEWS"
+          ],
+          "sampleTags": [
+            "P"
+          ]
+        },
+        {
+          "category": "heading",
+          "textColor": "rgb(35, 39, 47)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "28px",
+          "count": 4,
+          "sampleTexts": [
+            "Additional Vulnerabilities in RSC",
+            "Vulnerability in React Server Components",
+            "React Conf 2025 Recap",
+            "React Compiler v1.0"
+          ],
+          "sampleTags": [
+            "H2"
+          ]
+        },
+        {
+          "category": "other",
+          "textColor": "rgb(64, 71, 86)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "17px",
+          "count": 1,
+          "sampleTexts": [
+            "Copyright \u00a9 Meta Platforms, Inc\nuwu?\nLearn React\nQuick Start\nInstallation\nDescri"
+          ],
+          "sampleTags": [
+            "FOOTER"
+          ]
+        },
+        {
+          "category": "link",
+          "textColor": "rgb(64, 71, 86)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "17px",
+          "count": 3,
+          "sampleTexts": [
+            "Learn React",
+            "API Reference",
+            "Community"
+          ],
+          "sampleTags": [
+            "A"
+          ]
+        },
+        {
+          "category": "link",
+          "textColor": "rgb(35, 39, 47)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontSize": "13px",
+          "count": 16,
+          "sampleTexts": [
+            "Quick Start",
+            "Installation",
+            "Describing the UI",
+            "Adding Interactivity",
+            "Managing State"
+          ],
+          "sampleTags": [
+            "A"
+          ]
+        }
       ]
     }
-  ]
+  }
 }
