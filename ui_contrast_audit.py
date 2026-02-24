@@ -24,11 +24,43 @@ a, button, input, select, textarea,
 [onclick], [tabindex]
 """
 
+# Text-content elements that carry WCAG SC 1.4.3 contrast requirements but are
+# not interactive.  Scanned separately from interactive elements (base state only).
+CONTENT_SELECTOR = (
+    "h1, h2, h3, h4, h5, h6, "
+    "p, li, dt, dd, "
+    "td, th, caption, figcaption, "
+    "label, legend, blockquote"
+)
 
 DEFAULT_URLS = [
-    "https://www.booking.com/",
-    "https://www.airbnb.com/",
-    "https://react.dev/"
+    "https://jspaint.app",
+    "https://10minutemail.com",
+    "https://mp3cut.net",
+    "https://is.gd",
+    "https://imgur.com",
+    "https://www.online-stopwatch.com",
+    "https://pixlr.com/e",
+    "https://hemingwayapp.com",
+    "https://cryptii.com",
+    "https://remove.bg",
+    "https://wheeldecide.com",
+    "https://typeracer.com",
+    "https://quickdraw.withgoogle.com",
+    "https://radio.garden",
+    "https://lifeat.io",
+    "https://monkeytype.com",
+    "https://draw.io",
+    "https://autodraw.com",
+    "https://www.desmos.com/calculator",
+    "https://www.wolframalpha.com",
+    "https://excalidraw.com",
+    "https://www.tldraw.com",
+    "https://cloudconvert.com",
+    "https://www.photopea.com",
+    "https://www.online-convert.com",
+    "https://ideone.com",
+    "https://www.virustotal.com",
 ]
 
 
@@ -54,6 +86,14 @@ DEFICIENCY_MAP = {
 _SIMULATOR = Simulator_Machado2009()
 _CVD_CACHE = {}  # (rgb_tuple, deficiency_str) -> rgb_tuple
 
+# CVD simulation severity (0.0 = no effect, 1.0 = complete dichromacy).
+# 1.0 is a methodological upper bound: it represents the most severe form of each
+# CVD type and produces the maximum possible contrast loss.  Anomalous trichromacy —
+# the most prevalent real-world form — typically falls in the 0.3–0.7 range.
+# Using 1.0 gives conservative, reproducible site comparisons and should be described
+# in reporting as a worst-case bound rather than a population average.
+CVD_SEVERITY = 1.0
+
 
 def simulate_rgb(rgb, deficiency: str):
     """
@@ -75,7 +115,7 @@ def simulate_rgb(rgb, deficiency: str):
     # DaltonLens in your environment expects a numpy array with .astype(...)
     arr = np.array([[rgb]], dtype=np.uint8)  # shape (1, 1, 3)
 
-    sim_arr = _SIMULATOR.simulate_cvd(arr, DEFICIENCY_MAP[deficiency], severity=1.0)
+    sim_arr = _SIMULATOR.simulate_cvd(arr, DEFICIENCY_MAP[deficiency], severity=CVD_SEVERITY)
 
     # Some versions return PIL Images; normalize to numpy
     if isinstance(sim_arr, Image.Image):
@@ -195,6 +235,26 @@ def classify(tag, role):
             if role in ["button", "link", "textbox", "tab", "checkbox", "radio"]:
                 return role
             return "interactive_other"
+
+
+def classify_content(tag):
+    """Map an HTML tag to a content-layer category name."""
+    tag = (tag or "").lower()
+    match tag:
+        case "h1" | "h2" | "h3" | "h4" | "h5" | "h6":
+            return "heading"
+        case "p":
+            return "paragraph"
+        case "li" | "dt" | "dd":
+            return "list-item"
+        case "td" | "th":
+            return "table-cell"
+        case "label" | "legend" | "caption" | "figcaption":
+            return "label"
+        case "blockquote":
+            return "blockquote"
+        case _:
+            return "text"
 
 
 # ----------------------------
@@ -456,6 +516,8 @@ def scan_url(page, url, max_elements=500):
     # stats
     kept = 0
     error_state_captured = 0
+    focus_state_captured = 0
+    hover_state_captured = 0
 
     for i in range(scan_n):
         el = loc.nth(i)
@@ -484,6 +546,56 @@ def scan_url(page, url, max_elements=500):
             groups[k_base] = _init_group("interactive", "base", category, base)
         else:
             _update_group(groups[k_base], base)
+
+        # --- focus state (all interactive elements) ---
+        # Captures styles applied via :focus / :focus-visible — critical for
+        # WCAG 2.2 SC 1.4.11 and SC 2.4.11 focus-appearance requirements.
+        try:
+            el.focus(timeout=1500)
+            page.wait_for_timeout(150)
+            foc = el.evaluate(EXTRACT_JS)
+            foc_changed = (
+                foc.get("outlineColor")     != base.get("outlineColor")     or
+                foc.get("borderColor")      != base.get("borderColor")      or
+                foc.get("textColor")        != base.get("textColor")        or
+                foc.get("backgroundColor")  != base.get("backgroundColor")
+            )
+            if foc_changed:
+                focus_state_captured += 1
+                foc_data = dict(foc)
+                if not foc_data.get("label"):
+                    foc_data["label"] = base.get("label")
+                k_foc = style_key("interactive", category, "focus", foc_data)
+                if k_foc not in groups:
+                    groups[k_foc] = _init_group("interactive", "focus", category, foc_data)
+                else:
+                    _update_group(groups[k_foc], foc_data)
+        except Exception:
+            pass
+
+        # --- hover state (all interactive elements) ---
+        try:
+            el.hover(timeout=1500)
+            page.wait_for_timeout(150)
+            hov = el.evaluate(EXTRACT_JS)
+            hov_changed = (
+                hov.get("outlineColor")     != base.get("outlineColor")     or
+                hov.get("borderColor")      != base.get("borderColor")      or
+                hov.get("textColor")        != base.get("textColor")        or
+                hov.get("backgroundColor")  != base.get("backgroundColor")
+            )
+            if hov_changed:
+                hover_state_captured += 1
+                hov_data = dict(hov)
+                if not hov_data.get("label"):
+                    hov_data["label"] = base.get("label")
+                k_hov = style_key("interactive", category, "hover", hov_data)
+                if k_hov not in groups:
+                    groups[k_hov] = _init_group("interactive", "hover", category, hov_data)
+                else:
+                    _update_group(groups[k_hov], hov_data)
+        except Exception:
+            pass
 
         # --- try error state only for form fields ---
         is_form_field = (base.get("tag") in ("INPUT", "SELECT", "TEXTAREA")) or (base.get("role") == "textbox")
@@ -521,6 +633,39 @@ def scan_url(page, url, max_elements=500):
                 err_data["label"] = err.get("label") or base.get("label")
                 _update_group(groups[k_err], err_data)
 
+    # --- content elements (headings, paragraphs, list items, table cells, etc.) ---
+    # These carry WCAG SC 1.4.3 contrast requirements but are not interactive.
+    # Scanned in base state only; only elements with visible text are kept.
+    content_loc   = page.locator(CONTENT_SELECTOR)
+    content_scan_n = min(content_loc.count(), max_elements)
+    content_kept  = 0
+
+    for i in range(content_scan_n):
+        el = content_loc.nth(i)
+        try:
+            if not el.is_visible():
+                continue
+        except Exception:
+            continue
+
+        try:
+            cdata = el.evaluate(EXTRACT_JS)
+        except Exception:
+            continue
+
+        if not cdata.get("hasVisibleText"):
+            continue
+
+        content_kept += 1
+        cat = classify_content(cdata.get("tag"))
+        category_counts[cat] += 1
+
+        k = style_key("content", cat, "base", cdata)
+        if k not in groups:
+            groups[k] = _init_group("content", "base", cat, cdata)
+        else:
+            _update_group(groups[k], cdata)
+
     # Compute contrasts once per group token (efficient)
     group_list = list(groups.values())
     for g in group_list:
@@ -531,7 +676,10 @@ def scan_url(page, url, max_elements=500):
         "matched": matched,
         "scanned": scan_n,
         "elements_kept": kept,
+        "content_elements_kept": content_kept,
         "error_state_tokens_seen": error_state_captured,
+        "focus_state_tokens_seen": focus_state_captured,
+        "hover_state_tokens_seen": hover_state_captured,
         "category_counts": dict(category_counts),
         "unique_style_groups": len(group_list),
         "groups": group_list,
@@ -543,14 +691,6 @@ def scan_url(page, url, max_elements=500):
 # ----------------------------
 
 def summarize(site_result):
-    """
-    Flags potentially vulnerable groups:
-      - text contrast below AA threshold in normal OR any CVD type
-      - indicator (border/outline) contrast below 3.0 in normal OR any CVD type
-    Notes:
-      - AA: 4.5 normal text, 3.0 large text (>=18px heuristic)
-      - For borders/outlines, we use 3.0 as a heuristic for visibility of non-text indicators.
-    """
     summary = {
         "url": site_result["url"],
         "elements_kept": site_result["elements_kept"],
@@ -559,25 +699,31 @@ def summarize(site_result):
         "vulnerable_groups_indicator": 0,
         "cvd_only_fail_text": 0,
         "cvd_only_fail_indicator": 0,
+        "unique_vulnerable_groups": 0,
         "top_vulnerable_examples": [],
     }
 
-    def threshold_for_font(font_size: str):
+    vulnerable_group_ids = set()
+    examples = []
+
+    def threshold_for_font(font_size: str, font_weight: str = "400") -> float:
+        # WCAG 2.1 SC 1.4.3 at 96 dpi:  18 pt regular → 24 px | 14 pt bold → 18.67 px
         try:
             px = float(font_size.replace("px", "").strip())
         except Exception:
             px = 0.0
-        return 3.0 if px >= 18 else 4.5
+        try:
+            weight = int(float(font_weight))
+        except Exception:
+            weight = 400
+        if px >= 24 or (weight >= 700 and px >= 18.67):
+            return 3.0
+        return 4.5
 
     def any_below(contrasts: dict | None, thr: float):
         if not contrasts:
             return False
-        for _, v in contrasts.items():
-            if v is None:
-                continue
-            if v < thr:
-                return True
-        return False
+        return any(v is not None and v < thr for v in contrasts.values())
 
     def normal_pass_but_cvd_fail(contrasts: dict | None, thr: float):
         if not contrasts:
@@ -585,69 +731,63 @@ def summarize(site_result):
         normal = contrasts.get("normal")
         if normal is None or normal < thr:
             return False
-        for d in ("protanopia", "deuteranopia", "tritanopia"):
-            v = contrasts.get(d)
-            if v is not None and v < thr:
-                return True
-        return False
+        return any(
+            contrasts.get(d) is not None and contrasts[d] < thr
+            for d in ("protanopia", "deuteranopia", "tritanopia")
+        )
 
-    examples = []
-
-    for g in site_result["groups"]:
-        thr_text = threshold_for_font(g.get("fontSize", "0px"))
+    for idx, g in enumerate(site_result["groups"]):
+        thr_text = threshold_for_font(g.get("fontSize", "0px"), g.get("fontWeight", "400"))
 
         text_c = (g.get("contrast") or {}).get("text_on_bg")
         border_c = (g.get("contrast") or {}).get("border_on_bg")
         outline_c = (g.get("contrast") or {}).get("outline_on_bg")
 
         text_bad = any_below(text_c, thr_text) if text_c else False
-        indicator_bad = False
-
-        # Use border or outline as indicator channels
-        if border_c and any_below(border_c, 3.0):
-            indicator_bad = True
-        if outline_c and any_below(outline_c, 3.0):
-            indicator_bad = True
+        indicator_bad = (
+            (border_c and any_below(border_c, 3.0)) or
+            (outline_c and any_below(outline_c, 3.0))
+        )
 
         if text_bad:
             summary["vulnerable_groups_text"] += 1
+            vulnerable_group_ids.add(idx)
+
             if normal_pass_but_cvd_fail(text_c, thr_text):
                 summary["cvd_only_fail_text"] += 1
 
         if indicator_bad:
             summary["vulnerable_groups_indicator"] += 1
-            # consider cvd-only on either border or outline
-            if (border_c and normal_pass_but_cvd_fail(border_c, 3.0)) or (outline_c and normal_pass_but_cvd_fail(outline_c, 3.0)):
+            vulnerable_group_ids.add(idx)
+
+            if (
+                (border_c and normal_pass_but_cvd_fail(border_c, 3.0)) or
+                (outline_c and normal_pass_but_cvd_fail(outline_c, 3.0))
+            ):
                 summary["cvd_only_fail_indicator"] += 1
 
         if text_bad or indicator_bad:
-            # keep compact example list
             examples.append({
-                "layer": g["layer"],
-                "state": g["state"],
                 "category": g["category"],
+                "state": g["state"],
                 "count": g["count"],
-                "textColor": g["textColor"],
-                "backgroundColor": g["backgroundColor"],
-                "borderColor": g["borderColor"],
-                "outlineColor": g["outlineColor"],
-                "fontSize": g["fontSize"],
-                "sample": (g["sampleLabels"][0] if g.get("sampleLabels") else ""),
+                "sample": g["sampleLabels"][0] if g.get("sampleLabels") else "",
                 "contrast": g.get("contrast"),
             })
 
-    # Pick top examples by frequency (most impactful)
+    summary["unique_vulnerable_groups"] = len(vulnerable_group_ids)
+
     examples.sort(key=lambda x: x["count"], reverse=True)
     summary["top_vulnerable_examples"] = examples[:10]
-    return summary
 
+    return summary
 
 def print_console(site_result, site_summary):
     print(f"\n=== {domain_key(site_result['url'])} ===")
     print(f"URL: {site_result['url']}")
-    print(f"Matched: {site_result['matched']} | Scanned: {site_result['scanned']} | Kept: {site_result['elements_kept']}")
+    print(f"Matched: {site_result['matched']} | Scanned: {site_result['scanned']} | Kept: {site_result['elements_kept']} interactive + {site_result.get('content_elements_kept', 0)} content")
     print(f"Unique style groups: {site_result['unique_style_groups']}")
-    print(f"Error-state tokens captured: {site_result['error_state_tokens_seen']}")
+    print(f"State tokens — error: {site_result['error_state_tokens_seen']}  focus: {site_result.get('focus_state_tokens_seen', 0)}  hover: {site_result.get('hover_state_tokens_seen', 0)}")
     print("\nCategory counts:")
     for k, v in sorted(site_result["category_counts"].items(), key=lambda x: (-x[1], x[0])):
         print(f"  - {k}: {v}")
