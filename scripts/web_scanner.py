@@ -1,6 +1,7 @@
 import json
 from playwright.sync_api import sync_playwright
 from scripts.component_counter import count_components
+from scripts.style_extractor import extract_component_styles
 
 
 def load_sites(path="data/sites.json"):
@@ -18,6 +19,7 @@ def scan_site(page, site):
         "url": site["url"],
         "success": False,
         "components": None,
+        "styles": None,
         "error": None
     }
 
@@ -27,27 +29,11 @@ def scan_site(page, site):
 
         component_counts = count_components(page)
 
+        component_styles = extract_component_styles(page)
+
         result["success"] = True
         result["components"] = component_counts
-
-    except Exception as e:
-
-        result["error"] = str(e)
-
-    return result
-
-    result = {
-        "site": site["site_name"],
-        "url": site["url"],
-        "success": False,
-        "error": None
-    }
-
-    try:
-
-        page.goto(site["url"], wait_until="networkidle", timeout=30000)
-
-        result["success"] = True
+        result["styles"] = component_styles
 
     except Exception as e:
 

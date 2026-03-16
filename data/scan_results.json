@@ -1,0 +1,601 @@
+[
+  {
+    "site": "Wikipedia",
+    "url": "https://www.wikipedia.org",
+    "success": true,
+    "components": {
+      "navigation": 3,
+      "buttons": 6,
+      "links": 374,
+      "forms": 1,
+      "inputs": 4,
+      "selects": 1,
+      "textareas": 0,
+      "headers": 1,
+      "footers": 2,
+      "main_content": 1,
+      "sidebars": 0
+    },
+    "styles": {
+      "navigation": [
+        {
+          "foreground": "rgb(32, 33, 34)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "14px"
+        },
+        {
+          "foreground": "rgb(32, 33, 34)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "14px"
+        },
+        {
+          "foreground": "rgb(32, 33, 34)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "13px"
+        }
+      ],
+      "buttons": [
+        {
+          "foreground": "rgb(255, 255, 255)",
+          "background": "rgb(51, 102, 204)",
+          "font_size": "10px"
+        },
+        {
+          "foreground": "rgb(32, 33, 34)",
+          "background": "rgb(255, 228, 156)",
+          "font_size": "14px"
+        },
+        {
+          "foreground": "rgb(32, 33, 34)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px"
+        },
+        {
+          "foreground": "rgb(255, 255, 255)",
+          "background": "rgb(51, 102, 204)",
+          "font_size": "16px"
+        },
+        {
+          "foreground": "rgb(255, 255, 255)",
+          "background": "rgb(51, 102, 204)",
+          "font_size": "16px"
+        }
+      ],
+      "links": [
+        {
+          "foreground": "rgb(51, 102, 204)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "14px"
+        },
+        {
+          "foreground": "rgb(51, 102, 204)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "14px"
+        },
+        {
+          "foreground": "rgb(51, 102, 204)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "14px"
+        },
+        {
+          "foreground": "rgb(51, 102, 204)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "14px"
+        },
+        {
+          "foreground": "rgb(51, 102, 204)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "14px"
+        }
+      ],
+      "forms": [
+        {
+          "foreground": "rgb(32, 33, 34)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "14px"
+        }
+      ],
+      "inputs": [
+        {
+          "foreground": "rgb(32, 33, 34)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "14px"
+        },
+        {
+          "foreground": "rgb(32, 33, 34)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px"
+        },
+        {
+          "foreground": "rgb(32, 33, 34)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "14px"
+        },
+        {
+          "foreground": "rgb(84, 89, 93)",
+          "background": "rgb(248, 249, 250)",
+          "font_size": "16px"
+        }
+      ],
+      "selects": [
+        {
+          "foreground": "rgba(255, 255, 255, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "14px"
+        }
+      ],
+      "textareas": [],
+      "headers": [
+        {
+          "foreground": "rgb(32, 33, 34)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "14px"
+        }
+      ],
+      "footers": [
+        {
+          "foreground": "rgb(32, 33, 34)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "14px"
+        },
+        {
+          "foreground": "rgb(32, 33, 34)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "13px"
+        }
+      ],
+      "main_content": [
+        {
+          "foreground": "rgb(32, 33, 34)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "14px"
+        }
+      ],
+      "sidebars": []
+    },
+    "error": null
+  },
+  {
+    "site": "BBC",
+    "url": "https://www.bbc.com",
+    "success": true,
+    "components": {
+      "navigation": 4,
+      "buttons": 56,
+      "links": 242,
+      "forms": 0,
+      "inputs": 1,
+      "selects": 0,
+      "textareas": 0,
+      "headers": 1,
+      "footers": 1,
+      "main_content": 1,
+      "sidebars": 0
+    },
+    "styles": {
+      "navigation": [
+        {
+          "foreground": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px"
+        },
+        {
+          "foreground": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px"
+        },
+        {
+          "foreground": "rgb(0, 0, 0)",
+          "background": "rgb(255,255,255)",
+          "font_size": "16px"
+        },
+        {
+          "foreground": "rgb(0, 0, 0)",
+          "background": "rgb(255,255,255)",
+          "font_size": "16px"
+        }
+      ],
+      "buttons": [
+        {
+          "foreground": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "13.3333px"
+        },
+        {
+          "foreground": "rgb(255, 255, 255)",
+          "background": "rgb(0, 0, 0)",
+          "font_size": "16px"
+        },
+        {
+          "foreground": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px"
+        },
+        {
+          "foreground": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "13.3333px"
+        },
+        {
+          "foreground": "rgb(255, 255, 255)",
+          "background": "rgb(0, 0, 0)",
+          "font_size": "16px"
+        }
+      ],
+      "links": [
+        {
+          "foreground": "rgb(0, 0, 0)",
+          "background": "rgb(255,255,255)",
+          "font_size": "16px"
+        },
+        {
+          "foreground": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px"
+        },
+        {
+          "foreground": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px"
+        },
+        {
+          "foreground": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px"
+        },
+        {
+          "foreground": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "14px"
+        }
+      ],
+      "forms": [],
+      "inputs": [
+        {
+          "foreground": "rgb(32, 34, 36)",
+          "background": "rgba(239, 239, 239, 0.3)",
+          "font_size": "16px"
+        }
+      ],
+      "selects": [],
+      "textareas": [],
+      "headers": [
+        {
+          "foreground": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px"
+        }
+      ],
+      "footers": [
+        {
+          "foreground": "rgb(0, 0, 0)",
+          "background": "rgb(255,255,255)",
+          "font_size": "16px"
+        }
+      ],
+      "main_content": [
+        {
+          "foreground": "rgb(0, 0, 0)",
+          "background": "rgb(255,255,255)",
+          "font_size": "16px"
+        }
+      ],
+      "sidebars": []
+    },
+    "error": null
+  },
+  {
+    "site": "CNN",
+    "url": "https://www.cnn.com",
+    "success": true,
+    "components": {
+      "navigation": 10,
+      "buttons": 93,
+      "links": 486,
+      "forms": 3,
+      "inputs": 35,
+      "selects": 0,
+      "textareas": 1,
+      "headers": 3,
+      "footers": 3,
+      "main_content": 0,
+      "sidebars": 0
+    },
+    "styles": {
+      "navigation": [
+        {
+          "foreground": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px"
+        },
+        {
+          "foreground": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px"
+        },
+        {
+          "foreground": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px"
+        },
+        {
+          "foreground": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px"
+        },
+        {
+          "foreground": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px"
+        }
+      ],
+      "buttons": [
+        {
+          "foreground": "rgb(12, 12, 12)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px"
+        },
+        {
+          "foreground": "rgb(255, 255, 255)",
+          "background": "rgba(12, 12, 12, 0.2)",
+          "font_size": "16px"
+        },
+        {
+          "foreground": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "13.3333px"
+        },
+        {
+          "foreground": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "13.3333px"
+        },
+        {
+          "foreground": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "13.3333px"
+        }
+      ],
+      "links": [
+        {
+          "foreground": "rgb(0, 0, 238)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px"
+        },
+        {
+          "foreground": "rgb(12, 12, 12)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "15px"
+        },
+        {
+          "foreground": "rgb(12, 12, 12)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "15px"
+        },
+        {
+          "foreground": "rgb(12, 12, 12)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "15px"
+        },
+        {
+          "foreground": "rgb(12, 12, 12)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "15px"
+        }
+      ],
+      "forms": [
+        {
+          "foreground": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px"
+        },
+        {
+          "foreground": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px"
+        },
+        {
+          "foreground": "rgb(0, 0, 0)",
+          "background": "rgb(12, 12, 12)",
+          "font_size": "16px"
+        }
+      ],
+      "inputs": [
+        {
+          "foreground": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "13.3333px"
+        },
+        {
+          "foreground": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "13.3333px"
+        },
+        {
+          "foreground": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "13.3333px"
+        },
+        {
+          "foreground": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "13.3333px"
+        },
+        {
+          "foreground": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "13.3333px"
+        }
+      ],
+      "selects": [],
+      "textareas": [
+        {
+          "foreground": "rgb(12, 12, 12)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "13px"
+        }
+      ],
+      "headers": [
+        {
+          "foreground": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px"
+        },
+        {
+          "foreground": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px"
+        },
+        {
+          "foreground": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px"
+        }
+      ],
+      "footers": [
+        {
+          "foreground": "rgb(0, 0, 0)",
+          "background": "rgb(12, 12, 12)",
+          "font_size": "16px"
+        },
+        {
+          "foreground": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px"
+        },
+        {
+          "foreground": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px"
+        }
+      ],
+      "main_content": [],
+      "sidebars": []
+    },
+    "error": null
+  },
+  {
+    "site": "Mozilla",
+    "url": "https://developer.mozilla.org",
+    "success": true,
+    "components": {
+      "navigation": 2,
+      "buttons": 18,
+      "links": 174,
+      "forms": 1,
+      "inputs": 2,
+      "selects": 0,
+      "textareas": 0,
+      "headers": 1,
+      "footers": 1,
+      "main_content": 0,
+      "sidebars": 0
+    },
+    "styles": {
+      "navigation": [
+        {
+          "foreground": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px"
+        },
+        {
+          "foreground": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px"
+        }
+      ],
+      "buttons": [
+        {
+          "foreground": "rgb(255, 255, 255)",
+          "background": "rgb(107, 107, 107)",
+          "font_size": "16px"
+        },
+        {
+          "foreground": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px"
+        },
+        {
+          "foreground": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px"
+        },
+        {
+          "foreground": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px"
+        },
+        {
+          "foreground": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px"
+        }
+      ],
+      "links": [
+        {
+          "foreground": "rgb(4, 76, 159)",
+          "background": "rgb(247, 247, 248)",
+          "font_size": "16px"
+        },
+        {
+          "foreground": "rgb(4, 76, 159)",
+          "background": "rgb(247, 247, 248)",
+          "font_size": "16px"
+        },
+        {
+          "foreground": "rgb(164, 206, 254)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px"
+        },
+        {
+          "foreground": "rgb(164, 206, 254)",
+          "background": "rgb(7, 36, 70)",
+          "font_size": "16px"
+        },
+        {
+          "foreground": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px"
+        }
+      ],
+      "forms": [
+        {
+          "foreground": "rgb(0, 0, 0)",
+          "background": "rgb(247, 247, 248)",
+          "font_size": "24px"
+        }
+      ],
+      "inputs": [
+        {
+          "foreground": "rgb(0, 0, 0)",
+          "background": "rgb(247, 247, 248)",
+          "font_size": "24px"
+        },
+        {
+          "foreground": "rgb(255, 255, 255)",
+          "background": "rgb(195, 199, 203)",
+          "font_size": "13.3333px"
+        }
+      ],
+      "selects": [],
+      "textareas": [],
+      "headers": [
+        {
+          "foreground": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px"
+        }
+      ],
+      "footers": [
+        {
+          "foreground": "rgb(81, 86, 93)",
+          "background": "rgb(247, 247, 248)",
+          "font_size": "16px"
+        }
+      ],
+      "main_content": [],
+      "sidebars": []
+    },
+    "error": null
+  }
+]

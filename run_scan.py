@@ -8,10 +8,10 @@ def main():
 
     results = run_scanner(sites)
 
-    with open("data/component_counts.json", "w") as f:
+    with open("data/scan_results.json", "w") as f:
         json.dump(results, f, indent=2)
 
-    print("\nComponent counts saved to data/component_counts.json")
+    print("\nResults saved to data/scan_results.json")
 
 
 if __name__ == "__main__":
