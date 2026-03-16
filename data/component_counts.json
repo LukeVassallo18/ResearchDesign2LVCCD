@@ -1,0 +1,78 @@
+[
+  {
+    "site": "Wikipedia",
+    "url": "https://www.wikipedia.org",
+    "success": true,
+    "components": {
+      "navigation": 3,
+      "buttons": 6,
+      "links": 374,
+      "forms": 1,
+      "inputs": 4,
+      "selects": 1,
+      "textareas": 0,
+      "headers": 1,
+      "footers": 2,
+      "main_content": 1,
+      "sidebars": 0
+    },
+    "error": null
+  },
+  {
+    "site": "BBC",
+    "url": "https://www.bbc.com",
+    "success": true,
+    "components": {
+      "navigation": 4,
+      "buttons": 56,
+      "links": 243,
+      "forms": 0,
+      "inputs": 1,
+      "selects": 0,
+      "textareas": 0,
+      "headers": 1,
+      "footers": 1,
+      "main_content": 1,
+      "sidebars": 0
+    },
+    "error": null
+  },
+  {
+    "site": "CNN",
+    "url": "https://www.cnn.com",
+    "success": true,
+    "components": {
+      "navigation": 10,
+      "buttons": 93,
+      "links": 486,
+      "forms": 3,
+      "inputs": 35,
+      "selects": 0,
+      "textareas": 1,
+      "headers": 3,
+      "footers": 3,
+      "main_content": 0,
+      "sidebars": 0
+    },
+    "error": null
+  },
+  {
+    "site": "Mozilla",
+    "url": "https://developer.mozilla.org",
+    "success": true,
+    "components": {
+      "navigation": 2,
+      "buttons": 18,
+      "links": 174,
+      "forms": 1,
+      "inputs": 2,
+      "selects": 0,
+      "textareas": 0,
+      "headers": 1,
+      "footers": 1,
+      "main_content": 0,
+      "sidebars": 0
+    },
+    "error": null
+  }
+]
