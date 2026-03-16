@@ -21,3 +21,6 @@ requests>=2.31.0
 
 # Progress tracking — pipeline stage visualisation
 tqdm>=4.66.0
+
+# Debug visual overlays for detected components
+opencv-python>=4.10.0

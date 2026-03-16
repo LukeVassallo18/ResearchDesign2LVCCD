@@ -1,47 +1,8 @@
-# CVD Accessibility Audit
-
-A Python research tool for automated web accessibility evaluation focused on
-**colour vision deficiencies (CVD)**.
-
----
-
-## Project Overview
-
-This tool is part of an academic research study evaluating colour accessibility
-risks in web interfaces. It follows a **simulation-based accessibility
-evaluation methodology** — used when direct user testing is not feasible —
-to identify which UI component types are most vulnerable to contrast failures
-across different types of colour vision deficiency.
-
----
-
-## Research Question
-
-> **Which UI component groups are most vulnerable to colour accessibility
-> issues across simulated colour vision deficiencies?**
-
----
-
-## Methodology
-
-The evaluation pipeline consists of the following stages:
-
-| # | Stage | Description | Status |
-|---|-------|-------------|--------|
-| 1 | Website scanning | Load URLs, open in headless browser | ✅ Implemented |
-| 2 | UI component detection | Parse DOM, categorise elements | 🔲 Planned |
-| 3 | Screenshot capture | Full-page + per-component PNGs | ✅ Implemented |
-| 4 | CVD simulation | Apply protanopia / deuteranopia / tritanopia transforms | 🔲 Planned |
-| 5 | Contrast analysis | Compute WCAG contrast ratios pre/post simulation | 🔲 Planned |
-| 6 | Risk classification | Pass / Warning / Critical per component | 🔲 Planned |
-| 7 | Trend analysis | Failure rates by component type and CVD type | 🔲 Planned |
-
----
 
 ## Project Structure
 
 ```
-cvd-accessibility-audit/
+research_design/
 │
 ├── .venv/                        # Python virtual environment (not committed)
 ├── requirements.txt              # Python dependencies
@@ -83,20 +44,6 @@ pip install -r requirements.txt
 ```bash
 playwright install
 ```
-
----
-
-## Configuration
-
-Edit `config.py` to adjust project-wide settings:
-
-| Setting | Default | Description |
-|---------|---------|-------------|
-| `BROWSER_HEADLESS` | `True` | Set to `False` to watch the browser during scans |
-| `PAGE_LOAD_TIMEOUT` | `30000` | Max page load time (ms) |
-| `WAIT_AFTER_LOAD` | `2000` | JS settle buffer after networkidle (ms) |
-| `VIEWPORT_WIDTH` | `1280` | Browser viewport width (px) |
-| `VIEWPORT_HEIGHT` | `720` | Browser viewport height (px) |
 
 ---
 

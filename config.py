@@ -19,9 +19,15 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 # ── Data Paths ────────────────────────────────────────────────────────────────
 DATA_DIR  = os.path.join(BASE_DIR, "data")
 SITES_CSV = os.path.join(DATA_DIR, "sites.csv")   # Input: list of URLs to scan
+COMPONENT_DATA_CSV = os.path.join(DATA_DIR, "component_data.csv")
 
 # ── Output Paths ──────────────────────────────────────────────────────────────
 SCREENSHOTS_DIR = os.path.join(BASE_DIR, "screenshots")   # Full-page screenshots
+COMPONENT_SCREENSHOTS_DIR = os.path.join(SCREENSHOTS_DIR, "components")
+FULLPAGE_SCREENSHOTS_DIR = os.path.join(SCREENSHOTS_DIR, "fullpage")
+
+DEBUG_DIR = os.path.join(BASE_DIR, "debug")
+DEBUG_OVERLAYS_DIR = os.path.join(DEBUG_DIR, "overlays")
 
 # ── Playwright Browser Settings ───────────────────────────────────────────────
 # BROWSER_HEADLESS — set to False for a visible browser window during debugging
