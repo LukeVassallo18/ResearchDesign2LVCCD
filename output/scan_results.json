@@ -2,43 +2,21 @@
   "sites": [
     {
       "site": "https://developer.mozilla.org",
-      "total_elements_scanned": 710,
-      "components_detected": 608,
+      "total_elements_scanned": 740,
+      "components_detected": 296,
       "category_counts": {
-        "navigation": 48,
-        "other": 361,
-        "link": 156,
+        "button": 44,
         "header": 1,
-        "button": 10,
-        "text": 31,
-        "footer": 1
+        "navigation": 18,
+        "link": 156,
+        "other": 45,
+        "text": 32
       },
+      "other_percentage": 15.2,
       "results": [
         {
           "site": "https://developer.mozilla.org",
-          "component": "navigation",
-          "tag": "ul",
-          "text": "Skip to main content Skip to search",
-          "color": "rgb(0, 0, 0)",
-          "background": "rgb(255, 255, 255)",
-          "font_size": "16px",
-          "attributes": {
-            "class": "a11y-menu"
-          }
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "Skip to main content",
-          "color": "rgb(0, 0, 0)",
-          "background": "rgb(255, 255, 255)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "link",
+          "component": "button",
           "tag": "a",
           "text": "Skip to main content",
           "color": "rgb(4, 76, 159)",
@@ -50,17 +28,7 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "Skip to search",
-          "color": "rgb(0, 0, 0)",
-          "background": "rgb(255, 255, 255)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "link",
+          "component": "button",
           "tag": "a",
           "text": "Skip to search",
           "color": "rgb(4, 76, 159)",
@@ -108,7 +76,7 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "link",
+          "component": "button",
           "tag": "a",
           "text": "MDN",
           "color": "rgb(164, 206, 254)",
@@ -170,16 +138,6 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "mdn-dropdown",
-          "text": "HTML",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
           "component": "button",
           "tag": "button",
           "text": "HTML",
@@ -190,12 +148,12 @@
             "class": "menu__tab-button",
             "type": "button",
             "aria-expanded": "false",
-            "aria-controls": "uid_k582knn53fo"
+            "aria-controls": "uid_dasj6qh9sn"
           }
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "HTML",
           "color": "rgb(255, 255, 255)",
@@ -215,12 +173,12 @@
           "font_size": "16px",
           "attributes": {
             "class": "menu__panel",
-            "id": "uid_k582knn53fo"
+            "id": "uid_dasj6qh9sn"
           }
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "navigation",
+          "component": "button",
           "tag": "p",
           "text": "HTML: Markup language",
           "color": "rgb(164, 206, 254)",
@@ -244,7 +202,7 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "navigation",
+          "component": "button",
           "tag": "div",
           "text": "HTML reference Elements Global attributes Attributes See all… HTML guides Responsive images HTML che",
           "color": "rgb(255, 255, 255)",
@@ -253,56 +211,6 @@
           "attributes": {
             "class": "menu__panel-content"
           }
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "dl",
-          "text": "HTML reference Elements Global attributes Attributes See all…",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "dt",
-          "text": "HTML reference",
-          "color": "rgb(195, 199, 203)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "12.8px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "dd",
-          "text": "Elements Global attributes Attributes See all…",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "ul",
-          "text": "Elements Global attributes Attributes See all…",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "Elements",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
         },
         {
           "site": "https://developer.mozilla.org",
@@ -318,16 +226,6 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "Global attributes",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
           "component": "link",
           "tag": "a",
           "text": "Global attributes",
@@ -340,16 +238,6 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "Attributes",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
           "component": "link",
           "tag": "a",
           "text": "Attributes",
@@ -359,16 +247,6 @@
           "attributes": {
             "href": "/en-US/docs/Web/HTML/Reference/Attributes"
           }
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "See all…",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
         },
         {
           "site": "https://developer.mozilla.org",
@@ -385,56 +263,6 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "dl",
-          "text": "HTML guides Responsive images HTML cheatsheet Date & time formats See all…",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "dt",
-          "text": "HTML guides",
-          "color": "rgb(195, 199, 203)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "12.8px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "dd",
-          "text": "Responsive images HTML cheatsheet Date & time formats See all…",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "ul",
-          "text": "Responsive images HTML cheatsheet Date & time formats See all…",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "Responsive images",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
           "component": "link",
           "tag": "a",
           "text": "Responsive images",
@@ -444,16 +272,6 @@
           "attributes": {
             "href": "/en-US/docs/Web/HTML/Guides/Responsive_images"
           }
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "HTML cheatsheet",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
         },
         {
           "site": "https://developer.mozilla.org",
@@ -469,16 +287,6 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "Date & time formats",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
           "component": "link",
           "tag": "a",
           "text": "Date & time formats",
@@ -488,16 +296,6 @@
           "attributes": {
             "href": "/en-US/docs/Web/HTML/Guides/Date_and_time_formats"
           }
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "See all…",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
         },
         {
           "site": "https://developer.mozilla.org",
@@ -514,56 +312,6 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "dl",
-          "text": "Markup languages SVG MathML XML",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "dt",
-          "text": "Markup languages",
-          "color": "rgb(195, 199, 203)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "12.8px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "dd",
-          "text": "SVG MathML XML",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "ul",
-          "text": "SVG MathML XML",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "SVG",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
           "component": "link",
           "tag": "a",
           "text": "SVG",
@@ -576,16 +324,6 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "MathML",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
           "component": "link",
           "tag": "a",
           "text": "MathML",
@@ -595,16 +333,6 @@
           "attributes": {
             "href": "/en-US/docs/Web/MathML"
           }
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "XML",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
         },
         {
           "site": "https://developer.mozilla.org",
@@ -632,16 +360,6 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "mdn-dropdown",
-          "text": "CSS",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
           "component": "button",
           "tag": "button",
           "text": "CSS",
@@ -652,12 +370,12 @@
             "class": "menu__tab-button",
             "type": "button",
             "aria-expanded": "false",
-            "aria-controls": "uid_5zclioapak"
+            "aria-controls": "uid_9wzioxfok0r"
           }
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "CSS",
           "color": "rgb(255, 255, 255)",
@@ -669,7 +387,7 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "navigation",
+          "component": "other",
           "tag": "div",
           "text": "CSS: Styling language CSS reference Properties Selectors At-rules Values See all… CSS guides Box mod",
           "color": "rgb(255, 255, 255)",
@@ -677,12 +395,12 @@
           "font_size": "16px",
           "attributes": {
             "class": "menu__panel",
-            "id": "uid_5zclioapak"
+            "id": "uid_9wzioxfok0r"
           }
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "navigation",
+          "component": "button",
           "tag": "p",
           "text": "CSS: Styling language",
           "color": "rgb(164, 206, 254)",
@@ -706,7 +424,7 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "navigation",
+          "component": "button",
           "tag": "div",
           "text": "CSS reference Properties Selectors At-rules Values See all… CSS guides Box model Animations Flexbox",
           "color": "rgb(255, 255, 255)",
@@ -715,56 +433,6 @@
           "attributes": {
             "class": "menu__panel-content"
           }
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "dl",
-          "text": "CSS reference Properties Selectors At-rules Values See all…",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "dt",
-          "text": "CSS reference",
-          "color": "rgb(195, 199, 203)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "12.8px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "dd",
-          "text": "Properties Selectors At-rules Values See all…",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "ul",
-          "text": "Properties Selectors At-rules Values See all…",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "Properties",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
         },
         {
           "site": "https://developer.mozilla.org",
@@ -780,16 +448,6 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "Selectors",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
           "component": "link",
           "tag": "a",
           "text": "Selectors",
@@ -799,16 +457,6 @@
           "attributes": {
             "href": "/en-US/docs/Web/CSS/Reference/Selectors"
           }
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "At-rules",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
         },
         {
           "site": "https://developer.mozilla.org",
@@ -824,16 +472,6 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "Values",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
           "component": "link",
           "tag": "a",
           "text": "Values",
@@ -843,16 +481,6 @@
           "attributes": {
             "href": "/en-US/docs/Web/CSS/Reference/Values"
           }
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "See all…",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
         },
         {
           "site": "https://developer.mozilla.org",
@@ -869,56 +497,6 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "dl",
-          "text": "CSS guides Box model Animations Flexbox Colors See all…",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "dt",
-          "text": "CSS guides",
-          "color": "rgb(195, 199, 203)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "12.8px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "dd",
-          "text": "Box model Animations Flexbox Colors See all…",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "ul",
-          "text": "Box model Animations Flexbox Colors See all…",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "Box model",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
           "component": "link",
           "tag": "a",
           "text": "Box model",
@@ -928,16 +506,6 @@
           "attributes": {
             "href": "/en-US/docs/Web/CSS/Guides/Box_model/Introduction"
           }
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "Animations",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
         },
         {
           "site": "https://developer.mozilla.org",
@@ -953,16 +521,6 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "Flexbox",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
           "component": "link",
           "tag": "a",
           "text": "Flexbox",
@@ -975,16 +533,6 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "Colors",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
           "component": "link",
           "tag": "a",
           "text": "Colors",
@@ -994,16 +542,6 @@
           "attributes": {
             "href": "/en-US/docs/Web/CSS/Guides/Colors/Applying_color"
           }
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "See all…",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
         },
         {
           "site": "https://developer.mozilla.org",
@@ -1020,56 +558,6 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "dl",
-          "text": "Layout cookbook Column layouts Centering an element Card component See all…",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "dt",
-          "text": "Layout cookbook",
-          "color": "rgb(195, 199, 203)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "12.8px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "dd",
-          "text": "Column layouts Centering an element Card component See all…",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "ul",
-          "text": "Column layouts Centering an element Card component See all…",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "Column layouts",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
           "component": "link",
           "tag": "a",
           "text": "Column layouts",
@@ -1079,16 +567,6 @@
           "attributes": {
             "href": "/en-US/docs/Web/CSS/How_to/Layout_cookbook/Column_layouts"
           }
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "Centering an element",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
         },
         {
           "site": "https://developer.mozilla.org",
@@ -1104,16 +582,6 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "Card component",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
           "component": "link",
           "tag": "a",
           "text": "Card component",
@@ -1123,16 +591,6 @@
           "attributes": {
             "href": "/en-US/docs/Web/CSS/How_to/Layout_cookbook/Card"
           }
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "See all…",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
         },
         {
           "site": "https://developer.mozilla.org",
@@ -1160,16 +618,6 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "mdn-dropdown",
-          "text": "JavaScript",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
           "component": "button",
           "tag": "button",
           "text": "JavaScript",
@@ -1180,12 +628,12 @@
             "class": "menu__tab-button",
             "type": "button",
             "aria-expanded": "false",
-            "aria-controls": "uid_k4i3mezuus9"
+            "aria-controls": "uid_i0p3p7oqoyd"
           }
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "JavaScript",
           "color": "rgb(255, 255, 255)",
@@ -1197,7 +645,7 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "navigation",
+          "component": "other",
           "tag": "div",
           "text": "JavaScript: Scripting language JS reference Standard built-in objects Expressions & operators Statem",
           "color": "rgb(255, 255, 255)",
@@ -1205,12 +653,12 @@
           "font_size": "16px",
           "attributes": {
             "class": "menu__panel",
-            "id": "uid_k4i3mezuus9"
+            "id": "uid_i0p3p7oqoyd"
           }
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "navigation",
+          "component": "button",
           "tag": "p",
           "text": "JavaScript: Scripting language",
           "color": "rgb(164, 206, 254)",
@@ -1234,7 +682,7 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "navigation",
+          "component": "button",
           "tag": "div",
           "text": "JS reference Standard built-in objects Expressions & operators Statements & declarations Functions S",
           "color": "rgb(255, 255, 255)",
@@ -1243,56 +691,6 @@
           "attributes": {
             "class": "menu__panel-content"
           }
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "dl",
-          "text": "JS reference Standard built-in objects Expressions & operators Statements & declarations Functions S",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "dt",
-          "text": "JS reference",
-          "color": "rgb(195, 199, 203)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "12.8px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "dd",
-          "text": "Standard built-in objects Expressions & operators Statements & declarations Functions See all…",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "ul",
-          "text": "Standard built-in objects Expressions & operators Statements & declarations Functions See all…",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "Standard built-in objects",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
         },
         {
           "site": "https://developer.mozilla.org",
@@ -1308,16 +706,6 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "Expressions & operators",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
           "component": "link",
           "tag": "a",
           "text": "Expressions & operators",
@@ -1327,16 +715,6 @@
           "attributes": {
             "href": "/en-US/docs/Web/JavaScript/Reference/Operators"
           }
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "Statements & declarations",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
         },
         {
           "site": "https://developer.mozilla.org",
@@ -1352,16 +730,6 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "Functions",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
           "component": "link",
           "tag": "a",
           "text": "Functions",
@@ -1371,16 +739,6 @@
           "attributes": {
             "href": "/en-US/docs/Web/JavaScript/Reference/Functions"
           }
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "See all…",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
         },
         {
           "site": "https://developer.mozilla.org",
@@ -1397,56 +755,6 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "dl",
-          "text": "JS guides Control flow & error handing Loops and iteration Working with objects Using classes See al",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "dt",
-          "text": "JS guides",
-          "color": "rgb(195, 199, 203)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "12.8px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "dd",
-          "text": "Control flow & error handing Loops and iteration Working with objects Using classes See all…",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "ul",
-          "text": "Control flow & error handing Loops and iteration Working with objects Using classes See all…",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "Control flow & error handing",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
           "component": "link",
           "tag": "a",
           "text": "Control flow & error handing",
@@ -1456,16 +764,6 @@
           "attributes": {
             "href": "/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling"
           }
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "Loops and iteration",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
         },
         {
           "site": "https://developer.mozilla.org",
@@ -1481,16 +779,6 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "Working with objects",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
           "component": "link",
           "tag": "a",
           "text": "Working with objects",
@@ -1503,16 +791,6 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "Using classes",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
           "component": "link",
           "tag": "a",
           "text": "Using classes",
@@ -1522,16 +800,6 @@
           "attributes": {
             "href": "/en-US/docs/Web/JavaScript/Guide/Using_classes"
           }
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "See all…",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
         },
         {
           "site": "https://developer.mozilla.org",
@@ -1560,16 +828,6 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "mdn-dropdown",
-          "text": "Web APIs",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
           "component": "button",
           "tag": "button",
           "text": "Web APIs",
@@ -1580,12 +838,12 @@
             "class": "menu__tab-button",
             "type": "button",
             "aria-expanded": "false",
-            "aria-controls": "uid_3zyda3x7af9"
+            "aria-controls": "uid_dg3me6iso2"
           }
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "Web APIs",
           "color": "rgb(255, 255, 255)",
@@ -1597,7 +855,7 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "navigation",
+          "component": "other",
           "tag": "div",
           "text": "Web APIs: Programming interfaces Web API reference File system API Fetch API Geolocation API HTML DO",
           "color": "rgb(255, 255, 255)",
@@ -1605,12 +863,12 @@
           "font_size": "16px",
           "attributes": {
             "class": "menu__panel",
-            "id": "uid_3zyda3x7af9"
+            "id": "uid_dg3me6iso2"
           }
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "navigation",
+          "component": "button",
           "tag": "p",
           "text": "Web APIs: Programming interfaces",
           "color": "rgb(164, 206, 254)",
@@ -1634,7 +892,7 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "navigation",
+          "component": "other",
           "tag": "div",
           "text": "Web API reference File system API Fetch API Geolocation API HTML DOM API Push API Service worker API",
           "color": "rgb(255, 255, 255)",
@@ -1643,56 +901,6 @@
           "attributes": {
             "class": "menu__panel-content"
           }
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "dl",
-          "text": "Web API reference File system API Fetch API Geolocation API HTML DOM API Push API Service worker API",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "dt",
-          "text": "Web API reference",
-          "color": "rgb(195, 199, 203)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "12.8px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "dd",
-          "text": "File system API Fetch API Geolocation API HTML DOM API Push API Service worker API See all…",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "ul",
-          "text": "File system API Fetch API Geolocation API HTML DOM API Push API Service worker API See all…",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "File system API",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
         },
         {
           "site": "https://developer.mozilla.org",
@@ -1708,16 +916,6 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "Fetch API",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
           "component": "link",
           "tag": "a",
           "text": "Fetch API",
@@ -1727,16 +925,6 @@
           "attributes": {
             "href": "/en-US/docs/Web/API/Fetch_API"
           }
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "Geolocation API",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
         },
         {
           "site": "https://developer.mozilla.org",
@@ -1752,16 +940,6 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "HTML DOM API",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
           "component": "link",
           "tag": "a",
           "text": "HTML DOM API",
@@ -1771,16 +949,6 @@
           "attributes": {
             "href": "/en-US/docs/Web/API/HTML_DOM_API"
           }
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "Push API",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
         },
         {
           "site": "https://developer.mozilla.org",
@@ -1796,16 +964,6 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "Service worker API",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
           "component": "link",
           "tag": "a",
           "text": "Service worker API",
@@ -1815,16 +973,6 @@
           "attributes": {
             "href": "/en-US/docs/Web/API/Service_Worker_API"
           }
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "See all…",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
         },
         {
           "site": "https://developer.mozilla.org",
@@ -1841,56 +989,6 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "dl",
-          "text": "Web API guides Using the Web animation API Using the Fetch API Working with the History API Using th",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "dt",
-          "text": "Web API guides",
-          "color": "rgb(195, 199, 203)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "12.8px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "dd",
-          "text": "Using the Web animation API Using the Fetch API Working with the History API Using the Web speech AP",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "ul",
-          "text": "Using the Web animation API Using the Fetch API Working with the History API Using the Web speech AP",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "Using the Web animation API",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
           "component": "link",
           "tag": "a",
           "text": "Using the Web animation API",
@@ -1900,16 +998,6 @@
           "attributes": {
             "href": "/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API"
           }
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "Using the Fetch API",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
         },
         {
           "site": "https://developer.mozilla.org",
@@ -1925,16 +1013,6 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "Working with the History API",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
           "component": "link",
           "tag": "a",
           "text": "Working with the History API",
@@ -1947,16 +1025,6 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "Using the Web speech API",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
           "component": "link",
           "tag": "a",
           "text": "Using the Web speech API",
@@ -1966,16 +1034,6 @@
           "attributes": {
             "href": "/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API"
           }
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "Using web workers",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
         },
         {
           "site": "https://developer.mozilla.org",
@@ -2003,16 +1061,6 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "mdn-dropdown",
-          "text": "All",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
           "component": "button",
           "tag": "button",
           "text": "All",
@@ -2023,12 +1071,12 @@
             "class": "menu__tab-button",
             "type": "button",
             "aria-expanded": "false",
-            "aria-controls": "uid_h0e0iny7boe"
+            "aria-controls": "uid_a91kpln64df"
           }
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "All",
           "color": "rgb(255, 255, 255)",
@@ -2048,12 +1096,12 @@
           "font_size": "16px",
           "attributes": {
             "class": "menu__panel",
-            "id": "uid_h0e0iny7boe"
+            "id": "uid_a91kpln64df"
           }
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "navigation",
+          "component": "button",
           "tag": "p",
           "text": "All web technology",
           "color": "rgb(164, 206, 254)",
@@ -2077,7 +1125,7 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "navigation",
+          "component": "button",
           "tag": "div",
           "text": "Technologies Accessibility HTTP URI Web extensions WebAssembly WebDriver See all… Topics Media Perfo",
           "color": "rgb(255, 255, 255)",
@@ -2086,56 +1134,6 @@
           "attributes": {
             "class": "menu__panel-content"
           }
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "dl",
-          "text": "Technologies Accessibility HTTP URI Web extensions WebAssembly WebDriver See all…",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "dt",
-          "text": "Technologies",
-          "color": "rgb(195, 199, 203)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "12.8px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "dd",
-          "text": "Accessibility HTTP URI Web extensions WebAssembly WebDriver See all…",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "ul",
-          "text": "Accessibility HTTP URI Web extensions WebAssembly WebDriver See all…",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "Accessibility",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
         },
         {
           "site": "https://developer.mozilla.org",
@@ -2151,16 +1149,6 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "HTTP",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
           "component": "link",
           "tag": "a",
           "text": "HTTP",
@@ -2170,16 +1158,6 @@
           "attributes": {
             "href": "/en-US/docs/Web/HTTP"
           }
-        },
-        {
-          "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "URI",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
         },
         {
           "site": "https://developer.mozilla.org",
@@ -2195,16 +1173,6 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "Web extensions",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
           "component": "link",
           "tag": "a",
           "text": "Web extensions",
@@ -2217,16 +1185,6 @@
         },
         {
           "site": "https://developer.mozilla.org",
-          "component": "other",
-          "tag": "li",
-          "text": "WebAssembly",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgb(24, 25, 27)",
-          "font_size": "16px",
-          "attributes": {}
-        },
-        {
-          "site": "https://developer.mozilla.org",
           "component": "link",
           "tag": "a",
           "text": "WebAssembly",
@@ -2236,22 +1194,1289 @@
           "attributes": {
             "href": "/en-US/docs/WebAssembly"
           }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "WebDriver",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "href": "/en-US/docs/Web/WebDriver"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "See all…",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "href": "/en-US/docs/Web",
+            "aria-label": "See all web technology references"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "Media",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "href": "/en-US/docs/Web/Media"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "Performance",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "href": "/en-US/docs/Web/Performance"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "Privacy",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "href": "/en-US/docs/Web/Privacy"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "Security",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "href": "/en-US/docs/Web/Security"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "Progressive web apps",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "href": "/en-US/docs/Web/Progressive_web_apps"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "navigation",
+          "tag": "div",
+          "text": "Learn",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "menu__tab"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "button",
+          "tag": "button",
+          "text": "Learn",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "menu__tab-button",
+            "type": "button",
+            "aria-expanded": "false",
+            "aria-controls": "uid_0vcoeljjk6an"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "button",
+          "tag": "span",
+          "text": "Learn",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "menu__tab-label"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "other",
+          "tag": "div",
+          "text": "Learn web development Frontend developer course Getting started modules Core modules MDN Curriculum",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "menu__panel",
+            "id": "uid_0vcoeljjk6an"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "button",
+          "tag": "p",
+          "text": "Learn web development",
+          "color": "rgb(254, 190, 143)",
+          "background": "rgb(63, 34, 13)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "menu__panel-title"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "Learn web development",
+          "color": "rgb(254, 190, 143)",
+          "background": "rgb(63, 34, 13)",
+          "font_size": "16px",
+          "attributes": {
+            "href": "/en-US/docs/Learn_web_development"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "other",
+          "tag": "div",
+          "text": "Frontend developer course Getting started modules Core modules MDN Curriculum Check out the video co",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "menu__panel-content"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "Getting started modules",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "href": "/en-US/docs/Learn_web_development/Getting_started"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "Core modules",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "href": "/en-US/docs/Learn_web_development/Core"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "MDN Curriculum",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "",
+            "href": "/en-US/curriculum/"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "Check out the video course from Scrimba, our partner",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "external",
+            "href": "https://scrimba.com/frontend-path-c0j?via=mdn-learn-navbar"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "Structuring content with HTML module",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "href": "/en-US/docs/Learn_web_development/Core/Structuring_content"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "CSS styling basics module",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "href": "/en-US/docs/Learn_web_development/Core/Styling_basics"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "CSS layout module",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "href": "/en-US/docs/Learn_web_development/Core/CSS_layout"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "Dynamic scripting with JavaScript module",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "href": "/en-US/docs/Learn_web_development/Core/Scripting"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "navigation",
+          "tag": "div",
+          "text": "Tools",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "menu__tab"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "button",
+          "tag": "button",
+          "text": "Tools",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "menu__tab-button",
+            "type": "button",
+            "aria-expanded": "false",
+            "aria-controls": "uid_7kmnfezih85"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "button",
+          "tag": "span",
+          "text": "Tools",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "menu__tab-label"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "navigation",
+          "tag": "div",
+          "text": "Discover our tools Playground HTTP Observatory Border-image generator Border-radius generator Box-sh",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "menu__panel",
+            "id": "uid_7kmnfezih85"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "button",
+          "tag": "p",
+          "text": "Discover our tools",
+          "color": "rgb(216, 184, 255)",
+          "background": "rgb(38, 14, 67)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "menu__panel-title"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "button",
+          "tag": "div",
+          "text": "Playground HTTP Observatory Border-image generator Border-radius generator Box-shadow generator Colo",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "menu__panel-content"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "Playground",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "menu__panel-icon",
+            "href": "/en-US/play"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "HTTP Observatory",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "menu__panel-icon",
+            "href": "/en-US/observatory"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "Border-image generator",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "href": "/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-image_generator"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "Border-radius generator",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "href": "/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "Box-shadow generator",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "href": "/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Box-shadow_generator"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "Color format converter",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "href": "/en-US/docs/Web/CSS/Guides/Colors/Color_format_converter"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "Color mixer",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "href": "/en-US/docs/Web/CSS/Guides/Colors/Color_mixer"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "Shape generator",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "href": "/en-US/docs/Web/CSS/Guides/Shapes/Shape_generator"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "navigation",
+          "tag": "div",
+          "text": "About",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "menu__tab"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "button",
+          "tag": "button",
+          "text": "About",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "menu__tab-button",
+            "type": "button",
+            "aria-expanded": "false",
+            "aria-controls": "uid_5fc9rzfs4wq"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "button",
+          "tag": "span",
+          "text": "About",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "menu__tab-label"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "navigation",
+          "tag": "div",
+          "text": "Get to know MDN better About MDN Advertise with us Community MDN on GitHub",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "menu__panel",
+            "id": "uid_5fc9rzfs4wq"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "button",
+          "tag": "p",
+          "text": "Get to know MDN better",
+          "color": "rgb(112, 235, 163)",
+          "background": "rgb(12, 49, 28)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "menu__panel-title"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "button",
+          "tag": "div",
+          "text": "About MDN Advertise with us Community MDN on GitHub",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "menu__panel-content"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "About MDN",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "menu__panel-icon",
+            "href": "/en-US/about"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "Advertise with us",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "menu__panel-icon",
+            "href": "/en-US/advertising"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "Community",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "menu__panel-icon",
+            "href": "/en-US/community"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "MDN on GitHub",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "menu__panel-icon external",
+            "href": "https://github.com/mdn"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "navigation",
+          "tag": "div",
+          "text": "Blog",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "menu__tab"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "button",
+          "tag": "a",
+          "text": "Blog",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(24, 25, 27)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "menu__tab-link",
+            "href": "/en-US/blog/"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "button",
+          "tag": "div",
+          "text": "MDN",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(33, 36, 38)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "breadcrumbs-bar"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "MDN",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(33, 36, 38)",
+          "font_size": "16px",
+          "attributes": {
+            "href": "/en-US/"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "button",
+          "tag": "span",
+          "text": "MDN",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(33, 36, 38)",
+          "font_size": "16px",
+          "attributes": {}
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "other",
+          "tag": "div",
+          "text": "Resources for Developers, by Developers Documenting CSS, HTML, and JavaScript, since 2005. / / / / /",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(33, 36, 38)",
+          "font_size": "16px",
+          "attributes": {
+            "id": "content",
+            "class": "homepage homepage--dark"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "text",
+          "tag": "h1",
+          "text": "Resources for Developers, by Developers",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(33, 36, 38)",
+          "font_size": "40px",
+          "attributes": {}
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "text",
+          "tag": "p",
+          "text": "Documenting CSS, HTML, and JavaScript, since 2005.",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(33, 36, 38)",
+          "font_size": "24px",
+          "attributes": {}
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "CSS",
+          "color": "rgb(164, 206, 254)",
+          "background": "rgb(33, 36, 38)",
+          "font_size": "24px",
+          "attributes": {
+            "href": "/en-US/docs/Web/CSS"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "HTML",
+          "color": "rgb(164, 206, 254)",
+          "background": "rgb(33, 36, 38)",
+          "font_size": "24px",
+          "attributes": {
+            "href": "/en-US/docs/Web/HTML"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "JavaScript",
+          "color": "rgb(164, 206, 254)",
+          "background": "rgb(33, 36, 38)",
+          "font_size": "24px",
+          "attributes": {
+            "href": "/en-US/docs/Web/JavaScript"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "text",
+          "tag": "h2",
+          "text": "Featured articles",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "24px",
+          "attributes": {}
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "button",
+          "tag": "article",
+          "text": "Blog Celebrating 20 years of MDN MDN turns 20! Let's look at how we started, how MDN became the most",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "featured-articles__article"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "Blog",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "12.8px",
+          "attributes": {
+            "class": "featured-articles__tag",
+            "href": "/en-US/blog/"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "text",
+          "tag": "h3",
+          "text": "Celebrating 20 years of MDN",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "featured-articles__title"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "Celebrating 20 years of MDN",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px",
+          "attributes": {
+            "href": "/en-US/blog/mdn-turns-20/"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "text",
+          "tag": "p",
+          "text": "MDN turns 20! Let's look at how we started, how MDN became the most trusted resource for web develop",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "12.8px",
+          "attributes": {
+            "class": "featured-articles__summary"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "button",
+          "tag": "article",
+          "text": "Web APIs CSS Custom Highlight API The CSS Custom Highlight API provides a mechanism for styling arbi",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "featured-articles__article"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "Web APIs",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "12.8px",
+          "attributes": {
+            "class": "featured-articles__tag",
+            "href": "/en-US/docs/Web/API"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "text",
+          "tag": "h3",
+          "text": "CSS Custom Highlight API",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "featured-articles__title"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "CSS Custom Highlight API",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px",
+          "attributes": {
+            "href": "/en-US/docs/Web/API/CSS_Custom_Highlight_API"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "text",
+          "tag": "p",
+          "text": "The CSS Custom Highlight API provides a mechanism for styling arbitrary text ranges on a document by",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "12.8px",
+          "attributes": {
+            "class": "featured-articles__summary"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "other",
+          "tag": "article",
+          "text": "Web APIs Server timing Server-Timing is a part of the Performance API and allows servers to communic",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "featured-articles__article"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "Web APIs",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "12.8px",
+          "attributes": {
+            "class": "featured-articles__tag",
+            "href": "/en-US/docs/Web/API"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "text",
+          "tag": "h3",
+          "text": "Server timing",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "featured-articles__title"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "Server timing",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px",
+          "attributes": {
+            "href": "/en-US/docs/Web/API/Performance_API/Server_timing"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "other",
+          "tag": "p",
+          "text": "Server-Timing is a part of the Performance API and allows servers to communicate metrics about the r",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "12.8px",
+          "attributes": {
+            "class": "featured-articles__summary"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "other",
+          "tag": "article",
+          "text": "JavaScript JavaScript resource management This guide talks about how to do resource management in Ja",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "featured-articles__article"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "JavaScript",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "12.8px",
+          "attributes": {
+            "class": "featured-articles__tag",
+            "href": "/en-US/docs/Web/JavaScript"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "text",
+          "tag": "h3",
+          "text": "JavaScript resource management",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "featured-articles__title"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "JavaScript resource management",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px",
+          "attributes": {
+            "href": "/en-US/docs/Web/JavaScript/Guide/Resource_management"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "other",
+          "tag": "p",
+          "text": "This guide talks about how to do resource management in JavaScript. Resource management is not exact",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "12.8px",
+          "attributes": {
+            "class": "featured-articles__summary"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "text",
+          "tag": "h2",
+          "text": "Latest news",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "24px",
+          "attributes": {}
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "button",
+          "tag": "article",
+          "text": "developer.mozilla.org Launching MDN's new front end 8 months ago MDN is getting a facelift 🎉. Disco",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "latest-news__item"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "developer.mozilla.org",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "12.8px",
+          "attributes": {
+            "class": "latest-news__source",
+            "href": "/en-US/blog/"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "text",
+          "tag": "h3",
+          "text": "Launching MDN's new front end",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "latest-news__title"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "Launching MDN's new front end",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px",
+          "attributes": {
+            "href": "/en-US/blog/launching-new-front-end/"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "other",
+          "tag": "time",
+          "text": "8 months ago",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "12.8px",
+          "attributes": {
+            "class": "latest-news__date"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "text",
+          "tag": "p",
+          "text": "MDN is getting a facelift 🎉. Discover what's changed, what's improved, and how navigating the site",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "12.8px",
+          "attributes": {
+            "class": "latest-news__summary"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "other",
+          "tag": "article",
+          "text": "developer.mozilla.org Image formats: Pixel data from encoders to decoders 8 months ago From individu",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "latest-news__item"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "developer.mozilla.org",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "12.8px",
+          "attributes": {
+            "class": "latest-news__source",
+            "href": "/en-US/blog/"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "text",
+          "tag": "h3",
+          "text": "Image formats: Pixel data from encoders to decoders",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "latest-news__title"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "Image formats: Pixel data from encoders to decoders",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px",
+          "attributes": {
+            "href": "/en-US/blog/image-formats-pixels-graphics/"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "other",
+          "tag": "time",
+          "text": "8 months ago",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "12.8px",
+          "attributes": {
+            "class": "latest-news__date"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "text",
+          "tag": "p",
+          "text": "From individual pixels to fully decoded images on your screen, raw pixel data gets transformed, comp",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "12.8px",
+          "attributes": {
+            "class": "latest-news__summary"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "other",
+          "tag": "article",
+          "text": "developer.mozilla.org Image formats: Color models for humans and devices 11 months ago Images help b",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "latest-news__item"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "developer.mozilla.org",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "12.8px",
+          "attributes": {
+            "class": "latest-news__source",
+            "href": "/en-US/blog/"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "text",
+          "tag": "h3",
+          "text": "Image formats: Color models for humans and devices",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "latest-news__title"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "Image formats: Color models for humans and devices",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px",
+          "attributes": {
+            "href": "/en-US/blog/color-models-humans-devices/"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "other",
+          "tag": "time",
+          "text": "11 months ago",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "12.8px",
+          "attributes": {
+            "class": "latest-news__date"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "text",
+          "tag": "p",
+          "text": "Images help bring more color and life to the web. This post describes how images are represented by",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "12.8px",
+          "attributes": {
+            "class": "latest-news__summary"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "other",
+          "tag": "article",
+          "text": "developer.mozilla.org Default styles for h1 elements are changing 1 year ago Browsers are starting t",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "latest-news__item"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "developer.mozilla.org",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "12.8px",
+          "attributes": {
+            "class": "latest-news__source",
+            "href": "/en-US/blog/"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "text",
+          "tag": "h3",
+          "text": "Default styles for h1 elements are changing",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px",
+          "attributes": {
+            "class": "latest-news__title"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "link",
+          "tag": "a",
+          "text": "Default styles for h1 elements are changing",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "16px",
+          "attributes": {
+            "href": "/en-US/blog/h1-element-styles/"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "other",
+          "tag": "time",
+          "text": "1 year ago",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "12.8px",
+          "attributes": {
+            "class": "latest-news__date"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "text",
+          "tag": "p",
+          "text": "Browsers are starting to roll out changes in default UA styles for nested section headings. This pos",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "12.8px",
+          "attributes": {
+            "class": "latest-news__summary"
+          }
+        },
+        {
+          "site": "https://developer.mozilla.org",
+          "component": "text",
+          "tag": "h2",
+          "text": "Recent contributions",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "font_size": "24px",
+          "attributes": {}
         }
       ]
     },
     {
       "site": "https://www.apple.com/",
       "total_elements_scanned": 1899,
-      "components_detected": 708,
+      "components_detected": 628,
       "category_counts": {
-        "other": 232,
-        "button": 89,
-        "text": 93,
-        "navigation": 126,
-        "link": 122,
-        "card": 45,
-        "footer": 1
+        "other": 162,
+        "button": 245,
+        "text": 72,
+        "navigation": 31,
+        "link": 98,
+        "card": 20
       },
+      "other_percentage": 25.8,
       "results": [
         {
           "site": "https://www.apple.com/",
@@ -2268,31 +2493,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "other",
-          "tag": "div",
-          "text": "Choose another country or region to see content specific to your location. Malta Continue",
-          "color": "rgba(0, 0, 0, 0.8)",
-          "background": "rgb(250, 250, 252)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "ac-ls-content"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "other",
-          "tag": "div",
-          "text": "Choose another country or region to see content specific to your location.",
-          "color": "rgba(0, 0, 0, 0.8)",
-          "background": "rgb(250, 250, 252)",
-          "font_size": "12px",
-          "attributes": {
-            "class": "ac-ls-copy"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "other",
+          "component": "button",
           "tag": "div",
           "text": "Malta Continue",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -2304,7 +2505,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "other",
+          "component": "button",
           "tag": "div",
           "text": "Malta",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -2346,7 +2547,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "text",
+          "component": "button",
           "tag": "span",
           "text": "Malta",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -2373,7 +2574,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "other",
+          "component": "button",
           "tag": "li",
           "text": "Malta",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -2387,7 +2588,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "text",
+          "component": "button",
           "tag": "span",
           "text": "Malta",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -2399,7 +2600,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "other",
+          "component": "button",
           "tag": "li",
           "text": "Other country or region",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -2413,7 +2614,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "text",
+          "component": "button",
           "tag": "span",
           "text": "Other country or region",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -2486,18 +2687,6 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "other",
-          "tag": "div",
-          "text": "Apple Store Mac iPad iPhone Watch Vision AirPods TV & Home Entertainment Accessories Support 0 +",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgb(255, 255, 255)",
-          "font_size": "17px",
-          "attributes": {
-            "id": "globalheader"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
           "component": "navigation",
           "tag": "nav",
           "text": "Apple Store Mac iPad iPhone Watch Vision AirPods TV & Home Entertainment Accessories Support 0 +",
@@ -2512,7 +2701,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "div",
           "text": "Apple Store Mac iPad iPhone Watch Vision AirPods TV & Home Entertainment Accessories Support 0 +",
           "color": "rgb(29, 29, 31)",
@@ -2537,7 +2726,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "",
           "color": "rgb(29, 29, 31)",
@@ -2549,32 +2738,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
-          "tag": "ul",
-          "text": "Apple Store Mac iPad iPhone Watch Vision AirPods TV & Home Entertainment Accessories Support 0 +",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "id": "globalnav-list",
-            "class": "globalnav-list"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "navigation",
-          "tag": "li",
-          "text": "Apple",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "\n\t\t\t\tglobalnav-item\n\t\t\t\tglobalnav-item-apple\n\t\t\t\t\n\t\t\t\t\n\t\t\t"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "link",
+          "component": "button",
           "tag": "a",
           "text": "Apple",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -2588,7 +2752,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -2600,7 +2764,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "Apple",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -2608,18 +2772,6 @@
           "font_size": "17px",
           "attributes": {
             "class": "globalnav-link-text"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "navigation",
-          "tag": "li",
-          "text": "Store Mac iPad iPhone Watch Vision AirPods TV & Home Entertainment Accessories Support",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-item globalnav-menu"
           }
         },
         {
@@ -2660,31 +2812,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
-          "tag": "ul",
-          "text": "Store",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-submenu-trigger-group"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "navigation",
-          "tag": "li",
-          "text": "Store",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-submenu-trigger-item"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "link",
+          "component": "button",
           "tag": "a",
           "text": "Store",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -2698,7 +2826,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "Store",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -2710,7 +2838,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -2722,7 +2850,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "Store",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -2730,18 +2858,6 @@
           "font_size": "12px",
           "attributes": {
             "class": "globalnav-link-text"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "navigation",
-          "tag": "li",
-          "text": "",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-submenu-trigger-item"
           }
         },
         {
@@ -2763,19 +2879,6 @@
         {
           "site": "https://www.apple.com/",
           "component": "navigation",
-          "tag": "span",
-          "text": "",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-image-regular globalnav-submenu-button-icon",
-            "aria-hidden": "true"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "navigation",
           "tag": "div",
           "text": "Mac",
           "color": "rgb(29, 29, 31)",
@@ -2787,31 +2890,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
-          "tag": "ul",
-          "text": "Mac",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-submenu-trigger-group"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "navigation",
-          "tag": "li",
-          "text": "Mac",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-submenu-trigger-item"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "link",
+          "component": "button",
           "tag": "a",
           "text": "Mac",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -2825,7 +2904,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "Mac",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -2837,7 +2916,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -2849,7 +2928,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "Mac",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -2857,18 +2936,6 @@
           "font_size": "12px",
           "attributes": {
             "class": "globalnav-link-text"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "navigation",
-          "tag": "li",
-          "text": "",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-submenu-trigger-item"
           }
         },
         {
@@ -2890,19 +2957,6 @@
         {
           "site": "https://www.apple.com/",
           "component": "navigation",
-          "tag": "span",
-          "text": "",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-image-regular globalnav-submenu-button-icon",
-            "aria-hidden": "true"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "navigation",
           "tag": "div",
           "text": "iPad",
           "color": "rgb(29, 29, 31)",
@@ -2914,31 +2968,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
-          "tag": "ul",
-          "text": "iPad",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-submenu-trigger-group"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "navigation",
-          "tag": "li",
-          "text": "iPad",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-submenu-trigger-item"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "link",
+          "component": "button",
           "tag": "a",
           "text": "iPad",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -2952,7 +2982,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "iPad",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -2964,7 +2994,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -2976,7 +3006,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "iPad",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -2984,18 +3014,6 @@
           "font_size": "12px",
           "attributes": {
             "class": "globalnav-link-text"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "navigation",
-          "tag": "li",
-          "text": "",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-submenu-trigger-item"
           }
         },
         {
@@ -3017,19 +3035,6 @@
         {
           "site": "https://www.apple.com/",
           "component": "navigation",
-          "tag": "span",
-          "text": "",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-image-regular globalnav-submenu-button-icon",
-            "aria-hidden": "true"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "navigation",
           "tag": "div",
           "text": "iPhone",
           "color": "rgb(29, 29, 31)",
@@ -3041,31 +3046,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
-          "tag": "ul",
-          "text": "iPhone",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-submenu-trigger-group"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "navigation",
-          "tag": "li",
-          "text": "iPhone",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-submenu-trigger-item"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "link",
+          "component": "button",
           "tag": "a",
           "text": "iPhone",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -3079,7 +3060,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "iPhone",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -3091,7 +3072,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -3103,7 +3084,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "iPhone",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -3111,18 +3092,6 @@
           "font_size": "12px",
           "attributes": {
             "class": "globalnav-link-text"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "navigation",
-          "tag": "li",
-          "text": "",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-submenu-trigger-item"
           }
         },
         {
@@ -3144,19 +3113,6 @@
         {
           "site": "https://www.apple.com/",
           "component": "navigation",
-          "tag": "span",
-          "text": "",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-image-regular globalnav-submenu-button-icon",
-            "aria-hidden": "true"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "navigation",
           "tag": "div",
           "text": "Watch",
           "color": "rgb(29, 29, 31)",
@@ -3168,31 +3124,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
-          "tag": "ul",
-          "text": "Watch",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-submenu-trigger-group"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "navigation",
-          "tag": "li",
-          "text": "Watch",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-submenu-trigger-item"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "link",
+          "component": "button",
           "tag": "a",
           "text": "Watch",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -3206,7 +3138,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "Watch",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -3218,7 +3150,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -3230,7 +3162,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "Watch",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -3238,18 +3170,6 @@
           "font_size": "12px",
           "attributes": {
             "class": "globalnav-link-text"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "navigation",
-          "tag": "li",
-          "text": "",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-submenu-trigger-item"
           }
         },
         {
@@ -3271,19 +3191,6 @@
         {
           "site": "https://www.apple.com/",
           "component": "navigation",
-          "tag": "span",
-          "text": "",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-image-regular globalnav-submenu-button-icon",
-            "aria-hidden": "true"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "navigation",
           "tag": "div",
           "text": "Vision",
           "color": "rgb(29, 29, 31)",
@@ -3295,31 +3202,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
-          "tag": "ul",
-          "text": "Vision",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-submenu-trigger-group"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "navigation",
-          "tag": "li",
-          "text": "Vision",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-submenu-trigger-item"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "link",
+          "component": "button",
           "tag": "a",
           "text": "Vision",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -3333,7 +3216,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "Vision",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -3345,7 +3228,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -3357,7 +3240,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "Vision",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -3365,18 +3248,6 @@
           "font_size": "12px",
           "attributes": {
             "class": "globalnav-link-text"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "navigation",
-          "tag": "li",
-          "text": "",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-submenu-trigger-item"
           }
         },
         {
@@ -3398,19 +3269,6 @@
         {
           "site": "https://www.apple.com/",
           "component": "navigation",
-          "tag": "span",
-          "text": "",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-image-regular globalnav-submenu-button-icon",
-            "aria-hidden": "true"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "navigation",
           "tag": "div",
           "text": "AirPods",
           "color": "rgb(29, 29, 31)",
@@ -3422,31 +3280,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
-          "tag": "ul",
-          "text": "AirPods",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-submenu-trigger-group"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "navigation",
-          "tag": "li",
-          "text": "AirPods",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-submenu-trigger-item"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "link",
+          "component": "button",
           "tag": "a",
           "text": "AirPods",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -3460,7 +3294,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "AirPods",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -3472,7 +3306,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -3484,7 +3318,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "AirPods",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -3492,18 +3326,6 @@
           "font_size": "12px",
           "attributes": {
             "class": "globalnav-link-text"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "navigation",
-          "tag": "li",
-          "text": "",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-submenu-trigger-item"
           }
         },
         {
@@ -3525,19 +3347,6 @@
         {
           "site": "https://www.apple.com/",
           "component": "navigation",
-          "tag": "span",
-          "text": "",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-image-regular globalnav-submenu-button-icon",
-            "aria-hidden": "true"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "navigation",
           "tag": "div",
           "text": "TV & Home",
           "color": "rgb(29, 29, 31)",
@@ -3549,31 +3358,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
-          "tag": "ul",
-          "text": "TV & Home",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-submenu-trigger-group"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "navigation",
-          "tag": "li",
-          "text": "TV & Home",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-submenu-trigger-item"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "link",
+          "component": "button",
           "tag": "a",
           "text": "TV & Home",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -3587,7 +3372,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "TV & Home",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -3599,7 +3384,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -3611,7 +3396,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "TV & Home",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -3619,18 +3404,6 @@
           "font_size": "12px",
           "attributes": {
             "class": "globalnav-link-text"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "navigation",
-          "tag": "li",
-          "text": "",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-submenu-trigger-item"
           }
         },
         {
@@ -3652,19 +3425,6 @@
         {
           "site": "https://www.apple.com/",
           "component": "navigation",
-          "tag": "span",
-          "text": "",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-image-regular globalnav-submenu-button-icon",
-            "aria-hidden": "true"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "navigation",
           "tag": "div",
           "text": "Entertainment",
           "color": "rgb(29, 29, 31)",
@@ -3676,31 +3436,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
-          "tag": "ul",
-          "text": "Entertainment",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-submenu-trigger-group"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "navigation",
-          "tag": "li",
-          "text": "Entertainment",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-submenu-trigger-item"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "link",
+          "component": "button",
           "tag": "a",
           "text": "Entertainment",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -3714,7 +3450,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "Entertainment",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -3726,7 +3462,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -3738,7 +3474,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "Entertainment",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -3746,18 +3482,6 @@
           "font_size": "12px",
           "attributes": {
             "class": "globalnav-link-text"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "navigation",
-          "tag": "li",
-          "text": "",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-submenu-trigger-item"
           }
         },
         {
@@ -3779,19 +3503,6 @@
         {
           "site": "https://www.apple.com/",
           "component": "navigation",
-          "tag": "span",
-          "text": "",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-image-regular globalnav-submenu-button-icon",
-            "aria-hidden": "true"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "navigation",
           "tag": "div",
           "text": "Accessories",
           "color": "rgb(29, 29, 31)",
@@ -3803,31 +3514,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
-          "tag": "ul",
-          "text": "Accessories",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-submenu-trigger-group"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "navigation",
-          "tag": "li",
-          "text": "Accessories",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-submenu-trigger-item"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "link",
+          "component": "button",
           "tag": "a",
           "text": "Accessories",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -3841,7 +3528,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "Accessories",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -3853,7 +3540,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -3865,7 +3552,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "Accessories",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -3873,18 +3560,6 @@
           "font_size": "12px",
           "attributes": {
             "class": "globalnav-link-text"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "navigation",
-          "tag": "li",
-          "text": "",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-submenu-trigger-item"
           }
         },
         {
@@ -3906,19 +3581,6 @@
         {
           "site": "https://www.apple.com/",
           "component": "navigation",
-          "tag": "span",
-          "text": "",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-image-regular globalnav-submenu-button-icon",
-            "aria-hidden": "true"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "navigation",
           "tag": "div",
           "text": "Support",
           "color": "rgb(29, 29, 31)",
@@ -3930,31 +3592,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
-          "tag": "ul",
-          "text": "Support",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-submenu-trigger-group"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "navigation",
-          "tag": "li",
-          "text": "Support",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-submenu-trigger-item"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "link",
+          "component": "button",
           "tag": "a",
           "text": "Support",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -3968,7 +3606,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "Support",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -3980,7 +3618,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -3992,7 +3630,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "Support",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -4000,18 +3638,6 @@
           "font_size": "12px",
           "attributes": {
             "class": "globalnav-link-text"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "navigation",
-          "tag": "li",
-          "text": "",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-submenu-trigger-item"
           }
         },
         {
@@ -4032,31 +3658,6 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
-          "tag": "span",
-          "text": "",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-image-regular globalnav-submenu-button-icon",
-            "aria-hidden": "true"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "navigation",
-          "tag": "li",
-          "text": "5 total results Quick Links Find a Store Apple Vision Pro AirPods Apple Intelligence Apple Trade In",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "globalnav-item globalnav-search shift-0-1"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
           "component": "button",
           "tag": "a",
           "text": "",
@@ -4073,7 +3674,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -4081,19 +3682,6 @@
           "font_size": "12px",
           "attributes": {
             "class": "globalnav-image-regular"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "navigation",
-          "tag": "li",
-          "text": "0 +",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "17px",
-          "attributes": {
-            "id": "globalnav-bag",
-            "class": "globalnav-item globalnav-bag"
           }
         },
         {
@@ -4126,7 +3714,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "",
           "color": "rgba(0, 0, 0, 0.8)",
@@ -4138,7 +3726,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "0 +",
           "color": "rgb(255, 255, 255)",
@@ -4151,7 +3739,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "",
           "color": "rgb(255, 255, 255)",
@@ -4163,7 +3751,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "navigation",
+          "component": "button",
           "tag": "span",
           "text": "0",
           "color": "rgb(255, 255, 255)",
@@ -4171,18 +3759,6 @@
           "font_size": "10px",
           "attributes": {
             "class": "globalnav-bag-badge-number"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "navigation",
-          "tag": "span",
-          "text": "+",
-          "color": "rgb(255, 255, 255)",
-          "background": "rgba(255, 255, 255, 0.8)",
-          "font_size": "10px",
-          "attributes": {
-            "class": "globalnav-bag-badge-unit"
           }
         },
         {
@@ -4289,19 +3865,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "other",
-          "tag": "section",
-          "text": "iPhone Meet the latest iPhone lineup. Learn more Shop iPhone MacBook Neo Amazing Mac. Surprising pri",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgb(255, 255, 255)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "section section-hero"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "card",
+          "component": "button",
           "tag": "div",
           "text": "iPhone Meet the latest iPhone lineup. Learn more Shop iPhone",
           "color": "rgb(29, 29, 31)",
@@ -4315,7 +3879,7 @@
           "site": "https://www.apple.com/",
           "component": "link",
           "tag": "a",
-          "text": "",
+          "text": "[no visible text]",
           "color": "rgb(0, 102, 204)",
           "background": "rgb(245, 245, 247)",
           "font_size": "17px",
@@ -4375,7 +3939,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "card",
+          "component": "button",
           "tag": "div",
           "text": "Learn more Shop iPhone",
           "color": "rgb(29, 29, 31)",
@@ -4415,7 +3979,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "card",
+          "component": "other",
           "tag": "div",
           "text": "<picture class=\"static\" ><source srcset=\"/v/home/a/images/heroes/iphone-family/hero_iphone_family__f",
           "color": "rgb(29, 29, 31)",
@@ -4427,7 +3991,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "card",
+          "component": "button",
           "tag": "div",
           "text": "MacBook Neo Amazing Mac. Surprising price. Learn more Buy",
           "color": "rgb(29, 29, 31)",
@@ -4441,7 +4005,7 @@
           "site": "https://www.apple.com/",
           "component": "link",
           "tag": "a",
-          "text": "",
+          "text": "[no visible text]",
           "color": "rgb(0, 102, 204)",
           "background": "rgb(245, 245, 247)",
           "font_size": "17px",
@@ -4501,7 +4065,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "card",
+          "component": "button",
           "tag": "div",
           "text": "Learn more Buy",
           "color": "rgb(29, 29, 31)",
@@ -4541,7 +4105,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "card",
+          "component": "other",
           "tag": "div",
           "text": "<picture class=\"static\" ><source srcset=\"/v/home/a/images/heroes/macbook-neo/hero_macbook_neo__gnm3s",
           "color": "rgb(29, 29, 31)",
@@ -4553,7 +4117,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "card",
+          "component": "button",
           "tag": "div",
           "text": "iPad Air Now supercharged by M4. Learn more Buy",
           "color": "rgb(29, 29, 31)",
@@ -4567,7 +4131,7 @@
           "site": "https://www.apple.com/",
           "component": "link",
           "tag": "a",
-          "text": "",
+          "text": "[no visible text]",
           "color": "rgb(0, 102, 204)",
           "background": "rgb(245, 245, 247)",
           "font_size": "17px",
@@ -4639,7 +4203,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "card",
+          "component": "button",
           "tag": "div",
           "text": "Learn more Buy",
           "color": "rgb(29, 29, 31)",
@@ -4679,7 +4243,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "card",
+          "component": "other",
           "tag": "div",
           "text": "<picture class=\"static\" ><source srcset=\"/v/home/a/images/heroes/ipad-air-m4/hero_ipad_air_m4__ew8k9",
           "color": "rgb(29, 29, 31)",
@@ -4691,19 +4255,7 @@
         },
         {
           "site": "https://www.apple.com/",
-          "component": "other",
-          "tag": "section",
-          "text": "WWDC 26 Apple Worldwide Developers Conference. Join us online June 8–12. Learn more Apple Watch Seri",
-          "color": "rgb(29, 29, 31)",
-          "background": "rgb(255, 255, 255)",
-          "font_size": "17px",
-          "attributes": {
-            "class": "section section-promo"
-          }
-        },
-        {
-          "site": "https://www.apple.com/",
-          "component": "card",
+          "component": "button",
           "tag": "div",
           "text": "WWDC 26 Apple Worldwide Developers Conference. Join us online June 8–12. Learn more",
           "color": "rgb(29, 29, 31)",
@@ -4717,7 +4269,7 @@
           "site": "https://www.apple.com/",
           "component": "link",
           "tag": "a",
-          "text": "",
+          "text": "[no visible text]",
           "color": "rgb(41, 151, 255)",
           "background": "rgb(0, 0, 0)",
           "font_size": "17px",
@@ -4785,6 +4337,697 @@
           "font_size": "21px",
           "attributes": {
             "class": "tile-subhead typography-tile-subhead"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "button",
+          "tag": "div",
+          "text": "Learn more",
+          "color": "rgb(29, 29, 31)",
+          "background": "rgb(0, 0, 0)",
+          "font_size": "17px",
+          "attributes": {
+            "class": "tile-ctas"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "button",
+          "tag": "a",
+          "text": "Learn more",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(0, 113, 227)",
+          "font_size": "14px",
+          "attributes": {
+            "class": "button",
+            "href": "https://developer.apple.com/wwdc26/",
+            "aria-label": "Learn more, Apple Worldwide Developers Conference 2026"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "other",
+          "tag": "div",
+          "text": "<picture class=\"static\" ><source srcset=\"/v/home/a/images/promos/wwdc26-announce/promo_wwdc26_announ",
+          "color": "rgb(29, 29, 31)",
+          "background": "rgb(0, 0, 0)",
+          "font_size": "17px",
+          "attributes": {
+            "class": "tile-image-wrapper"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "button",
+          "tag": "div",
+          "text": "Apple Watch Series 11 The ultimate way to watch your health. Learn more Buy",
+          "color": "rgb(29, 29, 31)",
+          "background": "rgb(245, 245, 247)",
+          "font_size": "17px",
+          "attributes": {
+            "class": "tile-wrapper"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "link",
+          "tag": "a",
+          "text": "[no visible text]",
+          "color": "rgb(0, 102, 204)",
+          "background": "rgb(245, 245, 247)",
+          "font_size": "17px",
+          "attributes": {
+            "class": "tile-link",
+            "href": "/apple-watch-series-11/",
+            "aria-hidden": "true"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "card",
+          "tag": "div",
+          "text": "Apple Watch Series 11 The ultimate way to watch your health. Learn more Buy",
+          "color": "rgb(29, 29, 31)",
+          "background": "rgb(245, 245, 247)",
+          "font_size": "17px",
+          "attributes": {
+            "class": "tile-content"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "card",
+          "tag": "div",
+          "text": "Apple Watch Series 11 The ultimate way to watch your health.",
+          "color": "rgb(29, 29, 31)",
+          "background": "rgb(245, 245, 247)",
+          "font_size": "17px",
+          "attributes": {
+            "class": "tile-copy-wrapper"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "text",
+          "tag": "h3",
+          "text": "Apple Watch Series 11",
+          "color": "rgb(29, 29, 31)",
+          "background": "rgb(245, 245, 247)",
+          "font_size": "40px",
+          "attributes": {
+            "class": "tile-headline logo-image"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "text",
+          "tag": "span",
+          "text": "Apple Watch Series 11",
+          "color": "rgb(29, 29, 31)",
+          "background": "rgb(245, 245, 247)",
+          "font_size": "40px",
+          "attributes": {
+            "class": "visuallyhidden"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "text",
+          "tag": "p",
+          "text": "The ultimate way to watch your health.",
+          "color": "rgb(29, 29, 31)",
+          "background": "rgb(245, 245, 247)",
+          "font_size": "21px",
+          "attributes": {
+            "class": "tile-subhead typography-tile-subhead"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "button",
+          "tag": "div",
+          "text": "Learn more Buy",
+          "color": "rgb(29, 29, 31)",
+          "background": "rgb(245, 245, 247)",
+          "font_size": "17px",
+          "attributes": {
+            "class": "tile-ctas"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "button",
+          "tag": "a",
+          "text": "Learn more",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(0, 113, 227)",
+          "font_size": "14px",
+          "attributes": {
+            "class": "button",
+            "href": "/apple-watch-series-11/",
+            "aria-label": "Learn more, Apple Watch Series 11"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "button",
+          "tag": "a",
+          "text": "Buy",
+          "color": "rgb(0, 102, 204)",
+          "background": "rgb(245, 245, 247)",
+          "font_size": "14px",
+          "attributes": {
+            "class": "button button-secondary",
+            "href": "/us/shop/goto/buy_watch/apple_watch_series_11",
+            "aria-label": "Buy, Apple Watch Series 11"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "other",
+          "tag": "div",
+          "text": "<picture class=\"static\" ><source srcset=\"/v/home/a/images/promos/apple-watch-series-11/promo_apple_w",
+          "color": "rgb(29, 29, 31)",
+          "background": "rgb(245, 245, 247)",
+          "font_size": "17px",
+          "attributes": {
+            "class": "tile-image-wrapper"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "button",
+          "tag": "div",
+          "text": "MacBook Pro Now with M5, M5 Pro, and M5 Max. Learn more Buy",
+          "color": "rgb(29, 29, 31)",
+          "background": "rgb(0, 0, 0)",
+          "font_size": "17px",
+          "attributes": {
+            "class": "tile-wrapper theme-dark"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "link",
+          "tag": "a",
+          "text": "[no visible text]",
+          "color": "rgb(41, 151, 255)",
+          "background": "rgb(0, 0, 0)",
+          "font_size": "17px",
+          "attributes": {
+            "class": "tile-link",
+            "href": "/macbook-pro/",
+            "aria-hidden": "true"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "card",
+          "tag": "div",
+          "text": "MacBook Pro Now with M5, M5 Pro, and M5 Max. Learn more Buy",
+          "color": "rgb(29, 29, 31)",
+          "background": "rgb(0, 0, 0)",
+          "font_size": "17px",
+          "attributes": {
+            "class": "tile-content"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "card",
+          "tag": "div",
+          "text": "MacBook Pro Now with M5, M5 Pro, and M5 Max.",
+          "color": "rgb(245, 245, 247)",
+          "background": "rgb(0, 0, 0)",
+          "font_size": "17px",
+          "attributes": {
+            "class": "tile-copy-wrapper"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "text",
+          "tag": "h3",
+          "text": "MacBook Pro",
+          "color": "rgb(245, 245, 247)",
+          "background": "rgb(0, 0, 0)",
+          "font_size": "40px",
+          "attributes": {
+            "class": "tile-headline typography-tile-headline"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "text",
+          "tag": "p",
+          "text": "Now with M5, M5 Pro, and M5 Max.",
+          "color": "rgb(245, 245, 247)",
+          "background": "rgb(0, 0, 0)",
+          "font_size": "21px",
+          "attributes": {
+            "class": "tile-subhead typography-tile-subhead"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "button",
+          "tag": "div",
+          "text": "Learn more Buy",
+          "color": "rgb(29, 29, 31)",
+          "background": "rgb(0, 0, 0)",
+          "font_size": "17px",
+          "attributes": {
+            "class": "tile-ctas"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "button",
+          "tag": "a",
+          "text": "Learn more",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(0, 113, 227)",
+          "font_size": "14px",
+          "attributes": {
+            "class": "button",
+            "href": "/macbook-pro/",
+            "aria-label": "Learn more, MacBook Pro"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "button",
+          "tag": "a",
+          "text": "Buy",
+          "color": "rgb(41, 151, 255)",
+          "background": "rgb(0, 0, 0)",
+          "font_size": "14px",
+          "attributes": {
+            "class": "button button-secondary",
+            "href": "/us/shop/goto/buy_mac/macbook_pro",
+            "aria-label": "Buy, MacBook Pro"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "card",
+          "tag": "div",
+          "text": "<picture class=\"static\" ><source srcset=\"/v/home/a/images/promos/macbook-pro/promo_macbook_pro__e3xq",
+          "color": "rgb(29, 29, 31)",
+          "background": "rgb(0, 0, 0)",
+          "font_size": "17px",
+          "attributes": {
+            "class": "tile-image-wrapper"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "button",
+          "tag": "div",
+          "text": "AirPods Pro 3 The world’s best in-ear Active Noise Cancellation. Learn more Buy",
+          "color": "rgb(29, 29, 31)",
+          "background": "rgb(245, 245, 247)",
+          "font_size": "17px",
+          "attributes": {
+            "class": "tile-wrapper"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "link",
+          "tag": "a",
+          "text": "[no visible text]",
+          "color": "rgb(0, 102, 204)",
+          "background": "rgb(245, 245, 247)",
+          "font_size": "17px",
+          "attributes": {
+            "class": "tile-link",
+            "href": "/airpods-pro/",
+            "aria-hidden": "true"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "card",
+          "tag": "div",
+          "text": "AirPods Pro 3 The world’s best in-ear Active Noise Cancellation. Learn more Buy",
+          "color": "rgb(29, 29, 31)",
+          "background": "rgb(245, 245, 247)",
+          "font_size": "17px",
+          "attributes": {
+            "class": "tile-content"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "card",
+          "tag": "div",
+          "text": "AirPods Pro 3 The world’s best in-ear Active Noise Cancellation.",
+          "color": "rgb(29, 29, 31)",
+          "background": "rgb(245, 245, 247)",
+          "font_size": "17px",
+          "attributes": {
+            "class": "tile-copy-wrapper"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "text",
+          "tag": "h3",
+          "text": "AirPods Pro 3",
+          "color": "rgb(29, 29, 31)",
+          "background": "rgb(245, 245, 247)",
+          "font_size": "40px",
+          "attributes": {
+            "class": "tile-headline typography-tile-headline"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "text",
+          "tag": "p",
+          "text": "The world’s best in-ear Active Noise Cancellation.",
+          "color": "rgb(29, 29, 31)",
+          "background": "rgb(245, 245, 247)",
+          "font_size": "21px",
+          "attributes": {
+            "class": "tile-subhead typography-tile-subhead"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "button",
+          "tag": "div",
+          "text": "Learn more Buy",
+          "color": "rgb(29, 29, 31)",
+          "background": "rgb(245, 245, 247)",
+          "font_size": "17px",
+          "attributes": {
+            "class": "tile-ctas"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "button",
+          "tag": "a",
+          "text": "Learn more",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(0, 113, 227)",
+          "font_size": "14px",
+          "attributes": {
+            "class": "button",
+            "href": "/airpods-pro/",
+            "aria-label": "Learn more, AirPods Pro 3"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "button",
+          "tag": "a",
+          "text": "Buy",
+          "color": "rgb(0, 102, 204)",
+          "background": "rgb(245, 245, 247)",
+          "font_size": "14px",
+          "attributes": {
+            "class": "button button-secondary",
+            "href": "/us/shop/goto/buy_airpods/airpods_pro_3",
+            "aria-label": "Buy, AirPods Pro 3"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "card",
+          "tag": "div",
+          "text": "<picture class=\"static\" ><source srcset=\"/v/home/a/images/promos/airpods-pro-3/promo_airpodspro_3__f",
+          "color": "rgb(29, 29, 31)",
+          "background": "rgb(245, 245, 247)",
+          "font_size": "17px",
+          "attributes": {
+            "class": "tile-image-wrapper"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "button",
+          "tag": "div",
+          "text": "Apple Trade In Get up to $195–$685 in credit when you trade in iPhone 13 or higher.1 Get your estima",
+          "color": "rgb(29, 29, 31)",
+          "background": "rgb(245, 245, 247)",
+          "font_size": "17px",
+          "attributes": {
+            "class": "tile-wrapper"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "link",
+          "tag": "a",
+          "text": "[no visible text]",
+          "color": "rgb(0, 102, 204)",
+          "background": "rgb(245, 245, 247)",
+          "font_size": "17px",
+          "attributes": {
+            "class": "tile-link",
+            "href": "/us/shop/goto/trade_in",
+            "aria-hidden": "true"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "card",
+          "tag": "div",
+          "text": "Apple Trade In Get up to $195–$685 in credit when you trade in iPhone 13 or higher.1 Get your estima",
+          "color": "rgb(29, 29, 31)",
+          "background": "rgb(245, 245, 247)",
+          "font_size": "17px",
+          "attributes": {
+            "class": "tile-content"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "card",
+          "tag": "div",
+          "text": "Apple Trade In Get up to $195–$685 in credit when you trade in iPhone 13 or higher.1",
+          "color": "rgb(29, 29, 31)",
+          "background": "rgb(245, 245, 247)",
+          "font_size": "17px",
+          "attributes": {
+            "class": "tile-copy-wrapper"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "text",
+          "tag": "h3",
+          "text": "Apple Trade In",
+          "color": "rgb(29, 29, 31)",
+          "background": "rgb(245, 245, 247)",
+          "font_size": "40px",
+          "attributes": {
+            "class": "tile-headline logo-image"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "text",
+          "tag": "span",
+          "text": "Apple Trade In",
+          "color": "rgb(29, 29, 31)",
+          "background": "rgb(245, 245, 247)",
+          "font_size": "40px",
+          "attributes": {
+            "class": "visuallyhidden"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "text",
+          "tag": "p",
+          "text": "Get up to $195–$685 in credit when you trade in iPhone 13 or higher.1",
+          "color": "rgb(29, 29, 31)",
+          "background": "rgb(245, 245, 247)",
+          "font_size": "21px",
+          "attributes": {
+            "class": "tile-subhead typography-tile-subhead"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "other",
+          "tag": "sup",
+          "text": "1",
+          "color": "rgb(29, 29, 31)",
+          "background": "rgb(245, 245, 247)",
+          "font_size": "21px",
+          "attributes": {
+            "class": "footnote footnote-number",
+            "aria-label": "Footnote 1"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "button",
+          "tag": "div",
+          "text": "Get your estimate",
+          "color": "rgb(29, 29, 31)",
+          "background": "rgb(245, 245, 247)",
+          "font_size": "17px",
+          "attributes": {
+            "class": "tile-ctas"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "button",
+          "tag": "a",
+          "text": "Get your estimate",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(0, 113, 227)",
+          "font_size": "14px",
+          "attributes": {
+            "class": "button",
+            "href": "/us/shop/goto/trade_in",
+            "aria-label": "Get your estimate"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "other",
+          "tag": "div",
+          "text": "<picture class=\"static\" ><source srcset=\"/v/home/a/images/promos/iphone-tradein/promo_iphone_tradein",
+          "color": "rgb(29, 29, 31)",
+          "background": "rgb(245, 245, 247)",
+          "font_size": "17px",
+          "attributes": {
+            "class": "tile-image-wrapper"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "button",
+          "tag": "div",
+          "text": "Apple Card Get up to 3% Daily Cash back with every purchase. Learn more Apply now",
+          "color": "rgb(29, 29, 31)",
+          "background": "rgb(245, 245, 247)",
+          "font_size": "17px",
+          "attributes": {
+            "class": "tile-wrapper"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "link",
+          "tag": "a",
+          "text": "[no visible text]",
+          "color": "rgb(0, 102, 204)",
+          "background": "rgb(245, 245, 247)",
+          "font_size": "17px",
+          "attributes": {
+            "class": "tile-link",
+            "href": "/apple-card/",
+            "aria-hidden": "true"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "card",
+          "tag": "div",
+          "text": "Apple Card Get up to 3% Daily Cash back with every purchase. Learn more Apply now",
+          "color": "rgb(29, 29, 31)",
+          "background": "rgb(245, 245, 247)",
+          "font_size": "17px",
+          "attributes": {
+            "class": "tile-content"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "card",
+          "tag": "div",
+          "text": "Apple Card Get up to 3% Daily Cash back with every purchase.",
+          "color": "rgb(29, 29, 31)",
+          "background": "rgb(245, 245, 247)",
+          "font_size": "17px",
+          "attributes": {
+            "class": "tile-copy-wrapper"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "text",
+          "tag": "h3",
+          "text": "Apple Card",
+          "color": "rgb(29, 29, 31)",
+          "background": "rgb(245, 245, 247)",
+          "font_size": "40px",
+          "attributes": {
+            "class": "tile-headline logo-image"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "text",
+          "tag": "span",
+          "text": "Apple Card",
+          "color": "rgb(29, 29, 31)",
+          "background": "rgb(245, 245, 247)",
+          "font_size": "40px",
+          "attributes": {
+            "class": "visuallyhidden"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "text",
+          "tag": "p",
+          "text": "Get up to 3% Daily Cash back with every purchase.",
+          "color": "rgb(29, 29, 31)",
+          "background": "rgb(245, 245, 247)",
+          "font_size": "21px",
+          "attributes": {
+            "class": "tile-subhead typography-tile-subhead"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "button",
+          "tag": "div",
+          "text": "Learn more Apply now",
+          "color": "rgb(29, 29, 31)",
+          "background": "rgb(245, 245, 247)",
+          "font_size": "17px",
+          "attributes": {
+            "class": "tile-ctas"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "button",
+          "tag": "a",
+          "text": "Learn more",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(0, 113, 227)",
+          "font_size": "14px",
+          "attributes": {
+            "class": "button",
+            "href": "/apple-card/",
+            "aria-label": "Learn more, Apple Card"
+          }
+        },
+        {
+          "site": "https://www.apple.com/",
+          "component": "button",
+          "tag": "a",
+          "text": "Apply now",
+          "color": "rgb(0, 102, 204)",
+          "background": "rgb(245, 245, 247)",
+          "font_size": "14px",
+          "attributes": {
+            "class": "button button-secondary",
+            "href": "https://card.apple.com/apply/application?referrer=cid%3Dapy-200-10000036&start=false",
+            "aria-label": "Apply now, Apple Card"
           }
         }
       ]

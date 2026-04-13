@@ -45,9 +45,28 @@ IGNORED_TAGS = {
     "use",
     "source",
     "picture",
+    "text",
+    "textpath",
+    "tspan",
     "br",
     "hr",
+    "mdn-dropdown",
 }
+BUTTON_LIKE_TAGS = {"a", "div", "span"}
+TEXT_TAGS = {"p", "span", "label", "h1", "h2", "h3", "h4", "h5", "h6"}
+STRUCTURAL_TAGS = {
+    "ul",
+    "ol",
+    "li",
+    "dl",
+    "dt",
+    "dd",
+    "main",
+    "section",
+    "article",
+    "aside",
+}
+DEFAULT_BACKGROUND = "rgb(255, 255, 255)"
 
 
 def is_transparent_color(color: str | None) -> bool:
@@ -84,6 +103,14 @@ def has_visible_border(border: str | None) -> bool:
     return any(float(width) > 0 for width in widths) and "none" not in normalized
 
 
+def has_rounded_corners(border_radius: str | None) -> bool:
+    if not border_radius:
+        return False
+
+    numbers = re.findall(r"-?\d+(?:\.\d+)?", border_radius)
+    return any(float(number) > 0 for number in numbers)
+
+
 def starts_with_heading_tag(tag_name: str) -> bool:
     return bool(re.fullmatch(r"h[1-6]", tag_name))
 
@@ -115,16 +142,84 @@ def normalize_text(value: str | None) -> str:
     return re.sub(r"\s+", " ", value).strip()[:100]
 
 
+def word_count(value: str | None) -> int:
+    normalized = normalize_text(value)
+    if not normalized:
+        return 0
+    return len(normalized.split())
+
+
 def attribute_exists(attributes: dict[str, Any], name: str) -> bool:
     return name in attributes and attributes[name] is not None
+
+
+def has_interactivity(attributes: dict[str, Any], styles: dict[str, Any]) -> bool:
+    return any(
+        (
+            attribute_exists(attributes, "onclick"),
+            attribute_exists(attributes, "href"),
+            styles.get("cursor") == "pointer",
+        )
+    )
+
+
+def has_visual_surface(styles: dict[str, Any]) -> bool:
+    return any(
+        (
+            not is_transparent_color(styles.get("rawBackgroundColor")),
+            has_visible_border(styles.get("border")),
+            styles.get("boxShadow") not in {None, "", "none"},
+            has_rounded_corners(styles.get("borderRadius")),
+        )
+    )
+
+
+def is_hidden_element(styles: dict[str, Any]) -> bool:
+    return any(
+        (
+            styles.get("display") == "none",
+            styles.get("visibility") == "hidden",
+            styles.get("opacity") == "0",
+            styles.get("opacity") == "0.0",
+        )
+    )
+
+
+def is_structural_container(element_data: dict[str, Any]) -> bool:
+    styles = element_data["styles"]
+    attributes = element_data["attributes"]
+
+    return (
+        element_data["tag"] in STRUCTURAL_TAGS
+        and not attributes.get("role")
+        and not has_interactivity(attributes, styles)
+        and not has_visual_surface(styles)
+    )
+
+
+def is_noisy_text_container(element_data: dict[str, Any]) -> bool:
+    tag_name = element_data["tag"]
+    attributes = element_data["attributes"]
+    styles = element_data["styles"]
+    class_tokens = build_token_string(attributes.get("class", ""), attributes.get("id", ""))
+
+    return (
+        tag_name in {"div", "section", "article"}
+        and word_count(element_data["text"]) >= 12
+        and not attributes.get("role")
+        and not has_interactivity(attributes, styles)
+        and not has_visual_surface(styles)
+        and not contains_keyword(
+            class_tokens,
+            BUTTON_CLASS_KEYWORDS + NAV_CLASS_KEYWORDS + CARD_CLASS_KEYWORDS + ALERT_CLASS_KEYWORDS,
+        )
+    )
 
 
 def has_visual_role(element_data: dict[str, Any]) -> bool:
     tag_name = element_data["tag"]
     attributes = element_data["attributes"]
     styles = element_data["styles"]
-    has_border = has_visible_border(styles.get("border"))
-    has_raw_background = not is_transparent_color(styles.get("rawBackgroundColor"))
 
     joined_tokens = build_token_string(
         attributes.get("class", ""),
@@ -149,12 +244,11 @@ def has_visual_role(element_data: dict[str, Any]) -> bool:
                 "header",
                 "footer",
                 "label",
+                "form",
             },
-            attribute_exists(attributes, "href"),
-            attribute_exists(attributes, "onclick"),
             bool(attributes.get("role")),
             bool(attributes.get("aria-label")),
-            styles.get("cursor") == "pointer",
+            has_interactivity(attributes, styles),
             contains_keyword(
                 joined_tokens,
                 BUTTON_CLASS_KEYWORDS
@@ -162,8 +256,7 @@ def has_visual_role(element_data: dict[str, Any]) -> bool:
                 + CARD_CLASS_KEYWORDS
                 + ALERT_CLASS_KEYWORDS,
             ),
-            has_border,
-            has_padding(styles.get("padding")) and has_raw_background,
+            has_visual_surface(styles),
         )
     )
 
@@ -176,7 +269,20 @@ def should_skip_element(element_data: dict[str, Any]) -> bool:
     text = normalize_text(element_data.get("text", ""))
     element_data["text"] = text
 
-    if styles.get("display") == "none" or styles.get("visibility") == "hidden":
+    if is_hidden_element(styles):
+        return True
+
+    if is_structural_container(element_data):
+        return True
+
+    if is_noisy_text_container(element_data):
+        return True
+
+    if (
+        not text
+        and not element_data["attributes"].get("role")
+        and not has_interactivity(element_data["attributes"], styles)
+    ):
         return True
 
     if not text and not has_visual_role(element_data):
@@ -189,46 +295,72 @@ def classify_component(element_data: dict[str, Any]) -> str:
     tag_name = element_data["tag"]
     attributes = element_data["attributes"]
     styles = element_data["styles"]
+    text = element_data["text"]
 
     role = (attributes.get("role") or "").strip().lower()
     class_tokens = build_token_string(attributes.get("class", ""), attributes.get("id", ""))
     href_exists = attribute_exists(attributes, "href")
     onclick_exists = attribute_exists(attributes, "onclick")
     background = styles.get("backgroundColor")
-    has_border = has_visible_border(styles.get("border"))
+    pointer_cursor = styles.get("cursor") == "pointer"
+    is_button_keyword = contains_keyword(class_tokens, BUTTON_CLASS_KEYWORDS)
+    is_navigation_keyword = contains_keyword(class_tokens, NAV_CLASS_KEYWORDS)
+    is_card_keyword = contains_keyword(class_tokens, CARD_CLASS_KEYWORDS)
+    has_button_surface = (
+        not is_transparent_color(background) and has_padding(styles.get("padding"))
+    )
+    has_pointer_button_surface = pointer_cursor and (
+        not is_transparent_color(background)
+        or has_visible_border(styles.get("border"))
+    )
+    has_visual_card_cue = any(
+        (
+            is_card_keyword,
+            styles.get("boxShadow") not in {None, "", "none"},
+            has_rounded_corners(styles.get("borderRadius")),
+        )
+    )
+    text_words = element_data.get("text_word_count", word_count(text))
+
+    if text_words > 40:
+        return "other"
+
+    if tag_name == "nav" or role == "navigation":
+        if text_words > 30:
+            return "other"
+        return "navigation"
 
     if (
         tag_name == "button"
         or role == "button"
+        or onclick_exists
+        or has_button_surface
+        or (tag_name in BUTTON_LIKE_TAGS and is_button_keyword)
+        or (
+            tag_name in {"div", "span"}
+            and has_pointer_button_surface
+        )
         or (
             tag_name == "a"
-            and contains_keyword(class_tokens, BUTTON_CLASS_KEYWORDS)
-        )
-        or onclick_exists
-        or (
-            styles.get("cursor") == "pointer"
-            and not is_transparent_color(background)
-            and has_padding(styles.get("padding"))
+            and has_pointer_button_surface
             and (
                 not href_exists
-                or has_border
-                or contains_keyword(class_tokens, BUTTON_CLASS_KEYWORDS)
                 or role == "button"
-                or onclick_exists
+                or is_button_keyword
+                or has_button_surface
             )
         )
     ):
         return "button"
 
-    if (tag_name == "a" or href_exists) and not (
-        tag_name == "a" and contains_keyword(class_tokens, BUTTON_CLASS_KEYWORDS)
-    ):
+    if tag_name == "a" and href_exists:
+        if not text:
+            element_data["text"] = "[no visible text]"
         return "link"
 
     if (
-        tag_name == "nav"
-        or role == "navigation"
-        or contains_keyword(class_tokens, NAV_CLASS_KEYWORDS)
+        text_words < 30
+        and is_navigation_keyword
     ):
         return "navigation"
 
@@ -241,7 +373,7 @@ def classify_component(element_data: dict[str, Any]) -> str:
     if role == "alert" or contains_keyword(class_tokens, ALERT_CLASS_KEYWORDS):
         return "alert"
 
-    if tag_name in {"p", "span", "label"} or starts_with_heading_tag(tag_name):
+    if tag_name in TEXT_TAGS or starts_with_heading_tag(tag_name):
         return "text"
 
     if tag_name == "header":
@@ -252,11 +384,8 @@ def classify_component(element_data: dict[str, Any]) -> str:
 
     if (
         tag_name == "div"
-        and contains_keyword(class_tokens, CARD_CLASS_KEYWORDS)
-        and (
-            not is_transparent_color(styles.get("rawBackgroundColor"))
-            or not is_transparent_color(background)
-        )
+        and has_visual_card_cue
+        and not is_transparent_color(background)
     ):
         return "card"
 
@@ -365,10 +494,18 @@ def print_analysis_report(analysis_report: dict[str, Any]) -> None:
         print(f"  - {component}: {count}")
 
     for site_summary in analysis_report["site_analysis"]:
+        other_count = site_summary["category_counts"].get("other", 0)
+        other_percentage = (
+            (other_count / site_summary["components_detected"]) * 100
+            if site_summary["components_detected"]
+            else 0
+        )
+
         print()
         print(f"Site: {site_summary['site']}")
         print(f"  Elements scanned: {site_summary['total_elements_scanned']}")
         print(f"  Components detected: {site_summary['components_detected']}")
+        print(f"  Other percentage: {other_percentage:.2f}%")
         print("  Top component categories:")
 
         for item in site_summary["dominant_components"]:
@@ -412,7 +549,7 @@ async def extract_element_data(page) -> list[dict[str, Any]]:
               current = current.parentElement;
             }
 
-            return window.getComputedStyle(element).backgroundColor;
+            return "rgb(255, 255, 255)";
           };
 
           const elements = Array.from(document.querySelectorAll("*"));
@@ -428,11 +565,16 @@ async def extract_element_data(page) -> list[dict[str, Any]]:
             }
 
             const textSource = element.innerText || element.textContent || "";
-            const normalizedText = textSource.replace(/\\s+/g, " ").trim().slice(0, 100);
+            const fullNormalizedText = textSource.replace(/\\s+/g, " ").trim();
+            const normalizedText = fullNormalizedText.slice(0, 100);
+            const textWordCount = fullNormalizedText
+              ? fullNormalizedText.split(/\\s+/).filter(Boolean).length
+              : 0;
 
             return {
               tag: element.tagName.toLowerCase(),
               text: normalizedText,
+              text_word_count: textWordCount,
               attributes,
               styles: {
                 color: style.color,
@@ -442,8 +584,11 @@ async def extract_element_data(page) -> list[dict[str, Any]]:
                 cursor: style.cursor,
                 display: style.display,
                 visibility: style.visibility,
+                opacity: style.opacity,
                 border: style.border,
-                padding: style.padding
+                padding: style.padding,
+                boxShadow: style.boxShadow,
+                borderRadius: style.borderRadius
               }
             };
           });
@@ -492,11 +637,29 @@ async def scan_site(browser, url: str) -> dict[str, Any]:
                 }
             )
 
+        other_count = category_counts.get("other", 0)
+        classified_total = sum(category_counts.values())
+        other_percentage = (
+            (other_count / classified_total) * 100 if classified_total else 0
+        )
+
+        print(f"Debug metrics for {url}")
+        print(f"  Total elements scanned: {len(raw_elements)}")
+        print(f"  Total classified components: {classified_total}")
+        print("  Count per category:")
+        for component, count in sorted(
+            category_counts.items(),
+            key=lambda item: (-item[1], item[0]),
+        ):
+            print(f"    - {component}: {count}")
+        print(f"  Percentage of other: {other_percentage:.2f}%")
+
         return {
             "site": url,
             "total_elements_scanned": len(raw_elements),
-            "components_detected": sum(category_counts.values()),
+            "components_detected": classified_total,
             "category_counts": dict(category_counts),
+            "other_percentage": round(other_percentage, 2),
             "results": classified_elements[:MAX_OUTPUT_PER_SITE],
         }
     finally:

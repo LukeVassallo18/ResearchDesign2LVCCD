@@ -1,166 +1,166 @@
 {
   "total_sites_scanned": 2,
-  "total_elements_scanned": 2609,
-  "total_components_detected": 1316,
+  "total_elements_scanned": 2639,
+  "total_components_detected": 924,
   "overall_category_counts": {
-    "navigation": 174,
-    "other": 593,
-    "link": 278,
+    "button": 289,
     "header": 1,
-    "button": 99,
-    "text": 124,
-    "footer": 2,
-    "card": 45
+    "navigation": 49,
+    "link": 254,
+    "other": 207,
+    "text": 104,
+    "card": 20
   },
   "site_analysis": [
     {
       "site": "https://developer.mozilla.org",
-      "total_elements_scanned": 710,
-      "components_detected": 608,
+      "total_elements_scanned": 740,
+      "components_detected": 296,
       "output_records_written": 200,
       "category_counts": {
-        "navigation": 48,
-        "other": 361,
-        "link": 156,
+        "button": 44,
         "header": 1,
-        "button": 10,
-        "text": 31,
-        "footer": 1
+        "navigation": 18,
+        "link": 156,
+        "other": 45,
+        "text": 32
       },
       "dominant_components": [
-        {
-          "component": "other",
-          "count": 361
-        },
         {
           "component": "link",
           "count": 156
         },
         {
-          "component": "navigation",
-          "count": 48
-        },
-        {
-          "component": "text",
-          "count": 31
+          "component": "other",
+          "count": 45
         },
         {
           "component": "button",
-          "count": 10
+          "count": 44
+        },
+        {
+          "component": "text",
+          "count": 32
+        },
+        {
+          "component": "navigation",
+          "count": 18
         }
       ],
       "sample_text_by_component": {
         "button": [
-          "HTML",
-          "CSS",
-          "JavaScript",
-          "Web APIs",
-          "All"
-        ],
-        "link": [
           "Skip to main content",
           "Skip to search",
           "MDN",
+          "HTML",
+          "HTML: Markup language"
+        ],
+        "link": [
           "HTML: Markup language",
-          "Elements"
+          "Elements",
+          "Global attributes",
+          "Attributes",
+          "See all…"
         ],
         "navigation": [
-          "Skip to main content Skip to search",
           "HTML CSS JavaScript Web APIs All Learn Tools About Blog",
           "MDN",
           "HTML",
-          "HTML: Markup language HTML reference Elements Global attributes Attributes See all… HTML guides Resp"
+          "HTML: Markup language HTML reference Elements Global attributes Attributes See all… HTML guides Resp",
+          "CSS"
+        ],
+        "text": [
+          "Resources for Developers, by Developers",
+          "Documenting CSS, HTML, and JavaScript, since 2005.",
+          "Featured articles",
+          "Celebrating 20 years of MDN",
+          "MDN turns 20! Let's look at how we started, how MDN became the most trusted resource for web develop"
         ],
         "header": [
           "HTML CSS JavaScript Web APIs All Learn Tools About Blog MDN"
         ],
         "other": [
-          "Skip to main content",
-          "Skip to search",
-          "HTML",
-          "HTML reference Elements Global attributes Attributes See all…",
-          "HTML reference"
+          "CSS: Styling language CSS reference Properties Selectors At-rules Values See all… CSS guides Box mod",
+          "JavaScript: Scripting language JS reference Standard built-in objects Expressions & operators Statem",
+          "Web APIs: Programming interfaces Web API reference File system API Fetch API Geolocation API HTML DO",
+          "Web API reference File system API Fetch API Geolocation API HTML DOM API Push API Service worker API",
+          "Learn web development Frontend developer course Getting started modules Core modules MDN Curriculum"
         ]
       }
     },
     {
       "site": "https://www.apple.com/",
       "total_elements_scanned": 1899,
-      "components_detected": 708,
+      "components_detected": 628,
       "output_records_written": 200,
       "category_counts": {
-        "other": 232,
-        "button": 89,
-        "text": 93,
-        "navigation": 126,
-        "link": 122,
-        "card": 45,
-        "footer": 1
+        "other": 162,
+        "button": 245,
+        "text": 72,
+        "navigation": 31,
+        "link": 98,
+        "card": 20
       },
       "dominant_components": [
         {
-          "component": "other",
-          "count": 232
+          "component": "button",
+          "count": 245
         },
         {
-          "component": "navigation",
-          "count": 126
+          "component": "other",
+          "count": 162
         },
         {
           "component": "link",
-          "count": 122
+          "count": 98
         },
         {
           "component": "text",
-          "count": 93
+          "count": 72
         },
         {
-          "component": "button",
-          "count": 89
+          "component": "navigation",
+          "count": 31
         }
       ],
       "sample_text_by_component": {
         "button": [
+          "Malta Continue",
           "Malta",
+          "Other country or region",
           "Continue",
-          "0 +",
-          "Learn more",
-          "Shop iPhone"
+          "Apple Store Mac iPad iPhone Watch Vision AirPods TV & Home Entertainment Accessories Support 0 +"
         ],
         "link": [
-          "Apple",
-          "Store",
-          "Mac",
-          "iPad",
-          "iPhone"
+          "[no visible text]"
         ],
         "navigation": [
           "Apple Store Mac iPad iPhone Watch Vision AirPods TV & Home Entertainment Accessories Support 0 +",
-          "Apple",
           "Store Mac iPad iPhone Watch Vision AirPods TV & Home Entertainment Accessories Support",
           "Store",
-          "Mac"
+          "Mac",
+          "iPad"
         ],
         "text": [
           "Malta",
-          "Other country or region",
           "Apple",
           "iPhone",
-          "Meet the latest iPhone lineup."
+          "Meet the latest iPhone lineup.",
+          "MacBook Neo"
         ],
         "card": [
           "iPhone Meet the latest iPhone lineup. Learn more Shop iPhone",
           "iPhone Meet the latest iPhone lineup.",
-          "Learn more Shop iPhone",
-          "<picture class=\"static\" ><source srcset=\"/v/home/a/images/heroes/iphone-family/hero_iphone_family__f",
-          "MacBook Neo Amazing Mac. Surprising price. Learn more Buy"
+          "MacBook Neo Amazing Mac. Surprising price. Learn more Buy",
+          "MacBook Neo Amazing Mac. Surprising price.",
+          "iPad Air Now supercharged by M4. Learn more Buy"
         ],
         "other": [
           "Choose another country or region to see content specific to your location. Malta Continue",
-          "Choose another country or region to see content specific to your location.",
-          "Malta Continue",
-          "Malta",
-          "Malta Other country or region"
+          "Malta Other country or region",
+          "iPhone Meet the latest iPhone lineup. Learn more Shop iPhone MacBook Neo Amazing Mac. Surprising pri",
+          "<picture class=\"static\" ><source srcset=\"/v/home/a/images/heroes/iphone-family/hero_iphone_family__f",
+          "<picture class=\"static\" ><source srcset=\"/v/home/a/images/heroes/macbook-neo/hero_macbook_neo__gnm3s"
         ]
       }
     }
