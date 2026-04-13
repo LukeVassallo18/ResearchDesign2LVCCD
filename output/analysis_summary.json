@@ -1,168 +1,694 @@
 {
   "total_sites_scanned": 2,
+  "sites_scanned": [
+    "https://developer.mozilla.org",
+    "https://www.apple.com/"
+  ],
   "total_elements_scanned": 2639,
-  "total_components_detected": 924,
-  "overall_category_counts": {
+  "total_components": 922,
+  "counts_by_component_type": {
     "button": 289,
-    "header": 1,
-    "navigation": 49,
     "link": 254,
-    "other": 207,
+    "navigation": 49,
+    "form": 0,
+    "input": 0,
     "text": 104,
-    "card": 20
+    "header": 1,
+    "footer": 0,
+    "card": 20,
+    "alert": 0,
+    "other": 205
   },
-  "site_analysis": [
+  "overall_failure_rate": {
+    "normal": {
+      "total_components": 922,
+      "failed_components": 30,
+      "failure_rate": 0.0325
+    },
+    "protanopia": {
+      "total_components": 922,
+      "failed_components": 29,
+      "failure_rate": 0.0315
+    },
+    "deuteranopia": {
+      "total_components": 922,
+      "failed_components": 39,
+      "failure_rate": 0.0423
+    },
+    "tritanopia": {
+      "total_components": 922,
+      "failed_components": 39,
+      "failure_rate": 0.0423
+    }
+  },
+  "failure_rate_by_cvd_type": {
+    "protanopia": {
+      "total_components": 922,
+      "failed_components": 29,
+      "failure_rate": 0.0315
+    },
+    "deuteranopia": {
+      "total_components": 922,
+      "failed_components": 39,
+      "failure_rate": 0.0423
+    },
+    "tritanopia": {
+      "total_components": 922,
+      "failed_components": 39,
+      "failure_rate": 0.0423
+    }
+  },
+  "failure_rate_by_site": [
     {
       "site": "https://developer.mozilla.org",
       "total_elements_scanned": 740,
-      "components_detected": 296,
-      "output_records_written": 200,
-      "category_counts": {
+      "total_components": 294,
+      "other_percentage": 14.63,
+      "counts_by_component_type": {
         "button": 44,
-        "header": 1,
-        "navigation": 18,
         "link": 156,
-        "other": 45,
-        "text": 32
+        "navigation": 18,
+        "form": 0,
+        "input": 0,
+        "text": 32,
+        "header": 1,
+        "footer": 0,
+        "card": 0,
+        "alert": 0,
+        "other": 43
       },
-      "dominant_components": [
-        {
-          "component": "link",
-          "count": 156
-        },
-        {
-          "component": "other",
-          "count": 45
-        },
-        {
-          "component": "button",
-          "count": 44
-        },
-        {
-          "component": "text",
-          "count": 32
-        },
-        {
-          "component": "navigation",
-          "count": 18
-        }
-      ],
-      "sample_text_by_component": {
-        "button": [
-          "Skip to main content",
-          "Skip to search",
-          "MDN",
-          "HTML",
-          "HTML: Markup language"
-        ],
-        "link": [
-          "HTML: Markup language",
-          "Elements",
-          "Global attributes",
-          "Attributes",
-          "See all…"
-        ],
-        "navigation": [
-          "HTML CSS JavaScript Web APIs All Learn Tools About Blog",
-          "MDN",
-          "HTML",
-          "HTML: Markup language HTML reference Elements Global attributes Attributes See all… HTML guides Resp",
-          "CSS"
-        ],
-        "text": [
-          "Resources for Developers, by Developers",
-          "Documenting CSS, HTML, and JavaScript, since 2005.",
-          "Featured articles",
-          "Celebrating 20 years of MDN",
-          "MDN turns 20! Let's look at how we started, how MDN became the most trusted resource for web develop"
-        ],
-        "header": [
-          "HTML CSS JavaScript Web APIs All Learn Tools About Blog MDN"
-        ],
-        "other": [
-          "CSS: Styling language CSS reference Properties Selectors At-rules Values See all… CSS guides Box mod",
-          "JavaScript: Scripting language JS reference Standard built-in objects Expressions & operators Statem",
-          "Web APIs: Programming interfaces Web API reference File system API Fetch API Geolocation API HTML DO",
-          "Web API reference File system API Fetch API Geolocation API HTML DOM API Push API Service worker API",
-          "Learn web development Frontend developer course Getting started modules Core modules MDN Curriculum"
-        ]
-      }
+      "failed_normal": 0,
+      "failure_rate_normal": 0.0,
+      "failed_protanopia": 0,
+      "failure_rate_protanopia": 0.0,
+      "failed_deuteranopia": 0,
+      "failure_rate_deuteranopia": 0.0,
+      "failed_tritanopia": 0,
+      "failure_rate_tritanopia": 0.0
     },
     {
       "site": "https://www.apple.com/",
       "total_elements_scanned": 1899,
-      "components_detected": 628,
-      "output_records_written": 200,
-      "category_counts": {
-        "other": 162,
+      "total_components": 628,
+      "other_percentage": 25.8,
+      "counts_by_component_type": {
         "button": 245,
-        "text": 72,
-        "navigation": 31,
         "link": 98,
-        "card": 20
+        "navigation": 31,
+        "form": 0,
+        "input": 0,
+        "text": 72,
+        "header": 0,
+        "footer": 0,
+        "card": 20,
+        "alert": 0,
+        "other": 162
       },
-      "dominant_components": [
-        {
-          "component": "button",
-          "count": 245
-        },
-        {
-          "component": "other",
-          "count": 162
-        },
-        {
-          "component": "link",
-          "count": 98
-        },
-        {
-          "component": "text",
-          "count": 72
-        },
-        {
-          "component": "navigation",
-          "count": 31
-        }
-      ],
-      "sample_text_by_component": {
-        "button": [
-          "Malta Continue",
-          "Malta",
-          "Other country or region",
-          "Continue",
-          "Apple Store Mac iPad iPhone Watch Vision AirPods TV & Home Entertainment Accessories Support 0 +"
-        ],
-        "link": [
-          "[no visible text]"
-        ],
-        "navigation": [
-          "Apple Store Mac iPad iPhone Watch Vision AirPods TV & Home Entertainment Accessories Support 0 +",
-          "Store Mac iPad iPhone Watch Vision AirPods TV & Home Entertainment Accessories Support",
-          "Store",
-          "Mac",
-          "iPad"
-        ],
-        "text": [
-          "Malta",
-          "Apple",
-          "iPhone",
-          "Meet the latest iPhone lineup.",
-          "MacBook Neo"
-        ],
-        "card": [
-          "iPhone Meet the latest iPhone lineup. Learn more Shop iPhone",
-          "iPhone Meet the latest iPhone lineup.",
-          "MacBook Neo Amazing Mac. Surprising price. Learn more Buy",
-          "MacBook Neo Amazing Mac. Surprising price.",
-          "iPad Air Now supercharged by M4. Learn more Buy"
-        ],
-        "other": [
-          "Choose another country or region to see content specific to your location. Malta Continue",
-          "Malta Other country or region",
-          "iPhone Meet the latest iPhone lineup. Learn more Shop iPhone MacBook Neo Amazing Mac. Surprising pri",
-          "<picture class=\"static\" ><source srcset=\"/v/home/a/images/heroes/iphone-family/hero_iphone_family__f",
-          "<picture class=\"static\" ><source srcset=\"/v/home/a/images/heroes/macbook-neo/hero_macbook_neo__gnm3s"
-        ]
+      "failed_normal": 30,
+      "failure_rate_normal": 0.0478,
+      "failed_protanopia": 29,
+      "failure_rate_protanopia": 0.0462,
+      "failed_deuteranopia": 39,
+      "failure_rate_deuteranopia": 0.0621,
+      "failed_tritanopia": 39,
+      "failure_rate_tritanopia": 0.0621
+    }
+  ],
+  "failure_rate_by_component_type": [
+    {
+      "component_type": "button",
+      "total_components": 289,
+      "failed_normal": 16,
+      "failure_rate_normal": 0.0554,
+      "failed_protanopia": 16,
+      "failure_rate_protanopia": 0.0554,
+      "failed_deuteranopia": 25,
+      "failure_rate_deuteranopia": 0.0865,
+      "failed_tritanopia": 25,
+      "failure_rate_tritanopia": 0.0865
+    },
+    {
+      "component_type": "link",
+      "total_components": 254,
+      "failed_normal": 0,
+      "failure_rate_normal": 0.0,
+      "failed_protanopia": 0,
+      "failure_rate_protanopia": 0.0,
+      "failed_deuteranopia": 0,
+      "failure_rate_deuteranopia": 0.0,
+      "failed_tritanopia": 0,
+      "failure_rate_tritanopia": 0.0
+    },
+    {
+      "component_type": "navigation",
+      "total_components": 49,
+      "failed_normal": 0,
+      "failure_rate_normal": 0.0,
+      "failed_protanopia": 0,
+      "failure_rate_protanopia": 0.0,
+      "failed_deuteranopia": 0,
+      "failure_rate_deuteranopia": 0.0,
+      "failed_tritanopia": 0,
+      "failure_rate_tritanopia": 0.0
+    },
+    {
+      "component_type": "form",
+      "total_components": 0,
+      "failed_normal": 0,
+      "failure_rate_normal": 0.0,
+      "failed_protanopia": 0,
+      "failure_rate_protanopia": 0.0,
+      "failed_deuteranopia": 0,
+      "failure_rate_deuteranopia": 0.0,
+      "failed_tritanopia": 0,
+      "failure_rate_tritanopia": 0.0
+    },
+    {
+      "component_type": "input",
+      "total_components": 0,
+      "failed_normal": 0,
+      "failure_rate_normal": 0.0,
+      "failed_protanopia": 0,
+      "failure_rate_protanopia": 0.0,
+      "failed_deuteranopia": 0,
+      "failure_rate_deuteranopia": 0.0,
+      "failed_tritanopia": 0,
+      "failure_rate_tritanopia": 0.0
+    },
+    {
+      "component_type": "text",
+      "total_components": 104,
+      "failed_normal": 1,
+      "failure_rate_normal": 0.0096,
+      "failed_protanopia": 0,
+      "failure_rate_protanopia": 0.0,
+      "failed_deuteranopia": 1,
+      "failure_rate_deuteranopia": 0.0096,
+      "failed_tritanopia": 1,
+      "failure_rate_tritanopia": 0.0096
+    },
+    {
+      "component_type": "header",
+      "total_components": 1,
+      "failed_normal": 0,
+      "failure_rate_normal": 0.0,
+      "failed_protanopia": 0,
+      "failure_rate_protanopia": 0.0,
+      "failed_deuteranopia": 0,
+      "failure_rate_deuteranopia": 0.0,
+      "failed_tritanopia": 0,
+      "failure_rate_tritanopia": 0.0
+    },
+    {
+      "component_type": "footer",
+      "total_components": 0,
+      "failed_normal": 0,
+      "failure_rate_normal": 0.0,
+      "failed_protanopia": 0,
+      "failure_rate_protanopia": 0.0,
+      "failed_deuteranopia": 0,
+      "failure_rate_deuteranopia": 0.0,
+      "failed_tritanopia": 0,
+      "failure_rate_tritanopia": 0.0
+    },
+    {
+      "component_type": "card",
+      "total_components": 20,
+      "failed_normal": 3,
+      "failure_rate_normal": 0.15,
+      "failed_protanopia": 3,
+      "failure_rate_protanopia": 0.15,
+      "failed_deuteranopia": 3,
+      "failure_rate_deuteranopia": 0.15,
+      "failed_tritanopia": 3,
+      "failure_rate_tritanopia": 0.15
+    },
+    {
+      "component_type": "alert",
+      "total_components": 0,
+      "failed_normal": 0,
+      "failure_rate_normal": 0.0,
+      "failed_protanopia": 0,
+      "failure_rate_protanopia": 0.0,
+      "failed_deuteranopia": 0,
+      "failure_rate_deuteranopia": 0.0,
+      "failed_tritanopia": 0,
+      "failure_rate_tritanopia": 0.0
+    },
+    {
+      "component_type": "other",
+      "total_components": 205,
+      "failed_normal": 10,
+      "failure_rate_normal": 0.0488,
+      "failed_protanopia": 10,
+      "failure_rate_protanopia": 0.0488,
+      "failed_deuteranopia": 10,
+      "failure_rate_deuteranopia": 0.0488,
+      "failed_tritanopia": 10,
+      "failure_rate_tritanopia": 0.0488
+    }
+  ],
+  "mean_contrast_by_component_type": [
+    {
+      "component_type": "button",
+      "total_components": 289,
+      "mean_contrast_normal": 11.4674,
+      "mean_contrast_protanopia": 11.4828,
+      "mean_contrast_deuteranopia": 11.4209,
+      "mean_contrast_tritanopia": 11.4721
+    },
+    {
+      "component_type": "link",
+      "total_components": 254,
+      "mean_contrast_normal": 12.766,
+      "mean_contrast_protanopia": 12.7455,
+      "mean_contrast_deuteranopia": 12.7137,
+      "mean_contrast_tritanopia": 12.7116
+    },
+    {
+      "component_type": "navigation",
+      "total_components": 49,
+      "mean_contrast_normal": 17.3403,
+      "mean_contrast_protanopia": 17.2836,
+      "mean_contrast_deuteranopia": 17.2835,
+      "mean_contrast_tritanopia": 17.2654
+    },
+    {
+      "component_type": "form",
+      "total_components": 0,
+      "mean_contrast_normal": 0.0,
+      "mean_contrast_protanopia": 0.0,
+      "mean_contrast_deuteranopia": 0.0,
+      "mean_contrast_tritanopia": 0.0
+    },
+    {
+      "component_type": "input",
+      "total_components": 0,
+      "mean_contrast_normal": 0.0,
+      "mean_contrast_protanopia": 0.0,
+      "mean_contrast_deuteranopia": 0.0,
+      "mean_contrast_tritanopia": 0.0
+    },
+    {
+      "component_type": "text",
+      "total_components": 104,
+      "mean_contrast_normal": 16.7025,
+      "mean_contrast_protanopia": 16.682,
+      "mean_contrast_deuteranopia": 16.6399,
+      "mean_contrast_tritanopia": 16.6472
+    },
+    {
+      "component_type": "header",
+      "total_components": 1,
+      "mean_contrast_normal": 21.0,
+      "mean_contrast_protanopia": 20.822,
+      "mean_contrast_deuteranopia": 20.822,
+      "mean_contrast_tritanopia": 20.822
+    },
+    {
+      "component_type": "footer",
+      "total_components": 0,
+      "mean_contrast_normal": 0.0,
+      "mean_contrast_protanopia": 0.0,
+      "mean_contrast_deuteranopia": 0.0,
+      "mean_contrast_tritanopia": 0.0
+    },
+    {
+      "component_type": "card",
+      "total_components": 20,
+      "mean_contrast_normal": 13.7084,
+      "mean_contrast_protanopia": 13.7094,
+      "mean_contrast_deuteranopia": 13.7103,
+      "mean_contrast_tritanopia": 13.7109
+    },
+    {
+      "component_type": "alert",
+      "total_components": 0,
+      "mean_contrast_normal": 0.0,
+      "mean_contrast_protanopia": 0.0,
+      "mean_contrast_deuteranopia": 0.0,
+      "mean_contrast_tritanopia": 0.0
+    },
+    {
+      "component_type": "other",
+      "total_components": 205,
+      "mean_contrast_normal": 9.146,
+      "mean_contrast_protanopia": 9.1448,
+      "mean_contrast_deuteranopia": 9.1162,
+      "mean_contrast_tritanopia": 9.1553
+    }
+  ],
+  "mean_contrast_loss_by_component_type": [
+    {
+      "component_type": "button",
+      "total_components": 289,
+      "mean_contrast_loss_protanopia": -0.0154,
+      "mean_contrast_loss_deuteranopia": 0.0465,
+      "mean_contrast_loss_tritanopia": -0.0047
+    },
+    {
+      "component_type": "link",
+      "total_components": 254,
+      "mean_contrast_loss_protanopia": 0.0205,
+      "mean_contrast_loss_deuteranopia": 0.0523,
+      "mean_contrast_loss_tritanopia": 0.0543
+    },
+    {
+      "component_type": "navigation",
+      "total_components": 49,
+      "mean_contrast_loss_protanopia": 0.0567,
+      "mean_contrast_loss_deuteranopia": 0.0568,
+      "mean_contrast_loss_tritanopia": 0.0749
+    },
+    {
+      "component_type": "form",
+      "total_components": 0,
+      "mean_contrast_loss_protanopia": 0.0,
+      "mean_contrast_loss_deuteranopia": 0.0,
+      "mean_contrast_loss_tritanopia": 0.0
+    },
+    {
+      "component_type": "input",
+      "total_components": 0,
+      "mean_contrast_loss_protanopia": 0.0,
+      "mean_contrast_loss_deuteranopia": 0.0,
+      "mean_contrast_loss_tritanopia": 0.0
+    },
+    {
+      "component_type": "text",
+      "total_components": 104,
+      "mean_contrast_loss_protanopia": 0.0204,
+      "mean_contrast_loss_deuteranopia": 0.0626,
+      "mean_contrast_loss_tritanopia": 0.0553
+    },
+    {
+      "component_type": "header",
+      "total_components": 1,
+      "mean_contrast_loss_protanopia": 0.178,
+      "mean_contrast_loss_deuteranopia": 0.178,
+      "mean_contrast_loss_tritanopia": 0.178
+    },
+    {
+      "component_type": "footer",
+      "total_components": 0,
+      "mean_contrast_loss_protanopia": 0.0,
+      "mean_contrast_loss_deuteranopia": 0.0,
+      "mean_contrast_loss_tritanopia": 0.0
+    },
+    {
+      "component_type": "card",
+      "total_components": 20,
+      "mean_contrast_loss_protanopia": -0.0011,
+      "mean_contrast_loss_deuteranopia": -0.0019,
+      "mean_contrast_loss_tritanopia": -0.0025
+    },
+    {
+      "component_type": "alert",
+      "total_components": 0,
+      "mean_contrast_loss_protanopia": 0.0,
+      "mean_contrast_loss_deuteranopia": 0.0,
+      "mean_contrast_loss_tritanopia": 0.0
+    },
+    {
+      "component_type": "other",
+      "total_components": 205,
+      "mean_contrast_loss_protanopia": 0.0011,
+      "mean_contrast_loss_deuteranopia": 0.0298,
+      "mean_contrast_loss_tritanopia": -0.0093
+    }
+  ],
+  "mean_contrast_ratios": {
+    "overall": {
+      "normal": 12.2706,
+      "protanopia": 12.264,
+      "deuteranopia": 12.2247,
+      "tritanopia": 12.2488
+    },
+    "by_component_type": [
+      {
+        "component_type": "button",
+        "total_components": 289,
+        "mean_contrast_normal": 11.4674,
+        "mean_contrast_protanopia": 11.4828,
+        "mean_contrast_deuteranopia": 11.4209,
+        "mean_contrast_tritanopia": 11.4721
+      },
+      {
+        "component_type": "link",
+        "total_components": 254,
+        "mean_contrast_normal": 12.766,
+        "mean_contrast_protanopia": 12.7455,
+        "mean_contrast_deuteranopia": 12.7137,
+        "mean_contrast_tritanopia": 12.7116
+      },
+      {
+        "component_type": "navigation",
+        "total_components": 49,
+        "mean_contrast_normal": 17.3403,
+        "mean_contrast_protanopia": 17.2836,
+        "mean_contrast_deuteranopia": 17.2835,
+        "mean_contrast_tritanopia": 17.2654
+      },
+      {
+        "component_type": "form",
+        "total_components": 0,
+        "mean_contrast_normal": 0.0,
+        "mean_contrast_protanopia": 0.0,
+        "mean_contrast_deuteranopia": 0.0,
+        "mean_contrast_tritanopia": 0.0
+      },
+      {
+        "component_type": "input",
+        "total_components": 0,
+        "mean_contrast_normal": 0.0,
+        "mean_contrast_protanopia": 0.0,
+        "mean_contrast_deuteranopia": 0.0,
+        "mean_contrast_tritanopia": 0.0
+      },
+      {
+        "component_type": "text",
+        "total_components": 104,
+        "mean_contrast_normal": 16.7025,
+        "mean_contrast_protanopia": 16.682,
+        "mean_contrast_deuteranopia": 16.6399,
+        "mean_contrast_tritanopia": 16.6472
+      },
+      {
+        "component_type": "header",
+        "total_components": 1,
+        "mean_contrast_normal": 21.0,
+        "mean_contrast_protanopia": 20.822,
+        "mean_contrast_deuteranopia": 20.822,
+        "mean_contrast_tritanopia": 20.822
+      },
+      {
+        "component_type": "footer",
+        "total_components": 0,
+        "mean_contrast_normal": 0.0,
+        "mean_contrast_protanopia": 0.0,
+        "mean_contrast_deuteranopia": 0.0,
+        "mean_contrast_tritanopia": 0.0
+      },
+      {
+        "component_type": "card",
+        "total_components": 20,
+        "mean_contrast_normal": 13.7084,
+        "mean_contrast_protanopia": 13.7094,
+        "mean_contrast_deuteranopia": 13.7103,
+        "mean_contrast_tritanopia": 13.7109
+      },
+      {
+        "component_type": "alert",
+        "total_components": 0,
+        "mean_contrast_normal": 0.0,
+        "mean_contrast_protanopia": 0.0,
+        "mean_contrast_deuteranopia": 0.0,
+        "mean_contrast_tritanopia": 0.0
+      },
+      {
+        "component_type": "other",
+        "total_components": 205,
+        "mean_contrast_normal": 9.146,
+        "mean_contrast_protanopia": 9.1448,
+        "mean_contrast_deuteranopia": 9.1162,
+        "mean_contrast_tritanopia": 9.1553
       }
+    ]
+  },
+  "mean_contrast_loss_by_cvd_type": {
+    "protanopia": 0.0065,
+    "deuteranopia": 0.0458,
+    "tritanopia": 0.0218
+  },
+  "component_vulnerability_scores_by_type": {
+    "button": {
+      "component_type": "button",
+      "total_components": 289,
+      "cvs_protanopia": 0.0554,
+      "cvs_deuteranopia": 0.0865,
+      "cvs_tritanopia": 0.0865
+    },
+    "link": {
+      "component_type": "link",
+      "total_components": 254,
+      "cvs_protanopia": 0.0,
+      "cvs_deuteranopia": 0.0,
+      "cvs_tritanopia": 0.0
+    },
+    "navigation": {
+      "component_type": "navigation",
+      "total_components": 49,
+      "cvs_protanopia": 0.0,
+      "cvs_deuteranopia": 0.0,
+      "cvs_tritanopia": 0.0
+    },
+    "form": {
+      "component_type": "form",
+      "total_components": 0,
+      "cvs_protanopia": 0.0,
+      "cvs_deuteranopia": 0.0,
+      "cvs_tritanopia": 0.0
+    },
+    "input": {
+      "component_type": "input",
+      "total_components": 0,
+      "cvs_protanopia": 0.0,
+      "cvs_deuteranopia": 0.0,
+      "cvs_tritanopia": 0.0
+    },
+    "text": {
+      "component_type": "text",
+      "total_components": 104,
+      "cvs_protanopia": 0.0,
+      "cvs_deuteranopia": 0.0096,
+      "cvs_tritanopia": 0.0096
+    },
+    "header": {
+      "component_type": "header",
+      "total_components": 1,
+      "cvs_protanopia": 0.0,
+      "cvs_deuteranopia": 0.0,
+      "cvs_tritanopia": 0.0
+    },
+    "footer": {
+      "component_type": "footer",
+      "total_components": 0,
+      "cvs_protanopia": 0.0,
+      "cvs_deuteranopia": 0.0,
+      "cvs_tritanopia": 0.0
+    },
+    "card": {
+      "component_type": "card",
+      "total_components": 20,
+      "cvs_protanopia": 0.15,
+      "cvs_deuteranopia": 0.15,
+      "cvs_tritanopia": 0.15
+    },
+    "alert": {
+      "component_type": "alert",
+      "total_components": 0,
+      "cvs_protanopia": 0.0,
+      "cvs_deuteranopia": 0.0,
+      "cvs_tritanopia": 0.0
+    },
+    "other": {
+      "component_type": "other",
+      "total_components": 205,
+      "cvs_protanopia": 0.0488,
+      "cvs_deuteranopia": 0.0488,
+      "cvs_tritanopia": 0.0488
+    }
+  },
+  "component_vulnerability_summary_table": [
+    {
+      "component_type": "button",
+      "total_components": 289,
+      "cvs_protanopia": 0.0554,
+      "cvs_deuteranopia": 0.0865,
+      "cvs_tritanopia": 0.0865
+    },
+    {
+      "component_type": "link",
+      "total_components": 254,
+      "cvs_protanopia": 0.0,
+      "cvs_deuteranopia": 0.0,
+      "cvs_tritanopia": 0.0
+    },
+    {
+      "component_type": "navigation",
+      "total_components": 49,
+      "cvs_protanopia": 0.0,
+      "cvs_deuteranopia": 0.0,
+      "cvs_tritanopia": 0.0
+    },
+    {
+      "component_type": "text",
+      "total_components": 104,
+      "cvs_protanopia": 0.0,
+      "cvs_deuteranopia": 0.0096,
+      "cvs_tritanopia": 0.0096
+    },
+    {
+      "component_type": "card",
+      "total_components": 20,
+      "cvs_protanopia": 0.15,
+      "cvs_deuteranopia": 0.15,
+      "cvs_tritanopia": 0.15
+    },
+    {
+      "component_type": "form",
+      "total_components": 0,
+      "cvs_protanopia": 0.0,
+      "cvs_deuteranopia": 0.0,
+      "cvs_tritanopia": 0.0
+    },
+    {
+      "component_type": "input",
+      "total_components": 0,
+      "cvs_protanopia": 0.0,
+      "cvs_deuteranopia": 0.0,
+      "cvs_tritanopia": 0.0
+    },
+    {
+      "component_type": "header",
+      "total_components": 1,
+      "cvs_protanopia": 0.0,
+      "cvs_deuteranopia": 0.0,
+      "cvs_tritanopia": 0.0
+    },
+    {
+      "component_type": "footer",
+      "total_components": 0,
+      "cvs_protanopia": 0.0,
+      "cvs_deuteranopia": 0.0,
+      "cvs_tritanopia": 0.0
+    }
+  ],
+  "top_vulnerable_component_categories": [
+    {
+      "component_type": "card",
+      "total_components": 20,
+      "average_vulnerability_score": 0.15
+    },
+    {
+      "component_type": "button",
+      "total_components": 289,
+      "average_vulnerability_score": 0.0761
+    },
+    {
+      "component_type": "text",
+      "total_components": 104,
+      "average_vulnerability_score": 0.0064
+    },
+    {
+      "component_type": "header",
+      "total_components": 1,
+      "average_vulnerability_score": 0.0
+    },
+    {
+      "component_type": "link",
+      "total_components": 254,
+      "average_vulnerability_score": 0.0
     }
   ]
 }

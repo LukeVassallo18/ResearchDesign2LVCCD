@@ -6,6 +6,8 @@ from collections import Counter
 from pathlib import Path
 from typing import Any
 
+import numpy as np
+from daltonlens.simulate import Deficiency, Simulator_Brettel1997
 from playwright.async_api import TimeoutError as PlaywrightTimeoutError
 from playwright.async_api import async_playwright
 
@@ -16,10 +18,9 @@ TARGET_SITES = [
 ]
 
 HEADLESS = os.getenv("ACCESSIBILITY_SCANNER_HEADLESS", "false").lower() == "true"
-MAX_OUTPUT_PER_SITE = 200
 NETWORK_TIMEOUT_MS = 60_000
 OUTPUT_DIR = Path("output")
-SCAN_RESULTS_FILE = OUTPUT_DIR / "scan_results.json"
+DETAILED_RESULTS_FILE = OUTPUT_DIR / "detailed_results.json"
 ANALYSIS_RESULTS_FILE = OUTPUT_DIR / "analysis_summary.json"
 
 BUTTON_CLASS_KEYWORDS = ("btn", "button", "cta", "primary", "action")
@@ -67,6 +68,38 @@ STRUCTURAL_TAGS = {
     "aside",
 }
 DEFAULT_BACKGROUND = "rgb(255, 255, 255)"
+DEFAULT_BACKGROUND_RGB = (255, 255, 255)
+CVD_CONDITIONS = {
+    "protanopia": Deficiency.PROTAN,
+    "deuteranopia": Deficiency.DEUTAN,
+    "tritanopia": Deficiency.TRITAN,
+}
+ALL_CONDITIONS = ("normal", "protanopia", "deuteranopia", "tritanopia")
+CORE_VULNERABILITY_TYPES = (
+    "button",
+    "link",
+    "navigation",
+    "text",
+    "card",
+    "form",
+    "input",
+    "header",
+    "footer",
+)
+SUPPORTED_COMPONENT_TYPES = (
+    "button",
+    "link",
+    "navigation",
+    "form",
+    "input",
+    "text",
+    "header",
+    "footer",
+    "card",
+    "alert",
+    "other",
+)
+CVD_SIMULATOR = Simulator_Brettel1997()
 
 
 def is_transparent_color(color: str | None) -> bool:
@@ -153,6 +186,135 @@ def attribute_exists(attributes: dict[str, Any], name: str) -> bool:
     return name in attributes and attributes[name] is not None
 
 
+def clamp_rgb_channel(value: float) -> int:
+    return max(0, min(255, int(round(value))))
+
+
+def parse_rgb(color_value: str | None) -> tuple[int, int, int, float]:
+    if not color_value:
+        return (*DEFAULT_BACKGROUND_RGB, 1.0)
+
+    normalized = color_value.strip().lower()
+    if normalized == "transparent":
+        return (*DEFAULT_BACKGROUND_RGB, 0.0)
+
+    rgb_match = re.fullmatch(r"rgba?\(([^)]+)\)", normalized)
+    if rgb_match:
+        parts = [part.strip() for part in rgb_match.group(1).split(",")]
+        if len(parts) in {3, 4}:
+            rgb_channels = []
+            for part in parts[:3]:
+                if part.endswith("%"):
+                    rgb_channels.append(clamp_rgb_channel(float(part[:-1]) * 255 / 100))
+                else:
+                    rgb_channels.append(clamp_rgb_channel(float(part)))
+            alpha = float(parts[3]) if len(parts) == 4 else 1.0
+            return rgb_channels[0], rgb_channels[1], rgb_channels[2], max(0.0, min(1.0, alpha))
+
+    hex_match = re.fullmatch(r"#([0-9a-f]{3,8})", normalized)
+    if hex_match:
+        hex_value = hex_match.group(1)
+        if len(hex_value) in {3, 4}:
+            hex_value = "".join(character * 2 for character in hex_value)
+        if len(hex_value) == 6:
+            hex_value += "ff"
+        if len(hex_value) == 8:
+            red = int(hex_value[0:2], 16)
+            green = int(hex_value[2:4], 16)
+            blue = int(hex_value[4:6], 16)
+            alpha = int(hex_value[6:8], 16) / 255
+            return red, green, blue, alpha
+
+    return (*DEFAULT_BACKGROUND_RGB, 1.0)
+
+
+def rgb_to_string(rgb: tuple[int, int, int]) -> str:
+    red, green, blue = rgb
+    return f"rgb({red}, {green}, {blue})"
+
+
+def composite_rgba_over_background(
+    rgba: tuple[int, int, int, float],
+    background_rgb: tuple[int, int, int],
+) -> tuple[int, int, int]:
+    red, green, blue, alpha = rgba
+    bg_red, bg_green, bg_blue = background_rgb
+    return (
+        clamp_rgb_channel((red * alpha) + (bg_red * (1 - alpha))),
+        clamp_rgb_channel((green * alpha) + (bg_green * (1 - alpha))),
+        clamp_rgb_channel((blue * alpha) + (bg_blue * (1 - alpha))),
+    )
+
+
+def get_effective_background(styles: dict[str, Any]) -> str:
+    background = styles.get("backgroundColor")
+    if background and not is_transparent_color(background):
+        return background
+    return DEFAULT_BACKGROUND
+
+
+def srgb_to_linear(channel: float) -> float:
+    if channel <= 0.04045:
+        return channel / 12.92
+    return ((channel + 0.055) / 1.055) ** 2.4
+
+
+def relative_luminance(rgb: tuple[int, int, int]) -> float:
+    red, green, blue = [channel / 255 for channel in rgb]
+    linear_red = srgb_to_linear(red)
+    linear_green = srgb_to_linear(green)
+    linear_blue = srgb_to_linear(blue)
+    return (0.2126 * linear_red) + (0.7152 * linear_green) + (0.0722 * linear_blue)
+
+
+def contrast_ratio(
+    foreground_rgb: tuple[int, int, int],
+    background_rgb: tuple[int, int, int],
+) -> float:
+    foreground_luminance = relative_luminance(foreground_rgb)
+    background_luminance = relative_luminance(background_rgb)
+    lighter = max(foreground_luminance, background_luminance)
+    darker = min(foreground_luminance, background_luminance)
+    return (lighter + 0.05) / (darker + 0.05)
+
+
+def get_wcag_threshold(font_size: str | None) -> float:
+    if not font_size:
+        return 4.5
+
+    match = re.search(r"-?\d+(?:\.\d+)?", font_size)
+    if not match:
+        return 4.5
+
+    return 3.0 if float(match.group()) >= 18 else 4.5
+
+
+def simulate_color(
+    rgb: tuple[int, int, int],
+    deficiency: Deficiency,
+) -> tuple[int, int, int]:
+    color_sample = np.array([[list(rgb)]], dtype=np.uint8)
+    simulated = CVD_SIMULATOR.simulate_cvd(color_sample, deficiency, 1.0)
+    simulated_pixel = simulated[0, 0]
+    return (
+        int(simulated_pixel[0]),
+        int(simulated_pixel[1]),
+        int(simulated_pixel[2]),
+    )
+
+
+def safe_mean(values: list[float]) -> float:
+    if not values:
+        return 0.0
+    return sum(values) / len(values)
+
+
+def compute_rate(failed: int, total: int) -> float:
+    if not total:
+        return 0.0
+    return failed / total
+
+
 def has_interactivity(attributes: dict[str, Any], styles: dict[str, Any]) -> bool:
     return any(
         (
@@ -202,10 +364,11 @@ def is_noisy_text_container(element_data: dict[str, Any]) -> bool:
     attributes = element_data["attributes"]
     styles = element_data["styles"]
     class_tokens = build_token_string(attributes.get("class", ""), attributes.get("id", ""))
+    text_words = element_data.get("text_word_count", word_count(element_data["text"]))
 
     return (
         tag_name in {"div", "section", "article"}
-        and word_count(element_data["text"]) >= 12
+        and text_words >= 12
         and not attributes.get("role")
         and not has_interactivity(attributes, styles)
         and not has_visual_surface(styles)
@@ -392,84 +555,304 @@ def classify_component(element_data: dict[str, Any]) -> str:
     return "other"
 
 
-def summarize_texts(elements: list[dict[str, Any]], limit: int = 5) -> list[str]:
-    seen: set[str] = set()
-    summary: list[str] = []
-
-    for element in elements:
-        text = normalize_text(element.get("text", ""))
-        if not text or text in seen:
-            continue
-        seen.add(text)
-        summary.append(text)
-        if len(summary) >= limit:
-            break
-
-    return summary
-
-
-def build_site_analysis(site_result: dict[str, Any]) -> dict[str, Any]:
-    results = site_result["results"]
-    category_counts = site_result["category_counts"]
-    sorted_categories = sorted(
-        category_counts.items(),
-        key=lambda item: (-item[1], item[0]),
+def build_failure_metrics(
+    records: list[dict[str, Any]],
+    condition: str,
+) -> dict[str, float | int]:
+    total_components = len(records)
+    failed_components = sum(
+        1 for record in records if not record[f"pass_{condition}"]
     )
-
-    examples_by_component: dict[str, list[str]] = {}
-    for component_name in (
-        "button",
-        "link",
-        "navigation",
-        "form",
-        "input",
-        "text",
-        "header",
-        "footer",
-        "card",
-        "alert",
-        "other",
-    ):
-        component_examples = [
-            element for element in results if element["component"] == component_name
-        ]
-        if component_examples:
-            examples_by_component[component_name] = summarize_texts(component_examples)
-
-    dominant_components = [
-        {"component": component, "count": count}
-        for component, count in sorted_categories[:5]
-    ]
-
     return {
-        "site": site_result["site"],
-        "total_elements_scanned": site_result["total_elements_scanned"],
-        "components_detected": sum(category_counts.values()),
-        "output_records_written": len(results),
-        "category_counts": category_counts,
-        "dominant_components": dominant_components,
-        "sample_text_by_component": examples_by_component,
+        "total_components": total_components,
+        "failed_components": failed_components,
+        "failure_rate": round(compute_rate(failed_components, total_components), 4),
     }
 
 
-def build_analysis_report(site_results: list[dict[str, Any]]) -> dict[str, Any]:
-    overall_counts: Counter[str] = Counter()
-    total_elements_scanned = 0
-    total_components_detected = 0
-    site_analyses: list[dict[str, Any]] = []
+def compute_component_metrics(
+    site: str,
+    component_index: int,
+    component_type: str,
+    element_data: dict[str, Any],
+) -> dict[str, Any]:
+    styles = element_data["styles"]
+    attributes = element_data["attributes"]
+    font_size = styles.get("fontSize")
+    foreground_raw = styles.get("color", DEFAULT_BACKGROUND)
+    background_raw = get_effective_background(styles)
+    border_color_raw = styles.get("borderColor", "")
+    outline_color_raw = styles.get("outlineColor", "")
 
+    effective_background_rgb = composite_rgba_over_background(
+        parse_rgb(background_raw),
+        DEFAULT_BACKGROUND_RGB,
+    )
+    effective_foreground_rgb = composite_rgba_over_background(
+        parse_rgb(foreground_raw),
+        effective_background_rgb,
+    )
+
+    threshold = get_wcag_threshold(font_size)
+    record: dict[str, Any] = {
+        "site": site,
+        "component_index": component_index,
+        "component_type": component_type,
+        "tag": element_data["tag"],
+        "text": element_data["text"],
+        "text_word_count": element_data.get("text_word_count", word_count(element_data["text"])),
+        "font_size": font_size,
+        "wcag_threshold": threshold,
+        "foreground_raw": foreground_raw,
+        "background_raw": background_raw,
+        "border_color_raw": border_color_raw,
+        "outline_color_raw": outline_color_raw,
+        "foreground_normal": rgb_to_string(effective_foreground_rgb),
+        "background_normal": rgb_to_string(effective_background_rgb),
+        "role": attributes.get("role", ""),
+        "href": attributes.get("href", ""),
+        "class_name": attributes.get("class", ""),
+        "element_id": attributes.get("id", ""),
+        "onclick": attributes.get("onclick", ""),
+    }
+
+    normal_contrast = contrast_ratio(effective_foreground_rgb, effective_background_rgb)
+    record["contrast_normal"] = round(normal_contrast, 4)
+    record["pass_normal"] = normal_contrast >= threshold
+
+    for condition_name, deficiency in CVD_CONDITIONS.items():
+        simulated_foreground_rgb = simulate_color(effective_foreground_rgb, deficiency)
+        simulated_background_rgb = simulate_color(effective_background_rgb, deficiency)
+        simulated_contrast = contrast_ratio(
+            simulated_foreground_rgb,
+            simulated_background_rgb,
+        )
+
+        record[f"foreground_{condition_name}"] = rgb_to_string(simulated_foreground_rgb)
+        record[f"background_{condition_name}"] = rgb_to_string(simulated_background_rgb)
+        record[f"contrast_{condition_name}"] = round(simulated_contrast, 4)
+        record[f"pass_{condition_name}"] = simulated_contrast >= threshold
+        record[f"contrast_loss_{condition_name}"] = round(
+            normal_contrast - simulated_contrast,
+            4,
+        )
+
+    return record
+
+
+def build_analysis_summary(site_results: list[dict[str, Any]]) -> dict[str, Any]:
+    all_records = [
+        component
+        for site_result in site_results
+        for component in site_result["components"]
+    ]
+    observed_component_counts = Counter(record["component_type"] for record in all_records)
+    component_counts = {
+        component_type: observed_component_counts.get(component_type, 0)
+        for component_type in SUPPORTED_COMPONENT_TYPES
+    }
+
+    overall_failure_rate = {
+        condition: build_failure_metrics(all_records, condition)
+        for condition in ALL_CONDITIONS
+    }
+    failure_rate_by_cvd_type = {
+        condition: overall_failure_rate[condition]
+        for condition in CVD_CONDITIONS
+    }
+
+    site_summary_table = []
     for site_result in site_results:
-        total_elements_scanned += site_result["total_elements_scanned"]
-        overall_counts.update(site_result["category_counts"])
-        total_components_detected += sum(site_result["category_counts"].values())
-        site_analyses.append(build_site_analysis(site_result))
+        records = site_result["components"]
+        overall_failure = sum(1 for record in records if not record["pass_normal"])
+        protanopia_failure = sum(
+            1 for record in records if not record["pass_protanopia"]
+        )
+        deuteranopia_failure = sum(
+            1 for record in records if not record["pass_deuteranopia"]
+        )
+        tritanopia_failure = sum(
+            1 for record in records if not record["pass_tritanopia"]
+        )
+        site_summary_table.append(
+            {
+                "site": site_result["site"],
+                "total_elements_scanned": site_result["total_elements_scanned"],
+                "total_components": len(records),
+                "other_percentage": round(site_result["other_percentage"], 4),
+                "counts_by_component_type": {
+                    component_type: site_result["category_counts"].get(component_type, 0)
+                    for component_type in SUPPORTED_COMPONENT_TYPES
+                },
+                "failed_normal": overall_failure,
+                "failure_rate_normal": round(
+                    compute_rate(overall_failure, len(records)),
+                    4,
+                ),
+                "failed_protanopia": protanopia_failure,
+                "failure_rate_protanopia": round(
+                    compute_rate(protanopia_failure, len(records)),
+                    4,
+                ),
+                "failed_deuteranopia": deuteranopia_failure,
+                "failure_rate_deuteranopia": round(
+                    compute_rate(deuteranopia_failure, len(records)),
+                    4,
+                ),
+                "failed_tritanopia": tritanopia_failure,
+                "failure_rate_tritanopia": round(
+                    compute_rate(tritanopia_failure, len(records)),
+                    4,
+                ),
+            }
+        )
+
+    component_types = list(SUPPORTED_COMPONENT_TYPES)
+    failure_rate_by_component_type = []
+    mean_contrast_by_component_type = []
+    mean_contrast_loss_by_component_type = []
+    component_vulnerability_scores_by_type: dict[str, Any] = {}
+
+    for component_type in component_types:
+        component_records = [
+            record for record in all_records if record["component_type"] == component_type
+        ]
+        row = {
+            "component_type": component_type,
+            "total_components": len(component_records),
+        }
+        mean_row = {
+            "component_type": component_type,
+            "total_components": len(component_records),
+        }
+        contrast_loss_row = {
+            "component_type": component_type,
+            "total_components": len(component_records),
+        }
+        vulnerability_row = {
+            "component_type": component_type,
+            "total_components": len(component_records),
+        }
+
+        for condition in ALL_CONDITIONS:
+            failure_metrics = build_failure_metrics(component_records, condition)
+            row[f"failed_{condition}"] = failure_metrics["failed_components"]
+            row[f"failure_rate_{condition}"] = failure_metrics["failure_rate"]
+            mean_row[f"mean_contrast_{condition}"] = round(
+                safe_mean([record[f"contrast_{condition}"] for record in component_records]),
+                4,
+            )
+
+        for condition in CVD_CONDITIONS:
+            contrast_loss_row[f"mean_contrast_loss_{condition}"] = round(
+                safe_mean(
+                    [
+                        record[f"contrast_loss_{condition}"]
+                        for record in component_records
+                    ]
+                ),
+                4,
+            )
+            vulnerability_row[f"cvs_{condition}"] = row[f"failure_rate_{condition}"]
+
+        failure_rate_by_component_type.append(row)
+        mean_contrast_by_component_type.append(mean_row)
+        mean_contrast_loss_by_component_type.append(contrast_loss_row)
+        component_vulnerability_scores_by_type[component_type] = vulnerability_row
+
+    mean_contrast_overall = {
+        condition: round(
+            safe_mean([record[f"contrast_{condition}"] for record in all_records]),
+            4,
+        )
+        for condition in ALL_CONDITIONS
+    }
+    mean_contrast_loss_by_cvd_type = {
+        condition: round(
+            safe_mean([record[f"contrast_loss_{condition}"] for record in all_records]),
+            4,
+        )
+        for condition in CVD_CONDITIONS
+    }
+
+    component_vulnerability_summary_table = []
+    for component_type in CORE_VULNERABILITY_TYPES:
+        component_records = [
+            record for record in all_records if record["component_type"] == component_type
+        ]
+        total_components = len(component_records)
+        component_vulnerability_summary_table.append(
+            {
+                "component_type": component_type,
+                "total_components": total_components,
+                "cvs_protanopia": round(
+                    compute_rate(
+                        sum(1 for record in component_records if not record["pass_protanopia"]),
+                        total_components,
+                    ),
+                    4,
+                ),
+                "cvs_deuteranopia": round(
+                    compute_rate(
+                        sum(1 for record in component_records if not record["pass_deuteranopia"]),
+                        total_components,
+                    ),
+                    4,
+                ),
+                "cvs_tritanopia": round(
+                    compute_rate(
+                        sum(1 for record in component_records if not record["pass_tritanopia"]),
+                        total_components,
+                    ),
+                    4,
+                ),
+            }
+        )
+
+    top_vulnerable_component_categories = sorted(
+        (
+            {
+                "component_type": row["component_type"],
+                "total_components": row["total_components"],
+                "average_vulnerability_score": round(
+                    safe_mean(
+                        [
+                            row["cvs_protanopia"],
+                            row["cvs_deuteranopia"],
+                            row["cvs_tritanopia"],
+                        ]
+                    ),
+                    4,
+                ),
+            }
+            for row in component_vulnerability_summary_table
+            if row["total_components"] > 0
+        ),
+        key=lambda item: (-item["average_vulnerability_score"], item["component_type"]),
+    )[:5]
 
     return {
         "total_sites_scanned": len(site_results),
-        "total_elements_scanned": total_elements_scanned,
-        "total_components_detected": total_components_detected,
-        "overall_category_counts": dict(overall_counts),
-        "site_analysis": site_analyses,
+        "sites_scanned": [site_result["site"] for site_result in site_results],
+        "total_elements_scanned": sum(
+            site_result["total_elements_scanned"] for site_result in site_results
+        ),
+        "total_components": len(all_records),
+        "counts_by_component_type": component_counts,
+        "overall_failure_rate": overall_failure_rate,
+        "failure_rate_by_cvd_type": failure_rate_by_cvd_type,
+        "failure_rate_by_site": site_summary_table,
+        "failure_rate_by_component_type": failure_rate_by_component_type,
+        "mean_contrast_by_component_type": mean_contrast_by_component_type,
+        "mean_contrast_loss_by_component_type": mean_contrast_loss_by_component_type,
+        "mean_contrast_ratios": {
+            "overall": mean_contrast_overall,
+            "by_component_type": mean_contrast_by_component_type,
+        },
+        "mean_contrast_loss_by_cvd_type": mean_contrast_loss_by_cvd_type,
+        "component_vulnerability_scores_by_type": component_vulnerability_scores_by_type,
+        "component_vulnerability_summary_table": component_vulnerability_summary_table,
+        "top_vulnerable_component_categories": top_vulnerable_component_categories,
     }
 
 
@@ -478,43 +861,37 @@ def write_json_file(path: Path, payload: Any) -> None:
     path.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
 
 
-def print_analysis_report(analysis_report: dict[str, Any]) -> None:
-    print("Accessibility Scan Analysis")
-    print("=" * 27)
-    print(f"Sites scanned: {analysis_report['total_sites_scanned']}")
-    print(f"Total elements scanned: {analysis_report['total_elements_scanned']}")
-    print(f"Total components detected: {analysis_report['total_components_detected']}")
-    print()
-    print("Overall component counts:")
+def print_terminal_summary(analysis_summary: dict[str, Any]) -> None:
+    overall_contrast = analysis_summary["mean_contrast_ratios"]["overall"]
+    overall_failures = analysis_summary["overall_failure_rate"]
 
-    for component, count in sorted(
-        analysis_report["overall_category_counts"].items(),
-        key=lambda item: (-item[1], item[0]),
-    ):
-        print(f"  - {component}: {count}")
-
-    for site_summary in analysis_report["site_analysis"]:
-        other_count = site_summary["category_counts"].get("other", 0)
-        other_percentage = (
-            (other_count / site_summary["components_detected"]) * 100
-            if site_summary["components_detected"]
-            else 0
+    print("Research Pipeline Summary")
+    print("=" * 25)
+    print(f"Sites scanned: {analysis_summary['total_sites_scanned']}")
+    print(f"Components detected: {analysis_summary['total_components']}")
+    print(f"Mean normal contrast: {overall_contrast['normal']:.4f}")
+    print(f"Mean contrast (protanopia): {overall_contrast['protanopia']:.4f}")
+    print(f"Mean contrast (deuteranopia): {overall_contrast['deuteranopia']:.4f}")
+    print(f"Mean contrast (tritanopia): {overall_contrast['tritanopia']:.4f}")
+    print(f"Total failures under normal: {overall_failures['normal']['failed_components']}")
+    print(
+        f"Total failures under protanopia: "
+        f"{overall_failures['protanopia']['failed_components']}"
+    )
+    print(
+        f"Total failures under deuteranopia: "
+        f"{overall_failures['deuteranopia']['failed_components']}"
+    )
+    print(
+        f"Total failures under tritanopia: "
+        f"{overall_failures['tritanopia']['failed_components']}"
+    )
+    print("Top 5 most vulnerable component categories:")
+    for item in analysis_summary["top_vulnerable_component_categories"]:
+        print(
+            f"  - {item['component_type']}: "
+            f"{item['average_vulnerability_score']:.4f}"
         )
-
-        print()
-        print(f"Site: {site_summary['site']}")
-        print(f"  Elements scanned: {site_summary['total_elements_scanned']}")
-        print(f"  Components detected: {site_summary['components_detected']}")
-        print(f"  Other percentage: {other_percentage:.2f}%")
-        print("  Top component categories:")
-
-        for item in site_summary["dominant_components"]:
-            print(f"    - {item['component']}: {item['count']}")
-
-        print("  Representative findings:")
-        for component, texts in site_summary["sample_text_by_component"].items():
-            joined_examples = "; ".join(texts) if texts else "No text examples"
-            print(f"    - {component}: {joined_examples}")
 
 
 async def extract_element_data(page) -> list[dict[str, Any]]:
@@ -581,6 +958,8 @@ async def extract_element_data(page) -> list[dict[str, Any]]:
                 backgroundColor: resolveBackgroundColor(element),
                 rawBackgroundColor: style.backgroundColor,
                 fontSize: style.fontSize,
+                borderColor: style.borderColor,
+                outlineColor: style.outlineColor,
                 cursor: style.cursor,
                 display: style.display,
                 visibility: style.visibility,
@@ -616,6 +995,7 @@ async def scan_site(browser, url: str) -> dict[str, Any]:
 
         category_counts: Counter[str] = Counter()
         classified_elements: list[dict[str, Any]] = []
+        component_index = 0
 
         for element_data in raw_elements:
             if should_skip_element(element_data):
@@ -623,18 +1003,14 @@ async def scan_site(browser, url: str) -> dict[str, Any]:
 
             component_type = classify_component(element_data)
             category_counts[component_type] += 1
-
+            component_index += 1
             classified_elements.append(
-                {
-                    "site": url,
-                    "component": component_type,
-                    "tag": element_data["tag"],
-                    "text": element_data["text"],
-                    "color": element_data["styles"]["color"],
-                    "background": element_data["styles"]["backgroundColor"],
-                    "font_size": element_data["styles"]["fontSize"],
-                    "attributes": element_data["attributes"],
-                }
+                compute_component_metrics(
+                    site=url,
+                    component_index=component_index,
+                    component_type=component_type,
+                    element_data=element_data,
+                )
             )
 
         other_count = category_counts.get("other", 0)
@@ -643,24 +1019,13 @@ async def scan_site(browser, url: str) -> dict[str, Any]:
             (other_count / classified_total) * 100 if classified_total else 0
         )
 
-        print(f"Debug metrics for {url}")
-        print(f"  Total elements scanned: {len(raw_elements)}")
-        print(f"  Total classified components: {classified_total}")
-        print("  Count per category:")
-        for component, count in sorted(
-            category_counts.items(),
-            key=lambda item: (-item[1], item[0]),
-        ):
-            print(f"    - {component}: {count}")
-        print(f"  Percentage of other: {other_percentage:.2f}%")
-
         return {
             "site": url,
             "total_elements_scanned": len(raw_elements),
             "components_detected": classified_total,
             "category_counts": dict(category_counts),
             "other_percentage": round(other_percentage, 2),
-            "results": classified_elements[:MAX_OUTPUT_PER_SITE],
+            "components": classified_elements,
         }
     finally:
         await page.close()
@@ -679,20 +1044,18 @@ async def main() -> None:
         finally:
             await browser.close()
 
-    scan_payload = {
-        "sites": site_results,
-        "limits": {
-            "max_output_per_site": MAX_OUTPUT_PER_SITE,
-            "headless": HEADLESS,
-        },
-    }
-    analysis_report = build_analysis_report(site_results)
+    detailed_results = [
+        component
+        for site_result in site_results
+        for component in site_result["components"]
+    ]
+    analysis_report = build_analysis_summary(site_results)
 
-    write_json_file(SCAN_RESULTS_FILE, scan_payload)
+    write_json_file(DETAILED_RESULTS_FILE, detailed_results)
     write_json_file(ANALYSIS_RESULTS_FILE, analysis_report)
-    print_analysis_report(analysis_report)
+    print_terminal_summary(analysis_report)
     print()
-    print(f"Raw scan JSON written to: {SCAN_RESULTS_FILE}")
+    print(f"Detailed JSON written to: {DETAILED_RESULTS_FILE}")
     print(f"Analysis JSON written to: {ANALYSIS_RESULTS_FILE}")
 
 
