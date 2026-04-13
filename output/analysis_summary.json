@@ -1,0 +1,168 @@
+{
+  "total_sites_scanned": 2,
+  "total_elements_scanned": 2609,
+  "total_components_detected": 1316,
+  "overall_category_counts": {
+    "navigation": 174,
+    "other": 593,
+    "link": 278,
+    "header": 1,
+    "button": 99,
+    "text": 124,
+    "footer": 2,
+    "card": 45
+  },
+  "site_analysis": [
+    {
+      "site": "https://developer.mozilla.org",
+      "total_elements_scanned": 710,
+      "components_detected": 608,
+      "output_records_written": 200,
+      "category_counts": {
+        "navigation": 48,
+        "other": 361,
+        "link": 156,
+        "header": 1,
+        "button": 10,
+        "text": 31,
+        "footer": 1
+      },
+      "dominant_components": [
+        {
+          "component": "other",
+          "count": 361
+        },
+        {
+          "component": "link",
+          "count": 156
+        },
+        {
+          "component": "navigation",
+          "count": 48
+        },
+        {
+          "component": "text",
+          "count": 31
+        },
+        {
+          "component": "button",
+          "count": 10
+        }
+      ],
+      "sample_text_by_component": {
+        "button": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "Web APIs",
+          "All"
+        ],
+        "link": [
+          "Skip to main content",
+          "Skip to search",
+          "MDN",
+          "HTML: Markup language",
+          "Elements"
+        ],
+        "navigation": [
+          "Skip to main content Skip to search",
+          "HTML CSS JavaScript Web APIs All Learn Tools About Blog",
+          "MDN",
+          "HTML",
+          "HTML: Markup language HTML reference Elements Global attributes Attributes See all… HTML guides Resp"
+        ],
+        "header": [
+          "HTML CSS JavaScript Web APIs All Learn Tools About Blog MDN"
+        ],
+        "other": [
+          "Skip to main content",
+          "Skip to search",
+          "HTML",
+          "HTML reference Elements Global attributes Attributes See all…",
+          "HTML reference"
+        ]
+      }
+    },
+    {
+      "site": "https://www.apple.com/",
+      "total_elements_scanned": 1899,
+      "components_detected": 708,
+      "output_records_written": 200,
+      "category_counts": {
+        "other": 232,
+        "button": 89,
+        "text": 93,
+        "navigation": 126,
+        "link": 122,
+        "card": 45,
+        "footer": 1
+      },
+      "dominant_components": [
+        {
+          "component": "other",
+          "count": 232
+        },
+        {
+          "component": "navigation",
+          "count": 126
+        },
+        {
+          "component": "link",
+          "count": 122
+        },
+        {
+          "component": "text",
+          "count": 93
+        },
+        {
+          "component": "button",
+          "count": 89
+        }
+      ],
+      "sample_text_by_component": {
+        "button": [
+          "Malta",
+          "Continue",
+          "0 +",
+          "Learn more",
+          "Shop iPhone"
+        ],
+        "link": [
+          "Apple",
+          "Store",
+          "Mac",
+          "iPad",
+          "iPhone"
+        ],
+        "navigation": [
+          "Apple Store Mac iPad iPhone Watch Vision AirPods TV & Home Entertainment Accessories Support 0 +",
+          "Apple",
+          "Store Mac iPad iPhone Watch Vision AirPods TV & Home Entertainment Accessories Support",
+          "Store",
+          "Mac"
+        ],
+        "text": [
+          "Malta",
+          "Other country or region",
+          "Apple",
+          "iPhone",
+          "Meet the latest iPhone lineup."
+        ],
+        "card": [
+          "iPhone Meet the latest iPhone lineup. Learn more Shop iPhone",
+          "iPhone Meet the latest iPhone lineup.",
+          "Learn more Shop iPhone",
+          "<picture class=\"static\" ><source srcset=\"/v/home/a/images/heroes/iphone-family/hero_iphone_family__f",
+          "MacBook Neo Amazing Mac. Surprising price. Learn more Buy"
+        ],
+        "other": [
+          "Choose another country or region to see content specific to your location. Malta Continue",
+          "Choose another country or region to see content specific to your location.",
+          "Malta Continue",
+          "Malta",
+          "Malta Other country or region"
+        ]
+      }
+    }
+  ]
+}
