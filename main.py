@@ -1,4 +1,5 @@
 import asyncio
+import csv
 import json
 import os
 import re
@@ -11,22 +12,65 @@ from daltonlens.simulate import Deficiency, Simulator_Brettel1997
 from playwright.async_api import TimeoutError as PlaywrightTimeoutError
 from playwright.async_api import async_playwright
 
-
+# 20 - 30 sites is a good range for a comprehensive analysis while keeping the runtime manageable.
+# The selected sites cover a variety of industries, design styles, and accessibility practices to provide a well-rounded dataset for analysis.
 TARGET_SITES = [
     "https://developer.mozilla.org",
     "https://www.apple.com/",
+    "https://www.amazon.de/",
+    "https://www.netlify.com/",
+    "https://www.nasa.gov/",
+    "https://stripe.com/en-mt",
+    "https://mita.gov.mt/",
+    "https://openai.com/",
+    "https://www.wikipedia.org/",
+    "https://eu.louisvuitton.com/eng-e1/homepage",
+    "https://www.cnn.com/",
+    "https://www.w3schools.com/",
+    "https://firebase.google.com/",
+    "https://www.education.com/",
+    "https://claude.ai/login",
+    "https://timesofmalta.com/",
+    "https://www.espn.com/",
+    "https://www.foxnews.com/",
+    "https://www.ryanair.com/mt/en",
+    "https://www.emirates.com/mt/english/",
+    "https://www.printables.com/",
+    "https://www.behance.net/",
+    "https://imgur.com/",
+    "https://www.reddit.com/"
 ]
 
 HEADLESS = os.getenv("ACCESSIBILITY_SCANNER_HEADLESS", "false").lower() == "true"
-NETWORK_TIMEOUT_MS = 60_000
+NETWORK_TIMEOUT_MS = 30_000
+NETWORK_IDLE_TIMEOUT_MS = 10_000
+POST_LOAD_DELAY_MS = 1_000
+PER_SITE_TIMEOUT_SECONDS = 90
 OUTPUT_DIR = Path("output")
 DETAILED_RESULTS_FILE = OUTPUT_DIR / "detailed_results.json"
 ANALYSIS_RESULTS_FILE = OUTPUT_DIR / "analysis_summary.json"
+DETAILED_RESULTS_CSV_FILE = OUTPUT_DIR / "detailed_results.csv"
+SITE_SUMMARY_CSV_FILE = OUTPUT_DIR / "site_summary.csv"
+COMPONENT_FAILURE_CSV_FILE = OUTPUT_DIR / "component_failure_summary.csv"
+COMPONENT_VULNERABILITY_CSV_FILE = OUTPUT_DIR / "component_vulnerability_summary.csv"
 
 BUTTON_CLASS_KEYWORDS = ("btn", "button", "cta", "primary", "action")
 NAV_CLASS_KEYWORDS = ("nav", "menu", "navbar")
 CARD_CLASS_KEYWORDS = ("card", "tile", "box")
 ALERT_CLASS_KEYWORDS = ("alert", "error", "warning")
+COOKIE_KEYWORDS = (
+    "cookie",
+    "cookies",
+    "consent",
+    "gdpr",
+    "privacy",
+    "onetrust",
+    "cookiebot",
+    "cookielaw",
+    "cmp",
+    "didomi",
+    "trustarc",
+)
 TRACKED_ATTRIBUTES = {"class", "id", "role", "href", "onclick", "type", "name"}
 IGNORED_TAGS = {
     "head",
@@ -424,6 +468,37 @@ def has_visual_role(element_data: dict[str, Any]) -> bool:
     )
 
 
+def is_cookie_consent_element(element_data: dict[str, Any]) -> bool:
+    attributes = element_data["attributes"]
+    styles = element_data["styles"]
+    text = element_data.get("text", "")
+
+    signal_text = build_token_string(
+        text,
+        attributes.get("class", ""),
+        attributes.get("id", ""),
+        attributes.get("role", ""),
+        attributes.get("aria-label", ""),
+        attributes.get("aria-labelledby", ""),
+        attributes.get("aria-describedby", ""),
+    )
+    has_cookie_signal = contains_keyword(signal_text, COOKIE_KEYWORDS)
+
+    if not has_cookie_signal:
+        return False
+
+    role = (attributes.get("role") or "").strip().lower()
+    position = (styles.get("position") or "").strip().lower()
+
+    return any(
+        (
+            role in {"dialog", "alertdialog", "banner"},
+            position in {"fixed", "sticky"},
+            element_data["tag"] in {"form", "aside", "section", "div", "dialog"},
+        )
+    )
+
+
 def should_skip_element(element_data: dict[str, Any]) -> bool:
     if element_data["tag"] in IGNORED_TAGS:
         return True
@@ -433,6 +508,9 @@ def should_skip_element(element_data: dict[str, Any]) -> bool:
     element_data["text"] = text
 
     if is_hidden_element(styles):
+        return True
+
+    if is_cookie_consent_element(element_data):
         return True
 
     if is_structural_container(element_data):
@@ -861,6 +939,45 @@ def write_json_file(path: Path, payload: Any) -> None:
     path.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
 
 
+def normalize_csv_value(value: Any) -> str | int | float:
+    if value is None:
+        return ""
+    if isinstance(value, bool):
+        return int(value)
+    if isinstance(value, (int, float, str)):
+        return value
+    return json.dumps(value, ensure_ascii=False)
+
+
+def flatten_record_for_csv(record: dict[str, Any]) -> dict[str, str | int | float]:
+    flat_record: dict[str, str | int | float] = {}
+
+    for key, value in record.items():
+        if isinstance(value, dict):
+            for nested_key, nested_value in value.items():
+                flat_record[f"{key}_{nested_key}"] = normalize_csv_value(nested_value)
+        else:
+            flat_record[key] = normalize_csv_value(value)
+
+    return flat_record
+
+
+def write_csv_file(path: Path, records: list[dict[str, Any]]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+
+    if not records:
+        path.write_text("", encoding="utf-8")
+        return
+
+    flattened_records = [flatten_record_for_csv(record) for record in records]
+    fieldnames = sorted({key for record in flattened_records for key in record})
+
+    with path.open("w", newline="", encoding="utf-8") as csv_file:
+        writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(flattened_records)
+
+
 def print_terminal_summary(analysis_summary: dict[str, Any]) -> None:
     overall_contrast = analysis_summary["mean_contrast_ratios"]["overall"]
     overall_failures = analysis_summary["overall_failure_rate"]
@@ -961,6 +1078,8 @@ async def extract_element_data(page) -> list[dict[str, Any]]:
                 borderColor: style.borderColor,
                 outlineColor: style.outlineColor,
                 cursor: style.cursor,
+                position: style.position,
+                zIndex: style.zIndex,
                 display: style.display,
                 visibility: style.visibility,
                 opacity: style.opacity,
@@ -976,21 +1095,117 @@ async def extract_element_data(page) -> list[dict[str, Any]]:
     )
 
 
+async def dismiss_cookie_banners(page) -> None:
+        await page.evaluate(
+                """
+                () => {
+                    const buttonSelectors = [
+                        "button",
+                        "[role='button']",
+                        "input[type='button']",
+                        "input[type='submit']",
+                        "a[role='button']"
+                    ];
+
+                    const dismissText = [
+                        "accept",
+                        "agree",
+                        "allow all",
+                        "accept all",
+                        "reject",
+                        "decline",
+                        "close",
+                        "got it",
+                        "ok"
+                    ];
+
+                    const cookieSignals = [
+                        "cookie",
+                        "consent",
+                        "gdpr",
+                        "onetrust",
+                        "cookiebot",
+                        "didomi",
+                        "trustarc",
+                        "cmp"
+                    ];
+
+                    const textIncludesSignal = (value, signals) => {
+                        const normalized = (value || "").toLowerCase();
+                        return signals.some((signal) => normalized.includes(signal));
+                    };
+
+                    const isCookieContainer = (element) => {
+                        if (!element) return false;
+                        const markerText = [
+                            element.id,
+                            element.className,
+                            element.getAttribute("role"),
+                            element.getAttribute("aria-label"),
+                            element.textContent
+                        ].join(" ");
+                        return textIncludesSignal(markerText, cookieSignals);
+                    };
+
+                    for (const selector of buttonSelectors) {
+                        for (const button of Array.from(document.querySelectorAll(selector))) {
+                            const text = (button.innerText || button.value || button.textContent || "").trim().toLowerCase();
+                            if (!text) continue;
+                            if (!textIncludesSignal(text, dismissText)) continue;
+
+                            const container = button.closest("[id], [class], [role], form, dialog, section, aside, div");
+                            if (isCookieContainer(container)) {
+                                try {
+                                    button.click();
+                                } catch {
+                                    // ignore click failures
+                                }
+                            }
+                        }
+                    }
+
+                    const removableSelectors = [
+                        "#onetrust-banner-sdk",
+                        ".onetrust-pc-dark-filter",
+                        ".cookiebot",
+                        "#CybotCookiebotDialog",
+                        "[id*='cookie']",
+                        "[class*='cookie']",
+                        "[id*='consent']",
+                        "[class*='consent']",
+                        "[id*='gdpr']",
+                        "[class*='gdpr']",
+                        "[id*='onetrust']",
+                        "[class*='onetrust']"
+                    ];
+
+                    for (const selector of removableSelectors) {
+                        for (const node of Array.from(document.querySelectorAll(selector))) {
+                            if (!isCookieContainer(node)) continue;
+                            node.remove();
+                        }
+                    }
+                }
+                """
+        )
+
+
 async def scan_site(browser, url: str) -> dict[str, Any]:
     page = await browser.new_page()
 
     try:
-        await page.goto(url, wait_until="load", timeout=NETWORK_TIMEOUT_MS)
+        await page.goto(url, wait_until="domcontentloaded", timeout=NETWORK_TIMEOUT_MS)
 
         try:
-            await page.wait_for_load_state("networkidle", timeout=NETWORK_TIMEOUT_MS)
+            await page.wait_for_load_state("networkidle", timeout=NETWORK_IDLE_TIMEOUT_MS)
         except PlaywrightTimeoutError:
             print(
                 f"Warning: networkidle timeout for {url}; continuing after page load.",
                 flush=True,
             )
 
-        await page.wait_for_timeout(2_000)
+        await dismiss_cookie_banners(page)
+        await page.wait_for_timeout(POST_LOAD_DELAY_MS)
         raw_elements = await extract_element_data(page)
 
         category_counts: Counter[str] = Counter()
@@ -1026,6 +1241,7 @@ async def scan_site(browser, url: str) -> dict[str, Any]:
             "category_counts": dict(category_counts),
             "other_percentage": round(other_percentage, 2),
             "components": classified_elements,
+            "error": None,
         }
     finally:
         await page.close()
@@ -1039,7 +1255,39 @@ async def main() -> None:
 
         try:
             for url in TARGET_SITES:
-                site_result = await scan_site(browser, url)
+                try:
+                    site_result = await asyncio.wait_for(
+                        scan_site(browser, url),
+                        timeout=PER_SITE_TIMEOUT_SECONDS,
+                    )
+                except (PlaywrightTimeoutError, TimeoutError, asyncio.TimeoutError) as exc:
+                    print(
+                        f"Warning: timed out while scanning {url}: {exc}",
+                        flush=True,
+                    )
+                    site_result = {
+                        "site": url,
+                        "total_elements_scanned": 0,
+                        "components_detected": 0,
+                        "category_counts": {},
+                        "other_percentage": 0.0,
+                        "components": [],
+                        "error": f"timeout: {type(exc).__name__}",
+                    }
+                except Exception as exc:
+                    print(
+                        f"Warning: failed to scan {url}: {exc}",
+                        flush=True,
+                    )
+                    site_result = {
+                        "site": url,
+                        "total_elements_scanned": 0,
+                        "components_detected": 0,
+                        "category_counts": {},
+                        "other_percentage": 0.0,
+                        "components": [],
+                        "error": f"scan_failed: {type(exc).__name__}",
+                    }
                 site_results.append(site_result)
         finally:
             await browser.close()
@@ -1053,10 +1301,24 @@ async def main() -> None:
 
     write_json_file(DETAILED_RESULTS_FILE, detailed_results)
     write_json_file(ANALYSIS_RESULTS_FILE, analysis_report)
+    write_csv_file(DETAILED_RESULTS_CSV_FILE, detailed_results)
+    write_csv_file(SITE_SUMMARY_CSV_FILE, analysis_report["failure_rate_by_site"])
+    write_csv_file(
+        COMPONENT_FAILURE_CSV_FILE,
+        analysis_report["failure_rate_by_component_type"],
+    )
+    write_csv_file(
+        COMPONENT_VULNERABILITY_CSV_FILE,
+        analysis_report["component_vulnerability_summary_table"],
+    )
     print_terminal_summary(analysis_report)
     print()
     print(f"Detailed JSON written to: {DETAILED_RESULTS_FILE}")
     print(f"Analysis JSON written to: {ANALYSIS_RESULTS_FILE}")
+    print(f"Detailed CSV written to: {DETAILED_RESULTS_CSV_FILE}")
+    print(f"Site summary CSV written to: {SITE_SUMMARY_CSV_FILE}")
+    print(f"Component failure CSV written to: {COMPONENT_FAILURE_CSV_FILE}")
+    print(f"Component vulnerability CSV written to: {COMPONENT_VULNERABILITY_CSV_FILE}")
 
 
 if __name__ == "__main__":
