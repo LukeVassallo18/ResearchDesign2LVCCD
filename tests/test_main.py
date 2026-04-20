@@ -1,4 +1,5 @@
 import json
+import csv
 
 import pytest
 
@@ -123,10 +124,10 @@ def test_compute_component_metrics_sets_expected_flags(monkeypatch: pytest.Monke
     )
 
     assert record["contrast_normal"] >= 4.5
-    assert record["pass_normal"] is True
-    assert record["pass_protanopia"] is True
-    assert record["pass_deuteranopia"] is True
-    assert record["pass_tritanopia"] is True
+    assert record["pass_normal"] == 1
+    assert record["pass_protanopia"] == 1
+    assert record["pass_deuteranopia"] == 1
+    assert record["pass_tritanopia"] == 1
 
 
 def test_build_failure_metrics() -> None:
@@ -224,3 +225,79 @@ def test_write_json_file_creates_parent_and_serializes(tmp_path) -> None:
 
     assert target.exists()
     assert json.loads(target.read_text(encoding="utf-8")) == payload
+
+
+def test_flatten_record_for_csv_flattens_nested_dicts_and_bools() -> None:
+    record = {
+        "site": "https://example.com",
+        "pass_normal": True,
+        "counts": {"button": 2, "text": 3},
+        "notes": None,
+    }
+
+    flattened = main.flatten_record_for_csv(record)
+
+    assert flattened["site"] == "https://example.com"
+    assert flattened["pass_normal"] == 1
+    assert flattened["counts_button"] == 2
+    assert flattened["counts_text"] == 3
+    assert flattened["notes"] == ""
+
+
+def test_write_csv_file_creates_header_and_rows(tmp_path) -> None:
+    target = tmp_path / "nested" / "sample.csv"
+    records = [
+        {
+            "site": "https://a.com",
+            "pass_normal": True,
+            "counts": {"button": 1},
+        },
+        {
+            "site": "https://b.com",
+            "pass_normal": False,
+            "counts": {"button": 2},
+        },
+    ]
+
+    main.write_csv_file(target, records)
+
+    assert target.exists()
+    with target.open("r", newline="", encoding="utf-8") as csv_file:
+        rows = list(csv.DictReader(csv_file))
+
+    assert len(rows) == 2
+    assert rows[0]["site"] == "https://a.com"
+    assert rows[0]["pass_normal"] == "1"
+    assert rows[0]["counts_button"] == "1"
+    assert rows[1]["site"] == "https://b.com"
+    assert rows[1]["pass_normal"] == "0"
+    assert rows[1]["counts_button"] == "2"
+
+
+def test_build_spss_records_includes_only_export_columns() -> None:
+    detailed_records = [
+        {
+            "site": "https://example.com",
+            "component_type": "text",
+            "tag": "p",
+            "contrast_normal": 5.2,
+            "contrast_protanopia": 5.1,
+            "contrast_deuteranopia": 4.9,
+            "contrast_tritanopia": 4.8,
+            "contrast_loss_protanopia": 0.1,
+            "contrast_loss_deuteranopia": 0.3,
+            "contrast_loss_tritanopia": 0.4,
+            "pass_normal": 1,
+            "pass_protanopia": 1,
+            "pass_deuteranopia": 1,
+            "pass_tritanopia": 1,
+            "wcag_threshold": 4.5,
+            "text": "not exported",
+        }
+    ]
+
+    spss_records = main.build_spss_records(detailed_records)
+
+    assert len(spss_records) == 1
+    assert set(spss_records[0].keys()) == set(main.SPSS_EXPORT_COLUMNS)
+    assert spss_records[0]["pass_normal"] == 1

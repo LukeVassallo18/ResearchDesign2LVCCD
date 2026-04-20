@@ -48,11 +48,13 @@ POST_LOAD_DELAY_MS = 1_000
 PER_SITE_TIMEOUT_SECONDS = 90
 OUTPUT_DIR = Path("output")
 DETAILED_RESULTS_FILE = OUTPUT_DIR / "detailed_results.json"
-ANALYSIS_RESULTS_FILE = OUTPUT_DIR / "analysis_summary.json"
 DETAILED_RESULTS_CSV_FILE = OUTPUT_DIR / "detailed_results.csv"
-SITE_SUMMARY_CSV_FILE = OUTPUT_DIR / "site_summary.csv"
-COMPONENT_FAILURE_CSV_FILE = OUTPUT_DIR / "component_failure_summary.csv"
-COMPONENT_VULNERABILITY_CSV_FILE = OUTPUT_DIR / "component_vulnerability_summary.csv"
+LEGACY_SUMMARY_OUTPUT_FILES = (
+    OUTPUT_DIR / "analysis_summary.json",
+    OUTPUT_DIR / "site_summary.csv",
+    OUTPUT_DIR / "component_failure_summary.csv",
+    OUTPUT_DIR / "component_vulnerability_summary.csv",
+)
 
 BUTTON_CLASS_KEYWORDS = ("btn", "button", "cta", "primary", "action")
 NAV_CLASS_KEYWORDS = ("nav", "menu", "navbar")
@@ -144,6 +146,23 @@ SUPPORTED_COMPONENT_TYPES = (
     "other",
 )
 CVD_SIMULATOR = Simulator_Brettel1997()
+SPSS_EXPORT_COLUMNS = (
+    "site",
+    "component_type",
+    "tag",
+    "contrast_normal",
+    "contrast_protanopia",
+    "contrast_deuteranopia",
+    "contrast_tritanopia",
+    "contrast_loss_protanopia",
+    "contrast_loss_deuteranopia",
+    "contrast_loss_tritanopia",
+    "pass_normal",
+    "pass_protanopia",
+    "pass_deuteranopia",
+    "pass_tritanopia",
+    "wcag_threshold",
+)
 
 
 def is_transparent_color(color: str | None) -> bool:
@@ -696,7 +715,7 @@ def compute_component_metrics(
 
     normal_contrast = contrast_ratio(effective_foreground_rgb, effective_background_rgb)
     record["contrast_normal"] = round(normal_contrast, 4)
-    record["pass_normal"] = normal_contrast >= threshold
+    record["pass_normal"] = int(normal_contrast >= threshold)
 
     for condition_name, deficiency in CVD_CONDITIONS.items():
         simulated_foreground_rgb = simulate_color(effective_foreground_rgb, deficiency)
@@ -709,7 +728,7 @@ def compute_component_metrics(
         record[f"foreground_{condition_name}"] = rgb_to_string(simulated_foreground_rgb)
         record[f"background_{condition_name}"] = rgb_to_string(simulated_background_rgb)
         record[f"contrast_{condition_name}"] = round(simulated_contrast, 4)
-        record[f"pass_{condition_name}"] = simulated_contrast >= threshold
+        record[f"pass_{condition_name}"] = int(simulated_contrast >= threshold)
         record[f"contrast_loss_{condition_name}"] = round(
             normal_contrast - simulated_contrast,
             4,
@@ -978,37 +997,11 @@ def write_csv_file(path: Path, records: list[dict[str, Any]]) -> None:
         writer.writerows(flattened_records)
 
 
-def print_terminal_summary(analysis_summary: dict[str, Any]) -> None:
-    overall_contrast = analysis_summary["mean_contrast_ratios"]["overall"]
-    overall_failures = analysis_summary["overall_failure_rate"]
-
-    print("Research Pipeline Summary")
-    print("=" * 25)
-    print(f"Sites scanned: {analysis_summary['total_sites_scanned']}")
-    print(f"Components detected: {analysis_summary['total_components']}")
-    print(f"Mean normal contrast: {overall_contrast['normal']:.4f}")
-    print(f"Mean contrast (protanopia): {overall_contrast['protanopia']:.4f}")
-    print(f"Mean contrast (deuteranopia): {overall_contrast['deuteranopia']:.4f}")
-    print(f"Mean contrast (tritanopia): {overall_contrast['tritanopia']:.4f}")
-    print(f"Total failures under normal: {overall_failures['normal']['failed_components']}")
-    print(
-        f"Total failures under protanopia: "
-        f"{overall_failures['protanopia']['failed_components']}"
-    )
-    print(
-        f"Total failures under deuteranopia: "
-        f"{overall_failures['deuteranopia']['failed_components']}"
-    )
-    print(
-        f"Total failures under tritanopia: "
-        f"{overall_failures['tritanopia']['failed_components']}"
-    )
-    print("Top 5 most vulnerable component categories:")
-    for item in analysis_summary["top_vulnerable_component_categories"]:
-        print(
-            f"  - {item['component_type']}: "
-            f"{item['average_vulnerability_score']:.4f}"
-        )
+def build_spss_records(records: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    return [
+        {column: normalize_csv_value(record.get(column)) for column in SPSS_EXPORT_COLUMNS}
+        for record in records
+    ]
 
 
 async def extract_element_data(page) -> list[dict[str, Any]]:
@@ -1297,28 +1290,22 @@ async def main() -> None:
         for site_result in site_results
         for component in site_result["components"]
     ]
-    analysis_report = build_analysis_summary(site_results)
+    spss_records = build_spss_records(detailed_results)
+
+    for legacy_path in LEGACY_SUMMARY_OUTPUT_FILES:
+        if legacy_path.exists():
+            legacy_path.unlink()
 
     write_json_file(DETAILED_RESULTS_FILE, detailed_results)
-    write_json_file(ANALYSIS_RESULTS_FILE, analysis_report)
-    write_csv_file(DETAILED_RESULTS_CSV_FILE, detailed_results)
-    write_csv_file(SITE_SUMMARY_CSV_FILE, analysis_report["failure_rate_by_site"])
-    write_csv_file(
-        COMPONENT_FAILURE_CSV_FILE,
-        analysis_report["failure_rate_by_component_type"],
-    )
-    write_csv_file(
-        COMPONENT_VULNERABILITY_CSV_FILE,
-        analysis_report["component_vulnerability_summary_table"],
-    )
-    print_terminal_summary(analysis_report)
+    write_csv_file(DETAILED_RESULTS_CSV_FILE, spss_records)
+
+    print("SPSS dataset export complete")
+    print("=" * 28)
+    print(f"Sites scanned: {len(site_results)}")
+    print(f"Rows exported: {len(spss_records)}")
     print()
     print(f"Detailed JSON written to: {DETAILED_RESULTS_FILE}")
-    print(f"Analysis JSON written to: {ANALYSIS_RESULTS_FILE}")
     print(f"Detailed CSV written to: {DETAILED_RESULTS_CSV_FILE}")
-    print(f"Site summary CSV written to: {SITE_SUMMARY_CSV_FILE}")
-    print(f"Component failure CSV written to: {COMPONENT_FAILURE_CSV_FILE}")
-    print(f"Component vulnerability CSV written to: {COMPONENT_VULNERABILITY_CSV_FILE}")
 
 
 if __name__ == "__main__":
